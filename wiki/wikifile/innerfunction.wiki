@@ -1,0 +1,43 @@
+*匿名函数* 没有函数名的函数
+
+= js函数的定义 =
+* 常规方式
+{{{js 
+function double(x){ return 2*x }
+}}}
+*  Function 构造函数
+{{{js
+var double = new Function('x','return 2*x;');
+}}}
+* 匿名函数赋值
+{{{js
+var double = function(x){ return 2*x; }
+}}}
+
+= 匿名函数的创建 =
+* 上面所讲的第三种方式
+* 创建同时调用
+{{{js
+(function(x){
+	return 2*x;
+ })(2)
+}}}
+
+= 用途 =
+匿名函数最重要的用途就是创建[[closure|闭包]],并且还可以构建命名空间，减少全局变量的使用。
+{{{js
+var oEvent = {};
+(function(){
+	var addEvent = function(){};
+	function removeEvent(){};
+	
+	oEvent.addEvent = addEvent;
+	oEvent.removeEvent = removeEvent;
+ })();
+
+}}}
+在这段代码中函数addEvent和removeEvent都是局部变量，但我们可以通过全局变量oEvent使用它，这就大大减少了全局变量的使用，增强了网页的安全性.
+
+
+ [[index]] -- [[javascript]] 
+ 

@@ -1,0 +1,16 @@
+WMTS
+
+%toc
+
+==定义==
+* 切片地图Web服务(OpenGIS Web Map Tile Service)
+* 当前版本为1.0.0
+* OGC首个支持RESTful风格的协议
+
+==接口==
+* GetCapabilities 元信息
+* GetTile 切片信息
+* GetFeatureInfo 要素信息
+ 
+==与TMS区别==
+* TMS是纯RESTful风格的，WMTS支持KVP、SOAP、RESTful三种

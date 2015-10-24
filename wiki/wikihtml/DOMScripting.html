@@ -1,0 +1,163 @@
+    <html>
+    <head>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+        <title>DOMScripting</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="content">
+        
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">什么是DOM</a>
+<li><a href="#toc_0.2">HTML集合</a>
+<li><a href="#toc_0.3">重绘和重排版</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="toc_0.1">什么是DOM</h2>
+<p>
+	文档对象模型，是一套独立于语言的，使用XML和HTML文档操作的应用程序接口。
+	浏览器通常要求DOM实现和JavaScript实现保持独立。因此，利用JS操作DOM元素需要跨越2个库进行，天生就慢。
+	在操作DOM元素时，可以从以下几个方面进行优化：
+</p>
+<ul>
+<li>
+减少访问次数
+
+<li>
+使用局部变量缓存DOM引用
+
+<li>
+小心处理HTML集合
+
+<li>
+使用速度更快的API
+
+<li>
+注意重绘和重排版
+
+<li>
+动画中使用绝对坐标
+
+<li>
+使用事件托管技术
+
+</ul>
+<h2 id="toc_0.2">HTML集合</h2>
+<p>
+HTML collections 是一种类似数组的对象，用于存放DOM节点引用。如下面函数返回的就是HTML集合：
+</p>
+<ul>
+<li>
+document.getElementsByName()
+
+<li>
+document.getElementsByClassName()
+
+<li>
+document.getElementsByTagName_r()
+
+</ul>
+<p>
+下列属性也属于HTML集合：
+</p>
+<ul>
+<li>
+document.images
+
+<li>
+document.links
+
+<li>
+document.forms
+
+</ul>
+<p>
+HTML 集合是一个"虚拟存在，意味着当底层文档更新时，他们将自动更新"。因此，当你需要最新信息时，如查询集合中元素的数目(length属性)，都需要执行一遍查询文档操作，因此效率比较低。可以考虑从2个方面进行优化：
+</p>
+<ul>
+<li>
+使用变量缓存length属性
+
+<li>
+访问集合元素时使用局部变量进行缓存 
+
+</ul>
+<h2 id="toc_0.3">重绘和重排版</h2>
+<p>
+由于每次重排版都需要较大的计算量，许多浏览器通过优化队列、批量更新等手段优化重排版过程。但是在实际应用中我们经常不自觉的强迫队列刷新并将所有计划改变的部分立即执行。获取布局信息的操作会导致这一过程。这些操作包括：
+</p>
+<ul>
+<li>
+offsetTop, offsetLeft, offsetWidth, offsetHeight
+
+<li>
+scrollTop, scrollLeft, scrollWidth, scrollHeight
+
+<li>
+clientTop, clientLeft, clientWidth, clientHeight
+
+<li>
+getComputedStyle() (currentStyle in IE)
+
+</ul>
+<p>
+因此，需要尽量少的调用这些方法，当需要改变布局信息时，一次改变所有：
+</p>
+<pre js>
+var el = document.getElementById('mydiv');
+el.style.cssText = 'border-left: 1px; border-right: 2px; padding: 5px;';
+</pre>
+<p>
+当需要对DOM元素进行多次修改时，通过以下步骤减少重绘和重排版次数：
+</p>
+<ol>
+<li>
+从文档流中摘除该元素
+
+<li>
+对该元素进行修改
+
+<li>
+将元素添加到文档流中
+
+</ol>
+<p>
+有三种基本方法可以将DOM从文档中摘除：
+</p>
+<ul>
+<li>
+隐藏元素
+
+<li>
+使用文档片段(document fragment)
+<pre js>
+var fragment = document.createDocumentFragment();
+appendDataToElement(fragment, data);
+document.getElementById('mylist').appendChild(fragment);
+</pre>
+
+<li>
+将原始元素copy到一个脱离文档的节点中
+<pre js>
+var old = document.getElementById('mylist');
+var clone = old.cloneNode(true);
+appendDataToElement(clone, data);
+old.parentNode.replaceChild(clone, old);
+</pre>
+
+</ul>
+  
+
+
+<p>
+<a href="index.html">index</a> -- <a href="javascript.html">javascript</a> -- <a href="HighPerformanceJavaScript.html">HighPerformanceJavaScript</a>
+</p>
+
+        </div>
+		<div>
+		</div>
+    </body>
+    </html>

@@ -1,0 +1,69 @@
+    <html>
+    <head>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+        <title>LoadingandExecetion</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="content">
+        
+
+<p>
+	管理页面中的Javascript是一件非常棘手的问题，因为脚本的执行会阻塞浏览器其他处理过程，例如界面绘制。每次遇到script标签，浏览器都会停下来等待脚本下载并执行完成。然后再继续处理其他部分。但是有几种方法可以减少script对性能的影响：
+</p>
+<ul>
+<li>
+将标签放在页面底部，紧靠&lt;/body&gt;前面
+
+<li>
+将多个文件进行合并，减少请求次数
+
+<li>
+非阻塞方式加载
+
+<ul>
+<li>
+defer 标签，只适用于IE和 Firefox3.5+
+
+<li>
+动态加载
+<pre js>
+&lt;script type="text/javascript"&gt;
+	function loadscript(url,callback){
+		 var script = document.createElement ("script")
+		 script.type = "text/javascript";
+		 if (script.readyState){ //IE
+			 script.onreadystatechange = function(){
+					if (script.readyState == "loaded" ||
+						script.readyState == "complete"){
+						script.onreadystatechange = null;
+						 callback();
+					}
+			};
+		 } else { //Others
+			script.onload = function(){
+				 callback();
+			};
+		 }
+		 script.src = url;
+		 document.getElementsByTagName_r("head")[0].appendChild(script);
+	}
+&lt;/script&gt;
+</pre>
+
+<li>
+XHR对象下载代码，并注入到页面中，无法跨域
+
+</ul>
+</ul>
+	
+		
+<p>
+<a href="index.html">index</a> -- <a href="javascript.html">javascript</a> -- <a href="HighPerformanceJavaScript.html">HighPerformanceJavaScript</a>
+</p>
+
+        </div>
+		<div>
+		</div>
+    </body>
+    </html>

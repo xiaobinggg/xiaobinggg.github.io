@@ -1,0 +1,9 @@
+
+
+[[innerfunction|匿名函数]]  
+
+[[closure|闭包]]
+
+[[prototype|原型]]
+
+[[index]]
