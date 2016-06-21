@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/area.selector.css" />
+<script src="scripts/jquery.js"></script>
+<script src="scripts/region.js"></script>
+<script src="scripts/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="scripts/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/area.selector.js"></script>
+
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.select_handle').selector({seletedResultor:$('.selected_result'),seletedResulId:$('#selected_result_id')});
+});
+</script>
+<script type="text/javascript">
+window.onload = function(){
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("");//最外层框架样式
+	tabPage.setTabObj([{title:"风险状况",id:"a"},{title:"新增风险",id:"b"},{title:"监管指标",id:"c"},{title:"其他",id:"d"}]);//增加选项菜单
+	tabPage.addedTo("x");
+}
+
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+	<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:920px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0" style="margin-bottom:100px"></iframe>
+				</td>
+				<td>
+				<iframe src="content.html" width="810px" height="920px" scrolling="no" frameborder="0" name="left" id="left"></iframe>	
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+	</div>
+</body>
+</html>

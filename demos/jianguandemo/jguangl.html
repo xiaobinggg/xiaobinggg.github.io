@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+<script type="text/javascript" src="scripts/dtree.js"></script>
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+	<script type="text/javascript">
+<!--
+function ExChgClsName(Obj,NameA,NameB){
+var Obj=document.getElementById(Obj)?document.getElementById(Obj):Obj;
+Obj.className=Obj.className==NameA?NameB:NameA;
+}
+function showMenu(iNo){
+ExChgClsName("Menu_"+iNo,"MenuBox","MenuBox2");
+}
+function showChildMenu(iNo){
+ExChgClsName("ChildMenu_"+iNo,"ChildMenuBox","ChildMenuBox2");
+}
+-->
+</script>
+	<script language="javascript">
+		
+
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default = 1000;
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+{
+    var shadow = document.createElement("div");
+    shadow.setAttribute("id","shadow");
+    shadow.style.zIndex="10";
+
+    
+    document.body.appendChild(shadow);
+}
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+function choose1(){
+		var freq = document.getElementById("freq");
+		if(freq.checked){
+			document.getElementById("f1").style.display="none";
+			document.getElementById("f2").style.display="none";
+			document.getElementById("f3").style.display="";
+			document.getElementById("f4").style.display="";
+		}else{
+			document.getElementById("f1").style.display="";
+			document.getElementById("f2").style.display="";
+			document.getElementById("f3").style.display="none";
+			document.getElementById("f4").style.display="none";
+		}
+	}
+	function choose2(){
+		var task = document.getElementById("task");
+		if(task.checked){
+			document.getElementById("t1").style.display="none";
+			document.getElementById("t2").style.display="";
+			document.getElementById("t3").style.display="";
+		}else{
+			document.getElementById("t1").style.display="";
+			document.getElementById("t2").style.display="none";
+			document.getElementById("t3").style.display="none";
+		}
+	}
+-->
+
+
+		</script>
+
+	
+	<script>
+	function isdelete(){
+		confirm("确认删除吗");
+	}
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'300'
+			//show: "blind",
+			//hide: "explode"
+		});
+		$( "#dialog1" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'300'
+			//show: "blind",
+			//hide: "explode"
+		});
+		$( "#addjigou" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'auto'
+			//show: "blind",
+			//hide: "explode"
+		});
+
+		$( "#fenpei" ).click(function() {
+			$( "#dialog" ).dialog("open");
+			return false;
+		});
+		$( "#opener2" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener3" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener4" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#closedialog" ).click(function() {
+			$( "#dialog" ).dialog( "close" );
+			return false;
+		});
+		$( "#addjg" ).click(function() {
+			$( "#addjigou" ).dialog( "open" );
+			return false;
+		});
+		
+	});
+	</script>
+	
+
+		
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #000000; font-weight:bold}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+.MenuBox .titBox a,
+.MenuBox .titBox a:visited,
+.MenuBox2 .titBox a,
+.MenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:40px;color:#003;font-size:12px;display:block;}
+.MenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.MenuBox2 .txtBox {display:none;}
+.MenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.MenuBox .txtBox .num {color:#e00;}
+.MenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.MenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 0%;}
+
+
+
+
+.ChildMenuBox .titBox a,
+.ChildMenuBox .titBox a:visited,
+.ChildMenuBox2 .titBox a,
+.ChildMenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:0px;color:#003;font-size:12px;display:block;}
+.ChildMenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.ChildMenuBox2 .txtBox {display:none;}
+.ChildMenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.ChildMenuBox .txtBox .num {color:#e00;}
+.ChildMenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.ChildMenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 50%;}
+
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:790px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />系统管理<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />机关管理</div>
+	</div>
+<div class="univer_model">
+    
+
+	<div class="subc6" style="width:180px ; margin:5px 0px 0px 0px; float:left; height:770px;">
+	
+	<a href="javascript: d.openAll();">展开</a> | <a href="javascript: d.closeAll();">折叠</a>&nbsp;&nbsp;
+	<a href="#" id="addjg">添加</a>
+	<br/>
+	<script type="text/javascript">
+		<!--
+		d = new dTree('d');                
+		d.add(0,-1,'山西银监局','#');
+		d.add(1,0,'太原监管局','javascript:test()');
+		d.add(2,1,'古交监管办','#');
+		d.add(3,1,'清徐监管办','#');
+		d.add(4,1,'阳曲监管办','#');
+		d.add(5,1,'娄烦监管办','#');
+		d.add(6,0,'大同监管局','javascript:test()');
+		d.add(7,6,'古交监管办','#');
+		d.add(8,6,'阳高监管办','#');
+		d.add(9,6,'天镇监管办','#');
+		d.add(11,6,'广灵监管办','#');
+		d.add(12,6,'灵丘监管办','#');
+		d.add(13,6,'浑源监管办','#');
+		d.add(14,6,'左云监管办','#');
+		d.add(15,6,'大同监管办','#');
+		d.add(16,0,'长治监管局','javascript:test()');
+		d.add(17,16,'潞城监管办','#');
+		d.add(18,16,'长治监管办','#');
+		d.add(19,16,'襄垣监管办','#');
+		d.add(20,16,'屯留监管办','#');
+		d.add(21,16,'平顺监管办','#');
+		d.add(22,16,'黎城监管办','#');
+		d.add(23,16,'壶关监管办','#');
+		d.add(24,16,'长子监管办','#');
+		d.add(20,16,'武乡监管办','#');
+
+		document.write(d);
+		//-->
+		</script>
+
+	</div>	
+	<div class="subc6" style=" float:right;width:600px; margin:5px 0px 0px 0px; margin-top:5px; height:770px;">
+		<div class="title" style="width:40%">古交监管办所辖金融机构列表</div>
+		<div class="titlebg" style=" margin-top:0px; width:60%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tbody>
+				<tr><td colspan="3" align="right"><a onclick="#" id="fenpei">添加金融机构</div></a></td></tr>
+				<tr>
+				  <th width="20%">机构编号</th>
+				  <th width="20%">机构名称</th>
+				  <th width="20%">删除机构</th>
+				  
+				</tr>
+				<tr>
+				  <td>001</td>
+				  <td>清徐联合社</td>
+				  <td><a onclick="javascript:isdelete();">删除</a></td>				  				  
+				</tr>
+				<tr>
+				  <td>002</td>
+				  <td>清徐农业社</td>
+				  <td><a onclick="javascript:isdelete();">删除</a></td>				  				  
+				</tr>
+				<tr>
+				  <td>003</td>
+				  <td>清徐合作社</td>
+				  <td><a onclick="javascript:isdelete();">删除</a></td>				  				  
+				</tr>
+				<tr>
+				  <td>004</td>
+				  <td>清徐商业银行</td>
+				  <td><a onclick="javascript:isdelete();">删除</a></td>				  				  
+				</tr>
+			</tbody>
+			</table>
+				</div>	
+			  </div>
+		</div>
+	</div>
+	</div>
+					</td>
+			</tr>
+		</table>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+	</div>
+	<div id="addjigou" title="添加机关"> 
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="3" />机关管理&nbsp;&nbsp;<img src="images/icon_jt.gif" align=		"absmiddle" hspace="3" />添加机关</div>
+	</div>                    		
+		<form method="post" action="">
+		<table frame="void" width="95%" border="0" align="center" cellpadding="0" cellspacing="0"  >
+			<tbody>
+				<tr>
+				<td align="right" width="30%">机关编号:</td ><td align="left" width="50%"><input type="text" size="60" /></td>
+				</tr>
+				<tr>
+				<td align="right" width="30%">机关名称:</td><td align="left" width="50%"><input type="text" size="60" /></td>
+				</tr>
+				<tr>
+				<td align="right" width="30%">上级机关 &nbsp;</td>
+				<td align="left" width="50%">
+				<select name="jiguan">
+				<option value="山西银监局">山西银监局
+				<option value="山西银监局">太原监管局
+				<option value="山西银监局">古交监管办
+				<option value="山西银监局">清徐监管办
+				<option value="山西银监局">大同监管局
+				<option value="山西银监局">阳高监管办
+				</select>
+				</td>
+				</tr>
+				<tr>
+				<td  align="right">
+				<input type="button" value="确定"  />&nbsp;&nbsp;
+				</td>
+				<td align="left">
+				<input type="reset" value="重写"  />
+				</td>
+				</tr>				
+			</tbody>
+			</table>
+		</form>
+			 
+    </div>
+	 <div id="dialog1" title="金融机构设置">
+        <div class="MenuBox" id="Menu_0">
+<div class="titBox"><h3><a href="javascript:showMenu(0);" ><input type="checkbox" name="city">太原市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_0">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(0);" ><input type="checkbox" name="county">太原城区</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">太原城区联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">太原城区合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">太原城区农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_1">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(1);" ><input type="checkbox" name="county">古交市</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">古交市联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county" checked="checked">古交市合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">古交市农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_2">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(2);" ><input type="checkbox" name="county">清徐县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county" checked="checked">清徐县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">清徐县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">清徐县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_3">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(3);" ><input type="checkbox" name="county">阳曲县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">阳曲县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county" checked="checked">阳曲县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">阳曲县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_4">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(4);" ><input type="checkbox" name="county">娄烦县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">娄烦县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">娄烦县合作市</a></li>
+				<li class="Lst"><a href="#;" ><input type="checkbox" name="countyt">娄烦县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+</ul></div></div>
+<div class="MenuBox" id="Menu_1">
+<div class="titBox"><h3><a href="javascript:showMenu(1);" ><input type="checkbox" name="city">大同市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_5">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(5);" ><input type="checkbox" name="county">大同南效区</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">大同南效区联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">大同南效区合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">大同南效区农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_6">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(6);" ><input type="checkbox" name="county">阳高县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county" checked="checked">阳高县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">阳高县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">阳高县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_7">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(7);" ><input type="checkbox" name="county">天镇县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county" checked="checked">天镇县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">天镇县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">天镇县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox2" id="ChildMenu_8">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(8);" ><input type="checkbox" name="county">广灵县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">广灵县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">广灵县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">广灵县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_9">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(9);" ><input type="checkbox" name="county">灵丘县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">灵丘县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">灵丘县合作市</a></li>
+				<li class="Lst"><a href="#;" ><input type="checkbox" name="countyt">灵丘县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+</ul>
+</div>
+</div><div class="ressultbutton" align="center">
+		<form action="#">
+			<input type="submit" class="buttonStyle" value="确定" />
+		</form>	
+		</div>	 
+</div>
+
+
+ <div id="dialog" title="添加金融机构">
+           <div class="univer_model" align="center">           		
+			    <input type="checkbox" name="indicators" value="灵丘县联合社" checked="checked"/>灵丘县联合社<p>
+				<input type="checkbox" name="indicators" value="灵丘县合作市" checked="checked"/>灵丘县合作市<p>
+				<input type="checkbox" name="indicators" value="灵丘县农业社" checked="checked"/>灵丘县农业社<p>
+				<input type="checkbox" name="indicators" value="广灵县联合社" checked="checked"/>广灵县联合社<p>
+				<input type="checkbox" name="indicators" value="广灵县合作市" checked="checked"/>广灵县合作市<p>
+				<input type="checkbox" name="indicators" value="广灵县农业社" checked="checked"/>广灵县农业社<p>
+				<input type="checkbox" name="indicators" value="天镇县农业社" checked="checked"/>天镇县农业社<p>
+				<input type="checkbox" name="indicators" value="天镇县合作市" checked="checked"/>天镇县合作市<p>
+				
+				<input type="button" name="确定" value="确定" align="center" class="buttonStyle"id="closedialog"/>
+			 
+    </div>
+	</div>
+</body>
+</html>
+

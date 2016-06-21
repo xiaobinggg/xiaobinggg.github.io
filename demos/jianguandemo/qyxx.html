@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">  
+<title>无标题文档</title>
+<style>
+.myclass{width:30px;}
+</style>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+<script type="text/javascript" src="scripts/dtree.js"></script>
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+<script>
+
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			height:'100',
+			width:'600'
+			//show: "blind",
+			//hide: "explode"
+		});
+
+		$( "#opener1" ).click(function() {
+			$( "#dialog" ).dialog("open");
+			return false;
+		});
+		$( "#opener2" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener3" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener4" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener5" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#closedialog" ).click(function() {
+			$( "#dialog" ).dialog( "close" );
+			return false;
+		});
+	});
+	
+	</script>
+	<script>
+	function choose1(){
+		var freq = document.getElementById("freq");
+		if(freq.checked){
+			document.getElementById("f1").style.display="none";
+			document.getElementById("f2").style.display="none";
+			document.getElementById("f3").style.display="";
+			document.getElementById("f4").style.display="";
+		}else{
+			document.getElementById("f1").style.display="";
+			document.getElementById("f2").style.display="";
+			document.getElementById("f3").style.display="none";
+			document.getElementById("f4").style.display="none";
+		}
+	}
+	function choose2(){
+		var task = document.getElementById("task");
+		if(task.checked){
+			document.getElementById("t1").style.display="none";
+			document.getElementById("t2").style.display="";
+			document.getElementById("t3").style.display="";
+		}else{
+			document.getElementById("t1").style.display="";
+			document.getElementById("t2").style.display="none";
+			document.getElementById("t3").style.display="none";
+		}
+	}
+	</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+
+<body>		
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:860px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0" style="margin-bottom:30px;"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:790px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />信息录入<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />区域信息</div>
+	</div>
+	<!--div class="univer_model">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div-->
+	<div class="subc6" style="width:180px ; margin:5px 0px 0px 0px; float:left; height:790px;">
+	
+	<a href="javascript: d.openAll();">展开</a> | <a href="javascript: d.closeAll();">折叠</a>&nbsp;&nbsp;
+	<a href="#" id="addjg">添加</a>
+	<br/>
+	<script type="text/javascript">
+		<!--
+		d = new dTree('d');                
+		d.add(0,-1,'山西银监局','#');
+		d.add(1,0,'太原监管局','javascript:test()');
+		d.add(2,1,'古交监管办','#');
+		d.add(3,1,'清徐监管办','#');
+		d.add(4,1,'阳曲监管办','#');
+		d.add(5,1,'娄烦监管办','#');
+		d.add(6,0,'大同监管局','javascript:test()');
+		d.add(7,6,'古交监管办','#');
+		d.add(8,6,'阳高监管办','#');
+		d.add(9,6,'天镇监管办','#');
+		d.add(11,6,'广灵监管办','#');
+		d.add(12,6,'灵丘监管办','#');
+		d.add(13,6,'浑源监管办','#');
+		d.add(14,6,'左云监管办','#');
+		d.add(15,6,'大同监管办','#');
+		d.add(16,0,'长治监管局','javascript:test()');
+		d.add(17,16,'潞城监管办','#');
+		d.add(18,16,'长治监管办','#');
+		d.add(19,16,'襄垣监管办','#');
+		d.add(20,16,'屯留监管办','#');
+		d.add(21,16,'平顺监管办','#');
+		d.add(22,16,'黎城监管办','#');
+		d.add(23,16,'壶关监管办','#');
+		d.add(24,16,'长子监管办','#');
+		d.add(20,16,'武乡监管办','#');
+
+		document.write(d);
+		//-->
+		</script>
+
+	</div>	
+	<div class="subc6" style="width:600px; margin:5px 0px 0px 5px; margin-top:5px; height:690px;">
+		<div class="title" style="width:15%"><strong>区域信息</strong></div>
+		<div class="titlebg" style=" margin-top:0px; width:85%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+	
+			
+
+				<table width="551" height="200px" border="0" cellpadding="0" cellspacing="0" align="center">
+			
+				  <tr>
+					<td colspan="5"><strong>地理人口情况</strong></td>
+				  </tr>
+				  <tr>
+					<td colspan="5" height="120px" align="center"><img src="images/wbbj.jpg" height="136"/></td>
+			
+				  </tr>
+				   <tr>
+					<td colspan="5"><strong>经济情况</strong></td>
+				  </tr>
+				  <tr>
+					<td colspan="5" height="120px" align="center"><img src="images/wbbj.jpg" /></td>
+			
+				  </tr>
+				   <tr>
+					<td colspan="5"><strong>金融情况</strong>
+</td>
+				  </tr>
+				  </table>
+				   <div class="univer_model" style="width:96%">
+			 <table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+			</div>
+					 <table border="0" cellspacing="0" cellpadding="0" id="table_info">
+										<tbody>
+										<tr align="center">
+										<td colspan="9" align="center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****年度辖内全部银行业金融机构简表</strong></td>
+										</tr>
+										<tr align="right">
+										<td colspan="9" align="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单位：万元、个、人</td>
+										</tr>
+										<tr>
+										  <td>&nbsp;</td>
+										  <td>工行</td>
+										  <td>农行</td>
+										  <td>中行</td>
+										  <td>建行</td>
+										  <td>农村合作金融机构</td>
+										  <td>邮储</td>
+										  <td>其它</td>
+										  <td>合计</td>
+										  </tr>
+										<tr>
+										  <td>存款余额</td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  </tr>
+										<tr>
+										  <td>贷款余额</td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  </tr>
+										<tr>
+										  <td>净利润</td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  </tr>
+										<tr>
+										  <td>不良贷款</td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  </tr>
+										<tr>
+										  <td>不良占比</td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  </tr> 
+										  <tr>
+										  <td>机构网点</td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  </tr>
+										   <tr>
+										  <td>职工人数</td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  <td><input name="" type="text" class="myclass"/></td>
+										  </tr>
+										  </tbody>
+										  </table>
+											
+												
+                  <div align="center" style="margin-top:5px;"><input name="" type="button" value="保存" class="buttonStyle" /></div>
+				
+		
+			
+			  </div>
+		</div>
+	</div>
+	<div class="subc6" style=" float:right;width:600px; margin:5px 0px 0px 0px; margin-top:5px; height:130px;">
+		<div class="title" style="width:19%">其他风险状况</div>
+		<div class="titlebg" style=" margin-top:0px; width:81%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		
+	<input name="" type="button" value="点击添加" class="buttonStyle"  id="opener1" style="cursor:hand"/>
+
+				<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tbody>
+				
+				<tr>
+				 
+				  <th width="13%">风险问题</td>
+				  <th width="13%">添加时间</td>
+				  <th width="13%">修改</td>
+				  <th width="13%">删除</td>
+				</tr>
+				<tr>
+				 
+				  <td>风险问题</td>
+				  <td>2011-7-11</td>
+				  <td ><img src="images/icons/book.png" border="0" style="cursor:hand" title="查看详细" ></td>
+				  <td ><img src="images/icons/cancel.png" border="0" style="cursor:hand" title="查看详细" ></td>
+				</tr>
+				
+			</tbody>
+			</table>
+		
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+  <div id="dialog" title="添加">
+           <div class="univer_model" style="width:560px;">
+            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:5px">
+				 
+				  <tr>
+					<td>上传文件：</td>
+				
+					<td><input name="" type="text" /></td>
+					
+			
+					<td align="center"><input name="submit" type="submit" class="buttonStyle" value=" 浏览 "/></td>
+					
+				  </tr>
+				  
+				
+				 
+				</table>
+    </div>
+	</div>
+</body>
+</html>
+

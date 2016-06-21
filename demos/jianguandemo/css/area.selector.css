@@ -1,0 +1,67 @@
+.area_selecotr{position:absolute;width:750px;padding:10px;border-top:1px solid #C9D7F1;border-right:1px solid #3366CC;border-bottom:1px solid #3366cc;border-left:1px solid #c9d7f1;background:#fff;font-family:verdana}
+.area_close{font-size:12px;font-weight:bold;cursor:pointer;color:#2244dd;border:1px solid #2244dd}
+.area_btn{margin-left:5px;width:35px;font-size:11px;font-weight:bold}
+.area_tab{margin-top:20px;padding-left:10px;font-size:13px;border-bottom:1px solid #3366CC}
+.area_tab span{margin-right:10px;padding:3px 5px 0;border:1px solid #3366CC;color:#2244DD;background:#D5DFF3;cursor:pointer}
+.area_tab span.on{border-bottom:1px solid #fff;font-weight:bold;background:#fff}
+.area_con{padding:10px 0}
+.area_con ul{clear:left;width:650px;overflow:hidden;margin:0;padding:0}
+.area_con li{float:left;width:110px;line-height:150%;text-decoration:underline;color:#2244DD;font-size:11px;overflow:hidden;cursor:pointer;text-align:left}
+.area_con a, .area_con a:visited{color:#2244dd}
+
+
+/* jquery auto complete */
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	/*background: white url('indicator.gif') right center no-repeat;*/
+}
+
+.ac_lading{
+	font-size:11px solid #ddd;
+	color:#999;
+	text-decoration:none;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #0A246A;
+	color: white;
+}

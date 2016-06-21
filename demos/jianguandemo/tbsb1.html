@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+	<script type="text/javascript" src="scripts/dtree.js"></script>
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+	<script language="javascript">
+		
+
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default = 1000;
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+{
+    var shadow = document.createElement("div");
+    shadow.setAttribute("id","shadow");
+    shadow.style.zIndex="10";
+
+    
+    document.body.appendChild(shadow);
+}
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+function choose1(){
+		var freq = document.getElementById("freq");
+		if(freq.checked){
+			document.getElementById("f1").style.display="none";
+			document.getElementById("f2").style.display="none";
+			document.getElementById("f3").style.display="";
+			document.getElementById("f4").style.display="";
+		}else{
+			document.getElementById("f1").style.display="";
+			document.getElementById("f2").style.display="";
+			document.getElementById("f3").style.display="none";
+			document.getElementById("f4").style.display="none";
+		}
+	}
+	function choose2(){
+		var task = document.getElementById("task");
+		if(task.checked){
+			document.getElementById("t1").style.display="none";
+			document.getElementById("t2").style.display="";
+			document.getElementById("t3").style.display="";
+		}else{
+			document.getElementById("t1").style.display="";
+			document.getElementById("t2").style.display="none";
+			document.getElementById("t3").style.display="none";
+		}
+	}
+-->
+
+
+		</script>
+
+	
+	<script>
+
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'auto'
+			//show: "blind",
+			//hide: "explode"
+		});
+
+		$( "#opener1" ).click(function() {
+			$( "#dialog" ).dialog("open");
+			return false;
+		});
+		$( "#opener2" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener3" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener4" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+	});
+	</script>
+	
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />监管工作<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />通报上报<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />发布任务</div>
+	</div>
+	<!--div class="univer_model">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div-->	
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:810px;">
+		<div class="title" style="width:12%">通报上报</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		<div><input name="submit" type="submit" class="buttonStyle" id="opener1" value=" 发布任务 "/></div>
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" height="153" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">通报名称</th>
+					<th width="61">截止时间</th>
+					<th width="76">上传时间</th>
+					<th width="54">状态</th>
+					<th width="76">编辑</th>
+				   
+				  </tr>
+				  <tr>
+					<td>关于规范商业银行使用外部信用评级的通知</td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td align="center"><a href="#">已上报</a></td>
+					<td align="center"><a href="#">修改</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+				  </tr>
+				  <tr>
+					<td >关于进一步规范银信理财合作业务的通知</td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					 <td align="center"><a href="#">已上报</a></td>
+					<td align="center"><a href="#">修改</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+				  </tr>
+				  <tr>
+					<td>关于进一步加强和规范非现场报表报送工作</td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					 <td align="center"><a href="#">已上报</a></td>
+					<td align="center"><a href="#">修改</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+				  </tr>
+				  <tr>
+					<td>行政许可工作规程</td>
+					<td>2010-10-31</td>
+					<td>2010-10-3</td>
+					 <td align="center"><a href="#">未上报</a></td>
+					<td align="center"><a href="#">修改</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+				  </tr>
+				  <tr>
+					<td>关于对实施新资本协议相关指引征求意见</td>
+					<td>2010-8-31</td>
+					<td>2010-8-1</td>
+					<td align="center" ><a href="#">已上报</a></td>
+					<td align="center"><a href="#">修改</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+				  </tr>
+				 
+				</table>
+				</div>
+		</div>
+	</div>
+</div>
+	</div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+	</div>
+	<div id="dialog" title="发布任务">
+           <div class="univer_model">
+            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tr>
+			<td>报表名称：</td>
+			<td colspan="3" align="left"><input name="" type="text" /></td>
+			</tr>
+			<tr>
+			<td>频度：<input name="freq" id="freq" type="checkbox" value="" onclick="choose1()"/></td>
+			<td align="left" id="f1">开始时间：<input name="" type="text" /></td>
+			<td align="left" id="f2" colspan="2">结束时间：<input name="" type="text" /></td>
+			<td align="left" id="f3" style="display:none;">
+				<select name="select1" id="select1"><option value="-999">全部</option>
+					<option value="">月</option>
+					<option value="">季</option>
+					<option value="">半年</option>
+					<option value="">年</option>
+				</select></td>
+			<td align="left" id="f4" style="display:none;" colspan="2">报送时间：<input name="" type="text" /></td>
+			</tr>
+			<tr>
+			<td>报表任务：<input name="task" id="task" type="checkbox" value="" onclick="choose2()" /></td>
+			<td align="left" id="t1" colspan="3">&nbsp;</td>
+			<td align="left" id="t2" style="display:none;"><input name="" type="text" /></td>
+			<td align="left" id="t3" style="display:none;" colspan="2"><input name="" type="button"  value="浏览文件" class="buttonStyle"/></td>
+			</tr>
+			<tr>
+			<td>任务范围：</td>
+			<td align="left" colspan="3"><div class="subc6" style="width:180px ; margin:5px 0px 0px 0px; float:left; height:570px;">
+	
+	<a href="javascript: dw.openAll();">展开</a> | <a href="javascript: dw.closeAll();">折叠</a>
+	<br/>
+	<script type="text/javascript">
+		<!--
+
+		dw = new dTree('d');   
+				           
+		dw.add(0,-1,'山西省农信社','#');
+		dw.add(1,0,'太原市农信社','javascript:test()');
+		dw.add(2,1,'古交市农信社','#');
+		dw.add(3,1,'清徐县农信社','#');
+		dw.add(4,1,'阳曲县农信社','#');
+		dw.add(5,1,'娄烦县农信社','#');
+		dw.add(6,0,'大同市农信社','javascript:test()');
+		dw.add(7,6,'古交市农信社','#');
+		dw.add(8,6,'阳高县农信社','#');
+		dw.add(9,6,'天镇县农信社','#');
+		dw.add(11,6,'广灵县农信社','#');
+		dw.add(12,6,'灵丘县农信社','#');
+		dw.add(13,6,'浑源县农信社','#');
+		dw.add(14,6,'左云县农信社','#');
+		dw.add(15,6,'大同县农信社','#');
+		dw.add(16,0,'长治市农信社','javascript:test()');
+		dw.add(17,16,'潞城市农信社','#');
+		dw.add(18,16,'长治县农信社','#');
+		dw.add(19,16,'襄垣县农信社','#');
+		dw.add(20,16,'屯留县农信社','#');
+		dw.add(21,16,'平顺县农信社','#');
+		dw.add(22,16,'黎城县农信社','#');
+		dw.add(23,16,'壶关县农信社','#');
+		dw.add(24,16,'长子县农信社','#');
+		dw.add(20,16,'武乡县农信社','#');
+
+		document.write(dw);
+		//-->
+		</script>
+
+	</div></td>
+			</tr>
+			<tr>
+			<td align="center" colspan="4"><input name="" type="button"  value="发布" class="buttonStyle"/></td>
+			</tr>
+			</table>
+    </div>
+	</div>
+</body>
+</html>
+

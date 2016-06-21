@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("");//最外层框架样式
+	tabPage.setTabObj([{title:"风险状况",id:"a"},{title:"新增风险",id:"b"},{title:"监管指标",id:"c"},{title:"其他",id:"d"}]);//增加选项菜单
+	tabPage.addedTo("x");
+}
+
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+<body>
+	<div class="login_content" style=" width:1000px;clear:both;margin:0 auto;overflow:hidden;">
+		<table>
+			<tr>
+				<td>
+					<div class="login_content" style="width:195px;">
+					<div class="subc" style="width:190px">
+					<div class="title" style="width:100%"><table><tr><td width="18px"><img src="images/icons/application2.png"/></td><td align="left">信息概览</td></tr></table></div>
+						<div class="subc_content" style="text-indent:0">
+							<div class="list" style="margin-left:5px;">
+								   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_book.png" /></td>
+									   <td align="left"><a href="#">区域概况</a></td>
+									   <td width="10%">
+										<img src="images/icons/administrative-docs.png" /></td>
+									   <td align="left"><a href="#" >风险状况</a></td>
+									  </tr>
+								  </table>
+							</div>
+						</div>
+						<div class="title" style="width:100%"><table><tr><td width="18px"><img src="images/icons/application_view_icons.png"/></td><td align="left">监管台账</td></tr></table></div>
+						<div class="subc_content" style="text-indent:0">
+							<div class="list" style="margin-left:5px;">
+								   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/doc_excel_table.png" /></td>
+									   <td align="left"><a href="#">报表</a></td>
+									   <td width="10%">
+										<img src="images/icons/books.png" /></td>
+									   <td align="left"><a href="#" >通报</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left" colspan="3"><a href="#">行政许可事项</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/book_next.png" /></td>
+									   <td align="left"><a href="#">督查督办</a></td>
+									   <td width="10%">
+										<img src="images/icons/application_edit.png" /></td>
+									   <td align="left"><a href="#" >监管措施</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/book_next.png" /></td>
+									   <td align="left"><a href="#">报告</a></td>
+									   <td width="10%">
+										<img src="images/icons/application_edit.png" /></td>
+									   <td align="left"><a href="#" >监管评级</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left" colspan="3"><a href="#">其他</a></td>
+									  </tr>
+								  </table>
+							</div>
+						</div>
+						<div class="title" style="width:100%"><table><tr><td width="18px"><img src="images/icons/archives.png"/></td><td align="left">机构概况</td></tr></table></div>
+						<div class="subc_content" style="text-indent:0">
+							<div class="list" style="margin-left:5px;">
+								   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/doc_excel_table.png" /></td>
+									   <td align="left"><a href="#">宏观情况</a></td>
+									   <td width="10%">
+										<img src="images/icons/books.png" /></td>
+									   <td align="left"><a href="#" >基本情况</a></td>
+									  </tr>
+								  </table>
+							</div>
+						</div>
+						<div class="title" style="width:100%"><table><tr><td width="18px"><img src="images/icons/archives.png"/></td><td align="left">数据分析</td></tr></table></div>
+						<div class="subc_content" style="text-indent:0">
+							<div class="list" style="margin-left:5px;">
+								   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/doc_excel_table.png" /></td>
+									   <td align="left"><a href="#">监管报告</a></td>
+									   <td width="10%">
+										<img src="images/icons/books.png" /></td>
+									   <td align="left"><a href="#" >自助分析</a></td>
+									  </tr>
+								  </table>
+							</div>
+						</div>
+						<div class="title" style="width:100%"><table><tr><td width="18px"><img src="images/icons/archives.png"/></td><td align="left">监管工作</td></tr></table></div>
+						<div class="subc_content" style="text-indent:0">
+							<div class="list" style="margin-left:5px;">
+								   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/doc_excel_table.png" /></td>
+									   <td align="left"><a href="#">工作任务</a></td>
+									   <td width="10%">
+										<img src="images/icons/books.png" /></td>
+									   <td align="left"><a href="#">报表上报</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left" colspan="3"><a href="#">通报上报</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left" colspan="3"><a href="#">行政许可信息录入</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left" colspan="3"><a href="#">监管评级录入</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left" colspan="3"><a href="#">督查督办事项汇报</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left" colspan="3"><a href="#">其他事项汇报</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left"><a href="#">信息录入</a></td>
+										<td width="10%">
+										<img src="images/icons/bookmark_folder.png" /></td>
+									   <td align="left"><a href="#">报告上报</a></td>
+									  </tr>
+								  </table>
+							</div>
+						</div>
+						<div class="title" style="width:100%"><table><tr><td width="18px"><img src="images/icons/archives.png"/></td><td align="left">系统管理</td></tr></table></div>
+						<div class="subc_content" style="text-indent:0">
+							<div class="list" style="margin-left:5px;">
+								   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/doc_excel_table.png" /></td>
+									   <td align="left"><a href="#">用户管理</a></td>
+									   <td width="10%">
+										<img src="images/icons/books.png" /></td>
+									   <td align="left"><a href="#" >机构管理</a></td>
+									  </tr>
+									  <tr>
+									   <td width="10%" height="25px">
+										<img src="images/icons/doc_excel_table.png" /></td>
+									   <td align="left"><a href="#">机关管理</a></td>
+									   <td width="10%">
+										<img src="images/icons/books.png" /></td>
+									   <td align="left"><a href="#" >通知公告</a></td>
+									  </tr>
+								  </table>
+							</div>
+						</div>
+						<div class="title" style="width:100%"><table><tr><td width="18px"><img src="images/icons/archives.png"/></td><td align="left">考核评比</td></tr></table></div>
+						</div>
+					</div>
+</div>
+				</td>
+				<td>
+					<div class="login_content" style="width:805px;">
+					<div class="subc1" style="width:420px">
+						<div id="x" style="float:left;width:420px;margin-right:10px;"></div>
+							<div id="a">
+								<table id="table_info" border="0" cellspacing="0"  cellpadding="0" align="center" style="margin:0px 5px 5px 0px">
+										<tbody>
+											<tr>
+											  <th>指标名称</th>
+											  <th align="center" valign="middle">监管达标标准</th>
+											  <th>实际数据</th>
+											</tr>
+											
+											<tr>
+											  <td>资本充足率 </td>
+											  <td>≥10.5%</td>
+											  <td>11%</td>
+										  </tr>
+											<tr>
+											  <td>核心资本充足率 </td>
+											  <td>&nbsp;</td>
+											  <td><span class="STYLE1">4%</span></td>
+										  </tr>
+											<tr>
+											  <td>不良贷款率 </td>
+											  <td>≤4%</td>
+											  <td><span class="STYLE3">15%</span></td>
+										  </tr>
+											<tr>
+											  <td>拨备覆盖率 </td>
+											  <td>≥150%</td>
+											  <td><span class="STYLE4">60%</span></td>
+										  </tr>
+											<tr>
+											  <td>贷款拨备率 </td>
+											  <td>≥2.5%</td>
+											  <td>3%</td>
+										  </tr>
+											<tr>
+											  <td>贷款损失准备充足率 </td>
+											  <td>&nbsp;</td>
+											  <td><span class="STYLE3">77%</span></td>
+										  </tr>
+											<tr>
+											  <td>存贷款比例 </td>
+											  <td>&nbsp;</td>
+											  <td><span class="STYLE2">75%</span> </td>
+										  </tr>
+											<tr>
+											  <td colspan="3"><a href="#">查看详情</a></td>
+										  </tr>
+											
+										</tbody>
+										</table>
+							</div>
+							<div id="b">
+								<table id="table_info" border="0" cellspacing="0"  cellpadding="0" align="center" style="margin:0px 5px 5px 0px">
+										<tbody>
+											<tr>
+											  <th>指标名称</th>
+											  <th>变动情况</th>
+											</tr>
+											
+											<tr>
+											  <td>资本充足率 </td>
+											  <td>11%</td>
+										  </tr>
+											<tr>
+											  <td>核心资本充足率 </td>
+											  <td><span class="STYLE1">4%</span></td>
+										  </tr>
+											<tr>
+											  <td>不良贷款率 </td>
+											  <td><span class="STYLE3">15%</span></td>
+										  </tr>
+											<tr>
+											  <td>拨备覆盖率 </td>
+											  <td><span class="STYLE4">60%</span></td>
+										  </tr>
+											<tr>
+											  <td>贷款拨备率 </td>
+											  <td>3%</td>
+										  </tr>
+											<tr>
+											  <td>贷款损失准备充足率 </td>
+											  <td><span class="STYLE3">77%</span></td>
+										  </tr>
+											<tr>
+											  <td>存贷款比例 </td>
+											  <td><span class="STYLE2">75%</span> </td>
+										  </tr>
+											<tr>
+											  <td colspan="2"><a href="#">查看详情</a></td>
+										  </tr>
+											
+										</tbody>
+										</table>
+							</div>
+							<div id="c">c</div>
+							<div id="d">d</div>
+					</div>
+					<div class="subc2" style="width:360px; margin:5px; margin-top:0px">
+						<div class="title" style="width:26%">通知公告</div>
+						<div class="titlebg" style=" margin-top:0px; width:74%"><a href="#"><img src="images/more.gif"  align="right" style="margin-top:10px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+							  <table border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="#">关于规范商业银行使用外部信用评级的通知</a></td>
+								   <td class="date" width="20%">2011-07-11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="#">关于进一步规范银信理财合作业务的通知 </a></td>
+								   <td class="date">2011-07-11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">关于进一步加强和规范非现场报表报送工作</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">行政许可工作规程</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">关于对实施新资本协议相关指引征求意见</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">新会计准则准度培训</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">行政许可工作规程</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">关于对实施新资本协议相关指引征求意见</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">新会计准则准度培训</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+							  </table>
+							  </div>
+						</div>
+					</div>
+						<div class="subc2" style="width:419px; margin:5px 0px 0px 0px; margin-top:0px">
+						<div class="title" style="width:26%">通报</div>
+						<div class="titlebg" style=" margin-top:0px; width:74%"><a href="#"><img src="images/more.gif"  align="right" style="margin-top:10px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+							  <table border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="#">关于规范商业银行使用外部信用评级的通知</a></td>
+								   <td class="date" width="20%">2011-07-11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="#">关于进一步规范银信理财合作业务的通知 </a></td>
+								   <td class="date">2011-07-11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">关于进一步加强和规范非现场报表报送工作</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">行政许可工作规程</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">关于对实施新资本协议相关指引征求意见</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">新会计准则准度培训</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">行政许可工作规程</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">关于对实施新资本协议相关指引征求意见</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="#">新会计准则准度培训</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+							  </table>
+							  </div>
+						</div>
+					</div>
+					<div style=" margin-left:5px;">
+						<img src="images/jgbg.gif" style="margin-left:5px;" />
+					</div>
+					<div class="subc3" style="width:360px; margin:5px;">
+						<div class="title" style="width:35%">综合信息概述</div>
+						<div class="titlebg" style=" margin-top:0px; width:65%"><a href="#"><img src="images/more.gif"  align="right" style="margin-top:7px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+							  <table border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+								   <td><strong>农村中小金融机构</strong> ：农商行：19家；农合行：10家；农信社：61家；
+									存款总额为9732万元，贷款总额为73418万元</td>
+								 </tr>
+								 <tr>
+								   <td>&nbsp;</td>
+								 </tr>
+								<tr>
+								   <td><strong>新型农村中小金融机构</strong>：村镇银行：10家；贷款公司：5家；资金互
+									   助社：7家
+									存款总额为6814万元，贷款总额为4318万元</td>
+								</tr>
+							  </table>
+							  </div>
+						</div>
+					</div>
+					<div class="subc4" style="width:419px; margin:5px 0px 0px 0px; margin-top:0px">
+						<div class="title" style="width:26%">当地概况</div>
+						<div class="titlebg" style=" margin-top:0px; width:74%"><a href="#"><img src="images/more.gif"  align="right" style="margin-top:10px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+							  <table border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+								   <td><img src="images/map.gif" /></td>
+									<td class="date">&nbsp;</td>
+								   <td width="279px">
+									  <table border="0" cellspacing="0" cellpadding="0" id="table_info">
+										<tbody>
+										<tr><td colspan="3"><strong>临汾市</strong></td></tr>
+										<tr>
+				
+										  <td><a href="">尧都区</a></td>
+										  <td><a href="">侯马市</a></td>
+										  <td><a href="">霍州市</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">曲沃县</a></td>
+										  <td><a href="">翼城县</a></td>
+										  <td><a href="">襄汾县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">洪洞县</a></td>
+										  <td><a href="">古县</a></td>
+										  <td><a href="">安泽县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">浮山县</a></td>
+										  <td><a href="">吉县</a></td>
+										  <td><a href="">蒲县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">乡宁县</a></td>
+										  <td><a href="">永和县</a></td>
+										  <td><a href="">大宁县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">隰县</a></td>
+										  <td><a href="">汾西县</a></td>
+										  <td>&nbsp;</td>
+										  </tr> 
+										  </tbody>
+										  </table>
+									</td>
+								 </tr>
+							  </table>
+							  </div>
+						</div>
+					</div>
+					<div class="subc4" style="width:360px; margin:5px; margin-top:0px;">
+						<div class="title" style="width:35%">工作完成情况</div>
+						<div class="titlebg" style=" margin-top:0px; width:65%"><a href="#"><img src="images/more.gif"  align="right" style="margin-top:10px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+							  <table  id="table_info" border="0" cellspacing="0"  cellpadding="0" align="center">
+								  <tr>
+								   <td><img src="images/tu.gif" /></td>
+								 </tr>
+								
+							  </table>
+							  </div>
+						</div>
+					</div>
+				</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

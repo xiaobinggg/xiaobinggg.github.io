@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+	<script type="text/javascript" src="scripts/dtree.js"></script>
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+	<script language="javascript">
+		
+
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default = 1000;
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+{
+    var shadow = document.createElement("div");
+    shadow.setAttribute("id","shadow");
+    shadow.style.zIndex="10";
+
+    
+    document.body.appendChild(shadow);
+}
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+function choose1(){
+		var freq = document.getElementById("freq");
+		if(freq.checked){
+			document.getElementById("f1").style.display="none";
+			document.getElementById("f2").style.display="none";
+			document.getElementById("f3").style.display="";
+			document.getElementById("f4").style.display="";
+		}else{
+			document.getElementById("f1").style.display="";
+			document.getElementById("f2").style.display="";
+			document.getElementById("f3").style.display="none";
+			document.getElementById("f4").style.display="none";
+		}
+	}
+	function choose2(){
+		var task = document.getElementById("task");
+		if(task.checked){
+			document.getElementById("t1").style.display="none";
+			document.getElementById("t2").style.display="";
+			document.getElementById("t3").style.display="";
+		}else{
+			document.getElementById("t1").style.display="";
+			document.getElementById("t2").style.display="none";
+			document.getElementById("t3").style.display="none";
+		}
+	}
+-->
+
+
+		</script>
+
+	
+	<script>
+	function isdelete(){
+		confirm("文件下载");
+	}
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		d.openAll()
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'auto'
+			//show: "blind",
+			//hide: "explode"
+		});
+		$( "#addjigou" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'auto'
+			//show: "blind",
+			//hide: "explode"
+		});
+
+		$( "#fenpei" ).click(function() {
+			$( "#dialog" ).dialog("open");
+			return false;
+		});
+		$( "#opener2" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener3" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener4" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#closedialog" ).click(function() {
+			$( "#dialog" ).dialog( "close" );
+			return false;
+		});
+		$( "#addjg" ).click(function() {
+			$( "#addjigou" ).dialog( "open" );
+			return false;
+		});
+		
+	});
+	</script>
+	
+
+		
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #000000; font-weight:bold}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location">
+          <div class="name" style="width:90%"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />监管台帐<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />通报<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />省级通报关于规范商业银行使用外部信用评级的通知 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+		  <a href="tb.html"><img src="images/icon_jt.gif" align="absmiddle" hspace="6" />返回</a></div>
+
+	</div>
+	
+
+    
+
+	<div class="subc6" style="width:180px ; margin:5px 0px 0px 0px; float:left; height:780px;">
+	
+	<a href="javascript: d.openAll();">展开</a> | <a href="javascript: d.closeAll();">折叠</a>&nbsp;&nbsp;
+	<br/>
+	<script type="text/javascript">
+		<!--
+			d = new dTree('d');   
+				           
+		d.add(0,-1,'时间选择','#');
+		d.add(1,0,'2011年','javascript:shijishow()');
+		d.add(2,1,'2011年&nbsp;6&nbsp;月','javascript:xianjishow()');
+		d.add(3,1,'2011年&nbsp;5&nbsp;月','javascript:xianjishow()');
+		d.add(4,1,'2011年&nbsp;4&nbsp;月','javascript:xianjishow()');
+		d.add(5,1,'2011年&nbsp;3&nbsp;月','javascript:xianjishow()');
+		d.add(6,1,'2011年&nbsp;2&nbsp;月','javascript:xianjishow()');
+		d.add(7,1,'2011年&nbsp;1&nbsp;月','javascript:xianjishow()');
+		d.add(8,0,'2010年','javascript:shijishow()');
+		d.add(9,8,'2010年12月','javascript:xianjishow()');
+		d.add(10,8,'2010年11月','javascript:xianjishow()');
+		d.add(11,8,'2010年10月','javascript:xianjishow()');
+		d.add(12,8,'2010年&nbsp;9&nbsp;月','javascript:xianjishow()');
+		d.add(13,8,'2010年&nbsp;8&nbsp;月','javascript:xianjishow()');
+		d.add(14,8,'2010年&nbsp;7&nbsp;月','javascript:xianjishow()');
+
+		document.write(d);
+		//-->
+		</script>
+
+	</div>	
+	<div class="subc6" style=" float:right;width:600px; margin:5px 0px 0px 0px; margin-top:10px; height:30px;">
+		<table>
+		<tr>
+										<td  align="left" width="400">&nbsp;&nbsp;通报选择：<select name="" style="width:300px">
+										
+																<option value="">省级通报关于规范商业银行使用外部信用评级的通知</option>
+																<option value="">省级通报关于进一步规范银信理财合作业务的通知</option>
+																<option value="">省级通报关于进一步加强和规范非现场报表报送工作</option>
+																<option value="">省级通报行政许可工作规程</option>
+																
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										
+										</tr>
+			</table>
+	</div>	
+	<div class="subc6" style=" float:right;width:600px; margin:5px 0px 0px 0px; margin-top:5px; height:750px;">
+		<div class="title" style="width:90%">省级通报关于规范商业银行使用外部信用评级的通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;报送情况:52/60</div>
+		<div class="titlebg" style=" margin-top:0px; width:10%"></div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tbody>
+				<tr>
+				  <th width="40%" colspan="2" >机构名称</th>
+				  <th width="20%">报送情况</th>
+				  <th width="20%">查看</th>
+				  <th width="20%">下载</th>
+				  
+				</tr>
+				<tr>
+				  <td rowspan="4">太原市银监局</td>
+				  <td >太原市银监局</td>
+				  <td ><img src="img/green.png"/></td>
+				  <td><a href="#">查看</a></td>
+				  <td><a onclick="javascript:isdelete();">下载</a></td>				  				  
+				</tr>
+				<tr>
+				  
+				  <td colspan="1">古交市监管办</td>
+				  <td ><img src="img/green.png"/></td>
+				  <td><a href="#">查看</a></td>
+				  <td>下载</td>				  				  
+				</tr>
+					<tr>
+				  
+				  <td colspan="1">清徐县监管办</td>
+				  <td ><img src="img/red.png"/></td>
+				  <td>---</td>
+				  <td>---</td>				  				  
+				</tr>
+					<tr>
+				  
+				  <td colspan="1">阳曲县监管办</td>
+				  <td ><img src="img/green.png"/></td>
+				  <td><a href="#">查看</a></td>
+				  <td><a onclick="javascript:isdelete();">下载</a></td>				  				  
+				</tr>
+				
+				<tr>
+				  <td rowspan="4">大同市银监局</td>
+				  <td >大同市银监局</td>
+				  <td ><img src="img/green.png"/></td>
+				  <td><a href="#">查看</a></td>
+				  <td><a onclick="javascript:isdelete();">下载</a></td>				  				  
+				</tr>
+				<tr>
+				  
+				  <td colspan="1">天镇县监管办</td>
+				  <td ><img src="img/red.png"/></td>
+				  <td>---</td>
+				  <td>---</td>				  				  
+				</tr>
+				<tr>
+				  
+				  <td colspan="1">阳高县监管办</td>
+				  <td ><img src="img/green.png"/></td>
+				  <td><a href="#">查看</a></td>
+				  <td>下载</td>				  				  
+				</tr>
+
+					<tr>
+				  
+				  <td colspan="1">广灵县监管办</td>
+				  <td ><img src="img/green.png"/></td>
+				  <td><a href="#">查看</a></td>
+				  <td><a onclick="javascript:isdelete();">下载</a></td>				  				  
+				</tr>
+				<tr>
+				  
+				  <td colspan="5" rowspan="2"><img src="img/green.png"/>&nbsp;已上报&nbsp;&nbsp;<img src="img/red.png"/>&nbsp;未上报</td>
+				  			  				  
+				</tr>
+			</tbody>
+			</table>
+				</div>	
+			  </div>
+		</div>
+	</div>
+	</div>
+					</td>
+			</tr>
+		</table>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+	</div>
+	<div id="addjigou" title="添加机关"> 
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="3" />机关管理&nbsp;&nbsp;<img src="images/icon_jt.gif" align=		"absmiddle" hspace="3" />添加机关</div>
+	</div>                    		
+		<form method="post" action="">
+		<table frame="void" width="95%" border="0" align="center" cellpadding="0" cellspacing="0"  >
+			<tbody>
+				<tr>
+				<td align="right" width="30%">机关编号:</td ><td align="left" width="50%"><input type="text" size="60" /></td>
+				</tr>
+				<tr>
+				<td align="right" width="30%">机关名称:</td><td align="left" width="50%"><input type="text" size="60" /></td>
+				</tr>
+				<tr>
+				<td align="right" width="30%">上级机关 &nbsp;</td>
+				<td align="left" width="50%">
+				<select name="jiguan">
+				<option value="山西省银监局">山西省银监局
+				<option value="山西省银监局">太原市监管局
+				<option value="山西省银监局">古交市监管办
+				<option value="山西省银监局">清徐县监管办
+				<option value="山西省银监局">大同市监管局
+				<option value="山西省银监局">阳高县监管办
+				</select>
+				</td>
+				</tr>
+				<tr>
+				<td  align="right">
+				<input type="button" value="确定"  />&nbsp;&nbsp;
+				</td>
+				<td align="left">
+				<input type="reset" value="重写"  />
+				</td>
+				</tr>				
+			</tbody>
+			</table>
+		</form>
+			 
+    </div>
+	 <div id="dialog" title="金融机构设置">
+        <div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />监管台帐<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />报表<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />部分行业贷款情况统计表（分地区）</div>
+	</div>               		
+			    <input type="checkbox" name="indicators" value="" checked="checked"/>清徐县联合社<p>
+				<input type="checkbox" name="indicators" value="" checked="checked"/>古交市农业社<p>
+				<input type="checkbox" name="indicators" value="" checked="checked"/>清徐县农业社<p>
+				<input type="checkbox" name="indicators" value="" />阳曲县联合社<p>
+				<input type="checkbox" name="indicators" value="" />阳曲县合作市<p>
+				<input type="checkbox" name="indicators" value="" checked="checked"/>阳曲县农业社<p>
+				<input type="checkbox" name="indicators" value="" />娄烦县联合社<p>
+				<input type="checkbox" name="indicators" value="" checked="checked"/>娄烦县合作市<p>
+				<input type="checkbox" name="indicators" value="" />娄烦县农业社<p>
+				
+				<input type="button" name="确定" value="确定" align="center" id="closedialog"/>			 
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/area.selector.css" />
+<script src="scripts/jquery.js"></script>
+<script src="scripts/region.js"></script>
+<script src="scripts/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="scripts/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/area.selector.js"></script>
+
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.select_handle').selector({seletedResultor:$('.selected_result'),seletedResulId:$('#selected_result_id')});
+});
+</script>
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+	<script language="javascript">
+		
+
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default = 1000;
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+{
+    var shadow = document.createElement("div");
+    shadow.setAttribute("id","shadow");
+    shadow.style.zIndex="10";
+
+    
+    document.body.appendChild(shadow);
+}
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+-->
+
+
+		</script>
+
+	
+	<script>
+
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'auto'
+			//show: "blind",
+			//hide: "explode"
+		});
+
+		$( "#opener1" ).click(function() {
+			$( "#dialog" ).dialog("open");
+			return false;
+		});
+		$( "#opener2" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener3" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener4" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+	});
+	</script>
+	
+
+		
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #000000; font-weight:bold}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:790px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />系统管理<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />现场检查</div>
+	</div>
+	
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:780px;">
+		<div class="title" style="width:15%">现场检查</div>
+		<div class="titlebg" style=" margin-top:0px; width:85%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		<div><input name="submit" type="submit" class="buttonStyle" id="opener1" value=" 发布现场检查 "/></div>
+			<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tbody>
+				
+				<tr>
+				
+				  <th width="22%">现场检查</th>
+				  <th width="12%">发布时间</th>
+				  <th width="12%">发布人</th>
+				   <th width="20%">删除</th>				  
+				</tr>
+				<tr>
+				
+				  <td>关于现场检查</td>
+				  <td>2011-7-11</td>	
+				  <td>李鹏</td>	
+				    <td><a onclick="javascript:isdelete();">删除</a></td>					  
+				</tr>
+				<tr>
+			
+				  <td>现场检查 </td>
+				  <td>2011-7-11</td>	
+				  <td>李鹏</td>		
+				    <td><a onclick="javascript:isdelete();">删除</a></td>					  
+				</tr>
+				<tr>
+				
+				  <td>现场检查</td>
+				  <td>2011-7-11</td>	
+				  <td>李鹏</td>		
+				    <td><a onclick="javascript:isdelete();">删除</a></td>					  
+				</tr>
+				
+			
+			</tbody>
+			</table>
+			  </div>
+		</div>
+	</div>
+	</div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px"> 版权所有：山西银监局&nbsp;&nbsp;&nbsp;&nbsp;  技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+<div id="dialog" title="添加现场检查">
+              <div class="univer_model">     		
+			    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tr>
+			<td>现场检查名称：</td>
+			<td colspan="2" align="left"><input name="" type="text" /></td>
+			</tr>
+			<tr>
+			<tr>
+			<td>现场检查内容：</td>
+			<td colspan="2" align="left"><textarea name="" cols="" rows="" style="width:300px; height:100px"></textarea></td>
+			</tr>
+			<tr>
+			<td>发布人：</td>
+			<td align="left" colspan="2"><input name="" type="text" /></td>
+			</tr>
+			<tr>
+			<td>发布时间：</td>
+			<td align="left" colspan="2"><input name="" type="text" /></td>
+			</tr>
+			<tr>
+			<td align="center" colspan="3"><input name="" type="button"  value="发布" class="buttonStyle"/></td>
+			</tr>
+			</table>
+				</div>		 
+    </div>
+	
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+.leftsection {
+	height: auto;
+	width: 40%;
+	float: left;
+	padding-left: 30px;
+}
+
+.rightsection {
+	float: right;
+	height: auto;
+	width: 55%;
+	margin: 0;
+	padding: 0;
+}

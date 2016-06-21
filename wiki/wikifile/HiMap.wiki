@@ -1,16 +1,19 @@
 
 
-- Map
-- IoverLay
-	- Point
-	- Marker
-		- DeviceMarker
-	- Polyline
-	- Polygon
-	- Rect
-	- Circle
-- Layer
-	- WMSLayer
-	- CustomLayer
+- HiMapApp
+- HiOverLay
+	- HiPoint
+	- HiIcon
+	- HiVectorIcon
+	- HiTitle
+	- HiMarker
+		- HiDeviceMarker
+	- HiPolyline
+	- HiPolygon
+	- HiRect
+	- HiCircle
+- HiLayer
+	- HiWMSLayer
+	- HiCustomLayer
 
- 
+[[index|返回主页]] 

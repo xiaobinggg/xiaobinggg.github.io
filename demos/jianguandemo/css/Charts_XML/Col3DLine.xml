@@ -1,0 +1,31 @@
+<?xml version= '1.0' encoding= 'GB2312'?>
+<chart caption='拨备覆盖率' palette='1' showValues='0' yAxisValuesPadding='10' >	
+	<categories>
+<category label='2010/1' />
+<category label='2010/2' />
+<category label='2010/3' />
+<category label='2010/4' />
+<category label='2010/5' />
+<category label='2010/6' />
+
+        </categories>
+
+	<dataset seriesName='指标'>
+	<set value='90'  color='feda00'/>
+	<set value='140'  color='c30d23'/>
+	<set value='100'  color='5fb9e2'/>
+	<set value='150'  color='c9d801'/>
+	<set value='160'  color='02931d'/>
+	<set value='130' color='fe0422' />
+	</dataset>
+	
+	<dataset seriesname='监管达标标准' renderAs='Line'>
+	<set value='150' />
+	<set value='150' />
+	<set value='150' />
+	<set value='150' />
+	<set value='150' />
+	<set value='150' />
+	</dataset>
+
+</chart>

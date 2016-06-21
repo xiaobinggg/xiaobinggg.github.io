@@ -1,0 +1,35 @@
+<?xml version= '1.0' encoding= 'GB2312'?>
+<chart  numberSuffix='(万元)' palette='1' showValues='0' yAxisValuesPadding='10' >	
+	<categories>
+		<category label='资本充足状况' />
+		<category label='资产质量状况' />
+		<category label='管理状况' />
+		<category label='盈利状况' />
+		<category label='流动性状况' />
+     </categories>
+
+	<dataset seriesName='定量分'>
+		<set value='34' />
+		<set value='64' />
+		<set value='63' />
+		<set value='234' />
+		<set value='34' />
+	</dataset>
+	
+	<dataset seriesName='定性分'>
+		<set value='73' />
+		<set value='83' />
+		<set value='94' />
+		<set value='103' />
+		<set value='48' />
+	</dataset>
+	
+	<dataset seriesName='级别'>
+		<set value='23' />
+		<set value='15' />
+		<set value='33' />
+		<set value='24' />
+		<set value='11' />
+	</dataset>
+
+</chart>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/area.selector.css" />
+<script src="scripts/jquery.js"></script>
+<script src="scripts/region.js"></script>
+<script src="scripts/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="scripts/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/area.selector.js"></script>
+
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.select_handle').selector({seletedResultor:$('.selected_result'),seletedResulId:$('#selected_result_id')});
+});
+</script>
+<script type="text/javascript">
+window.onload = function(){
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("");//最外层框架样式
+	tabPage.setTabObj([{title:"机构",id:"a"},{title:"人员",id:"b"},{title:"业务",id:"c"},{title:"其他",id:"d"}]);//增加选项菜单
+	tabPage.addedTo("x");
+}
+
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />监管台帐<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />行政许可事项</div>
+	</div>
+	<div id="x" style="float:left;width:805px;margin-right:10px; margin-top:10px"></div>
+		<div id="a">
+		<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px;height:730px;">
+		<div class="title" style="width:12%">行政许可</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+
+			  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="ziliao.html"onclick="window.open(this.href);return false">机构行政许可事项</a></td>
+								   <td class="date" width="20%">2011-07-11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="ziliao.html"onclick="window.open(this.href);return false">机构行政许可事项 </a></td>
+								   <td class="date">2011-07-11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">机构行政许可事项</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+			 </table>
+			  </div>
+		</div>
+	</div>
+	</div>
+	<div id="b">
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:730px">
+		<div class="title" style="width:12%">行政许可</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+	  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="ziliao.html"onclick="window.open(this.href);return false">人员行政许可事项</a></td>
+								   <td class="date" width="20%">2011-07-11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="ziliao.html"onclick="window.open(this.href);return false">人员行政许可事项 </a></td>
+								   <td class="date">2011-07-11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">人员行政许可事项</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+			 </table>
+			  </div>
+		</div>
+	</div>
+	</div>
+	<div id="c">
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:730px">
+		<div class="title" style="width:12%">行政许可</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="ziliao.html"onclick="window.open(this.href);return false">业务行政许可事项</a></td>
+								   <td class="date" width="20%">2011-07-11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="ziliao.html"onclick="window.open(this.href);return false">业务行政许可事项 </a></td>
+								   <td class="date">2011-07-11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">业务行政许可事项</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+			 </table>
+			  </div>
+		</div>
+	</div>
+	</div>
+	<div id="d">
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:730px">
+		<div class="title" style="width:12%">行政许可</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		 <table border="0" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="ziliao.html"onclick="window.open(this.href);return false">其他行政许可事项</a></td>
+								   <td class="date" width="20%">2011-07-11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="ziliao.html"onclick="window.open(this.href);return false">其他行政许可事项 </a></td>
+								   <td class="date">2011-07-11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">其他行政许可事项</a></td>
+								  <td class="date">2011-07-11</td>
+								 </tr>
+			 </table>
+			  </div>
+		</div>
+	</div>
+	</div>
+	</div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+</body>
+</html>
+

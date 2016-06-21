@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script src="js/thd.js"></script>
+	<script type="text/javascript" src="scripts/dtree.js"></script>
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+	d.openAll();
+	dw.openAll();
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("");//最外层框架样式
+	tabPage.setTabObj([{title:"银监局",id:"a"},{title:"金融机构",id:"b"}]);//增加选项菜单
+	tabPage.addedTo("x");
+}
+
+</script>
+	
+	<script language="javascript">
+		
+
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default = 1000;
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+{
+    var shadow = document.createElement("div");
+    shadow.setAttribute("id","shadow");
+    shadow.style.zIndex="10";
+
+    
+    document.body.appendChild(shadow);
+}
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+function choose1(){
+		var freq = document.getElementById("freq");
+		if(freq.checked){
+			document.getElementById("f1").style.display="none";
+			document.getElementById("f2").style.display="none";
+			document.getElementById("f3").style.display="";
+			document.getElementById("f4").style.display="";
+		}else{
+			document.getElementById("f1").style.display="";
+			document.getElementById("f2").style.display="";
+			document.getElementById("f3").style.display="none";
+			document.getElementById("f4").style.display="none";
+		}
+	}
+	function choose2(){
+		var task = document.getElementById("task");
+		if(task.checked){
+			document.getElementById("t1").style.display="none";
+			document.getElementById("t2").style.display="";
+			document.getElementById("t3").style.display="";
+		}else{
+			document.getElementById("t1").style.display="";
+			document.getElementById("t2").style.display="none";
+			document.getElementById("t3").style.display="none";
+		}
+	}
+-->
+
+
+		</script>
+
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location" style="width:805px;">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />数据分析<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />风险分析报告</div>
+	</div>
+	<!--div class="univer_model">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2018年</option>
+																<option value="">2017年</option>
+																<option value="">2016年</option>
+																<option value="">2015年</option>
+																<option value="">2014年</option>
+																<option value="">2013年</option>
+																<option value="">2012年</option>
+																<option value="">2011年</option>
+																<option value="">2010年</option>
+																<option value="" selected="selected">2010年</option>
+																<option value="">2009年</option>
+																<option value="">2008年</option>
+																<option value="">2007年</option>
+																<option value="">2006年</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div-->	
+	<div id="x" style="float:left;width:805px;margin-right:10px; margin-top:10px"></div>
+	<div id="a">
+	
+	<div class="subc6" style="width:180px ; margin:5px 0px 0px 0px; float:left; height:740px;">
+	
+	<a href="javascript: d.openAll();">展开</a> | <a href="javascript: d.closeAll();">折叠</a>&nbsp;&nbsp;
+	<br/>
+	<script type="text/javascript">
+		<!--
+			d = new dTree('d');   
+				           
+		d.add(0,-1,'时间选择','#');
+		d.add(1,0,'2011年','javascript:shijishow()');
+		d.add(2,1,'2011年&nbsp;6&nbsp;月','javascript:xianjishow()');
+		d.add(3,1,'2011年&nbsp;5&nbsp;月','javascript:xianjishow()');
+		d.add(4,1,'2011年&nbsp;4&nbsp;月','javascript:xianjishow()');
+		d.add(5,1,'2011年&nbsp;3&nbsp;月','javascript:xianjishow()');
+		d.add(6,1,'2011年&nbsp;2&nbsp;月','javascript:xianjishow()');
+		d.add(7,1,'2011年&nbsp;1&nbsp;月','javascript:xianjishow()');
+		d.add(8,0,'2010年','javascript:shijishow()');
+		d.add(9,8,'2010年12月','javascript:xianjishow()');
+		d.add(10,8,'2010年11月','javascript:xianjishow()');
+		d.add(11,8,'2010年10月','javascript:xianjishow()');
+		d.add(12,8,'2010年&nbsp;9&nbsp;月','javascript:xianjishow()');
+		d.add(13,8,'2010年&nbsp;8&nbsp;月','javascript:xianjishow()');
+		d.add(14,8,'2010年&nbsp;7&nbsp;月','javascript:xianjishow()');
+
+		document.write(d);
+		//-->
+		</script>
+
+	</div>	
+	<div class="subc6" style="width:590px; margin:5px 0px 0px 5px; margin-top:5px; height:740px;">
+		<div class="title" style="width:30%">银监局风险分析报告</div>
+		<div class="titlebg" style=" margin-top:0px; width:70%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		
+			  <table cellspacing="0" cellpadding="0" align="center" id="table_info">
+				  
+				  <tr height="19">
+			
+					<th width="841">报告名称</th>
+					
+					<th width="126">频度</th>
+					<th width="127">报告时间</th>
+					<th width="127">查看</th>
+				  </tr>
+				  <tr height="19">
+				
+					<td>2010年12月风险分析报告</td>
+				
+					<td><div align="center">年</div></td>
+					<td><div align="center">2011.1</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+					
+					<td>2010年11月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.12</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>2010年10月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.11</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>2010年9月风险分析报告</td>
+			
+					<td><div align="center">季</div></td>
+					<td><div align="center">2010.9</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+					
+					<td>2010年8月风险分析报告</td>
+					
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.8</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>2010年7月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.7</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>2010年6月风险分析报告</td>
+		
+					<td><div align="center">季</div></td>
+					<td><div align="center">2010.7</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				   <tr height="19">
+					
+					<td>2010年5月风险分析报告</td>
+			
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.6</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				   <tr height="19">
+				
+					<td>2010年4月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.5</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				   <tr height="19">
+		
+					<td>2010年3月风险分析报告</td>
+					
+					<td><div align="center">季</div></td>
+					<td><div align="center">2010.4</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				</table>
+
+		
+		</div>
+	</div>
+	</div>
+	
+		<div id="b">
+	
+	<div class="subc6" style="width:180px ; margin:5px 0px 0px 0px; float:left; height:740px;">
+	
+	<a href="javascript: dw.openAll();">展开</a> | <a href="javascript: dw.closeAll();">折叠</a>&nbsp;&nbsp;
+	<br/>
+	<script type="text/javascript">
+		<!--
+			dw = new dTree('dw');   
+				           
+		dw.add(0,-1,'时间选择','#');
+		dw.add(1,0,'2011年','javascript:shijishow()');
+		dw.add(2,1,'2011年&nbsp;6&nbsp;月','javascript:xianjishow()');
+		dw.add(3,1,'2011年&nbsp;5&nbsp;月','javascript:xianjishow()');
+		dw.add(4,1,'2011年&nbsp;4&nbsp;月','javascript:xianjishow()');
+		dw.add(5,1,'2011年&nbsp;3&nbsp;月','javascript:xianjishow()');
+		dw.add(6,1,'2011年&nbsp;2&nbsp;月','javascript:xianjishow()');
+		dw.add(7,1,'2011年&nbsp;1&nbsp;月','javascript:xianjishow()');
+		dw.add(8,0,'2010年','javascript:shijishow()');
+		dw.add(9,8,'2010年12月','javascript:xianjishow()');
+		dw.add(10,8,'2010年11月','javascript:xianjishow()');
+		dw.add(11,8,'2010年10月','javascript:xianjishow()');
+		dw.add(12,8,'2010年&nbsp;9&nbsp;月','javascript:xianjishow()');
+		dw.add(13,8,'2010年&nbsp;8&nbsp;月','javascript:xianjishow()');
+		dw.add(14,8,'2010年&nbsp;7&nbsp;月','javascript:xianjishow()');
+
+		document.write(dw);
+		//-->
+		</script>
+
+	</div>	
+	<div class="subc6" style="width:590px; margin:5px 0px 0px 5px; margin-top:5px; height:740px;">
+		<div class="title" style="width:30%">金融机构风险分析报告</div>
+		<div class="titlebg" style=" margin-top:0px; width:70%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		
+			  <table cellspacing="0" cellpadding="0" align="center" id="table_info">
+				  
+				  <tr height="19">
+			
+					<th width="841">报告名称</th>
+					
+					<th width="126">频度</th>
+					<th width="127">报告时间</th>
+					<th width="127">查看</th>
+				  </tr>
+				  <tr height="19">
+				
+					<td>古交市农信社2010年12月风险分析报告</td>
+				
+					<td><div align="center">年</div></td>
+					<td><div align="center">2011.1</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+					
+					<td>清徐县农信社2010年11月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.12</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>阳曲县农信社2010年10月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.11</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>娄烦县农信社2010年9月风险分析报告</td>
+			
+					<td><div align="center">季</div></td>
+					<td><div align="center">2010.9</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+					
+					<td>古交市农信社2010年8月风险分析报告</td>
+					
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.8</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>左云县农信社2010年7月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.7</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				  <tr height="19">
+				
+					<td>长治市农信社2010年6月风险分析报告</td>
+		
+					<td><div align="center">季</div></td>
+					<td><div align="center">2010.7</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				   <tr height="19">
+					
+					<td>长治县农信社2010年5月风险分析报告</td>
+			
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.6</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				   <tr height="19">
+				
+					<td>襄垣县农信社2010年4月风险分析报告</td>
+				
+					<td><div align="center">月</div></td>
+					<td><div align="center">2010.5</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				   <tr height="19">
+		
+					<td>屯留县农信社2010年3月风险分析报告</td>
+					
+					<td><div align="center">季</div></td>
+					<td><div align="center">2010.4</div></td>
+					<td><div align="center"><a href="联社2010年监管报告年报.htm" onclick="window.open(this.href);return false">查看</a></div></td>
+				  </tr>
+				</table>
+
+		
+		</div>
+	</div>
+	</div>
+	</div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+	</div>
+</body>
+</html>
+
+

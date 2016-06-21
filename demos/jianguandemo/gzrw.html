@@ -1,0 +1,1634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">  
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+<script type="text/javascript" src="scripts/dtree.js"></script>
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+	<!--<link rel="stylesheet" href="css/datepicker/demos.css" />-->
+	<link rel="stylesheet" href="css/datepicker/theme/jquery-ui-redmond.css" />
+<script type="text/javascript">
+window.onload = function(){
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("width:805px;");//最外层框架样式
+	tabPage.setTabObj([{title:"报表上报",id:"a"},{title:"通报上报",id:"b"},{title:"其他事项汇报",id:"d"},{title:"报告上报",id:"c"}]);//增加选项菜单
+	tabPage.addedTo("x");
+	
+	var tabPage = new TabPage("dc1");
+	tabPage.setTabPDivCss("width:805px;");//最外层框架样式
+	tabPage.setTabObj([{title:"报表上报",id:"a1"},{title:"通报上报",id:"b1"},{title:"其他事项汇报",id:"d1"},{title:"报告上报",id:"c1"}]);//增加选项菜单
+	tabPage.addedTo("y");
+	
+}
+
+</script>
+<style type="text/css" media="all">
+* {
+	margin: 0;
+	padding: 0
+}
+
+body{
+margin-left:50px;
+font-size:12px;
+background:url(../imgs/bg.gif);
+}
+a,a:visited {color:#333;text-decoration:none;}
+a:hover {color:#f60;}
+ul,li {margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4,h5,h6 {margin:0;padding:0;}
+h1 {padding:5px;color:#900;
+font:24px bold "Geneva","宋体", "Arial", "Helvetica",sans-serif;}
+.TreeWrap {width:300px;}
+.MenuBox .titBox a,
+.MenuBox .titBox a:visited,
+.MenuBox2 .titBox a,
+.MenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:40px;color:#003;font-size:12px;display:block;}
+.MenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.MenuBox2 .txtBox {display:none;}
+.MenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.MenuBox .txtBox .num {color:#e00;}
+.MenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.MenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 0%;}
+
+
+
+
+.ChildMenuBox .titBox a,
+.ChildMenuBox .titBox a:visited,
+.ChildMenuBox2 .titBox a,
+.ChildMenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:0px;color:#003;font-size:12px;display:block;}
+.ChildMenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.ChildMenuBox2 .txtBox {display:none;}
+.ChildMenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.ChildMenuBox .txtBox .num {color:#e00;}
+.ChildMenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.ChildMenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 50%;}
+
+.timechoose{
+	margin-top:20px;
+}
+.reportchoose{
+    margin-top:20px;
+}
+.maincontent{
+	width:700px;
+}
+.maincontent_left
+{   
+    border-style:solid;
+	border-color:#CCCCCC;
+	float:left;
+	margin-top:10px;
+	margin-right:20px;
+	width:250px;
+	height:400px;
+	overflow-y:scroll;
+}
+.maincontent_right
+{   
+    border-style:solid;
+	border-color:#CCCCCC;
+	float:left;
+	margin-top:10px;
+	margin-left:20px;
+	width:320px;
+	height:400px;
+	overflow-y:scroll;
+}
+.titlespan{
+    width:100px;
+	display:inline;
+    text-align:left;
+	margin-right:200px;
+}
+.titlebox{
+    width:600px;
+	height:20px;
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:5px;
+}
+.ressultbutton{
+position:relative;
+	margin-top:420px;
+}
+.ressultbutton input{
+    margin-top:30px;
+	margin-right:150px;
+}
+.STYLE1 {width: 100px; display: inline; text-align: left; margin-right: 200px; font-size: 14px; }
+</style>
+<script language="javascript">
+		
+
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default ="1000";
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+		{
+			var shadow = document.createElement("div");
+			shadow.setAttribute("id","shadow");
+			shadow.style.zIndex="10";
+
+			
+			document.body.appendChild(shadow);
+		}
+
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+-->
+
+
+		</script>
+
+<script language="javascript">
+function selectDate(){
+
+if( document.getElementById('DateS').checked == true)
+{
+	date.style.display='none';
+	calendar.style.display='';
+}
+else
+{
+	date.style.display='';
+	calendar.style.display='none';
+}
+}
+function choose1(){
+		var freq = document.getElementById("freq");
+		if(freq.checked){			
+			document.getElementById("f3").style.display="";
+
+		}else{
+
+			document.getElementById("f3").style.display="none";
+
+		}
+	}
+	function choose2(){
+		var freq = document.getElementById("freq2");
+		if(freq.checked){			
+			document.getElementById("f23").style.display="";
+
+		}else{
+
+			document.getElementById("f23").style.display="none";
+
+		}
+	}
+	function choose3(){
+		var freq = document.getElementById("freq3");
+		if(freq.checked){			
+			document.getElementById("f33").style.display="";
+
+		}else{
+
+			document.getElementById("f33").style.display="none";
+
+		}
+	}
+
+</script>
+
+
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #000000; font-weight:bold}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<script language="javascript">
+var toHTML = {
+
+    on: function(str) {
+
+        var a = [],
+
+        i = 0;
+
+        for (; i < str.length;) a[i] = str.charCodeAt(i++);
+
+        return "&#" + a.join(";&#") + ";"
+
+    },
+
+    un: function(str) {
+
+        return str.replace(/&#(x)?([^&]{1,5});?/g,
+
+        function(a, b, c) {
+
+            return String.fromCharCode(parseInt(c, b ? 16 : 10))
+
+        })
+
+    }
+
+};
+
+
+
+function hidediv()
+
+{
+   // document.getElementById('dialog').style.display="";
+
+}
+
+function show()
+
+{  //出现时间
+
+	setTimeout("hidediv()",500);
+
+}
+
+function ExChgClsName(Obj,NameA,NameB){
+var Obj=document.getElementById(Obj)?document.getElementById(Obj):Obj;
+Obj.className=Obj.className==NameA?NameB:NameA;
+}
+function showMenu(iNo){
+ExChgClsName("Menu_"+iNo,"MenuBox","MenuBox2");
+}
+function showChildMenu(iNo){
+ExChgClsName("ChildMenu_"+iNo,"ChildMenuBox","ChildMenuBox2");
+}
+
+
+
+show();
+
+</script>
+<script language="javascript">
+
+		// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'800'
+			//show: "blind",
+			//hide: "explode"
+		});
+		$( "#dialog1" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'800'
+			//show: "blind",
+			//hide: "explode"
+		});
+		$( "#dialog2" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'800'
+			//show: "blind",
+			//hide: "explode"
+		});
+		$( "#dialog3" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'800'
+			//show: "blind",
+			//hide: "explode"
+		});
+ 
+		$( "#opener" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener1" ).click(function() {
+			$( "#dialog1" ).dialog( "open" );
+			return false;
+		});
+
+		$( "#opener2" ).click(function() {
+					$( "#dialog2" ).dialog( "open" );
+					return false;
+				});
+		
+		$( "#opener3" ).click(function() {
+					$( "#dialog3" ).dialog( "open" );
+					return false;
+				});
+		
+		$( "#opener5" ).click(function() {
+					$( "#dialog" ).dialog( "open" );
+					return false;
+				});
+		
+		$( "#opener6" ).click(function() {
+					$( "#dialog" ).dialog( "open" );
+					return false;
+				});
+		$( "#closedialog" ).click(function() {
+					$( "#dialog" ).dialog( "close" );
+					return false;
+				});
+						$( "#closedialog1" ).click(function() {
+					$( "#dialog1" ).dialog( "close" );
+					return false;
+				});
+						$( "#closedialog2" ).click(function() {
+					$( "#dialog2" ).dialog( "close" );
+					return false;
+				});
+						$( "#closedialog3" ).click(function() {
+					$( "#dialog3" ).dialog( "close" );
+					return false;
+				});
+				$( "#opener7" ).click(function() {
+					$( "#dialog" ).dialog( "open" );
+					return false;
+				});
+				$( "#opener8" ).click(function() {
+					$( "#dialog" ).dialog( "open" );
+					return false;
+				});
+
+
+});
+			
+
+		</script>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:790px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />监管工作<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />工作任务</div>
+	</div>
+	<!--div class="univer_model">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div-->
+	<!--shangji-->
+		<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:360px;">
+		<div class="title" style="width:18%">上级安排的任务</div>
+		<div class="titlebg" style=" margin-top:0px; width:82%">&nbsp;</div>
+		<div id="x" style="float:left;margin-top:10px"></div>
+		<div id="a">	
+
+
+		<div class="subc_content" style="text-indent:0">
+		
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			<div class="univer_model" style="width:96%">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div>
+	
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" height="153" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">报表名称</th>
+					<th width="81">频度</th>
+					<th width="80">起始时间</th>
+					<th width="80">截止时间</th>
+					<th width="76">上传时间</th>
+					<th width="76">发布机关</th>
+					<th width="54">状态</th>
+				
+				   
+				  </tr>
+				  <tr>
+					<td>D600014A小金融机构主要项目表(月报）</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td >D600013A农村中小金融机构主要项目表（季报）</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>D600033A 农村合作金融机构风险监管指标表（季报）</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+					
+				  </tr>
+				  <tr>
+					<td>XX大额贷款统计表</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td></td>
+					<td>长治农信社</td>
+					<td align="center">未上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>农村合作金融机构风险监管指标表（季报）</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				 
+				</table>
+				</div>
+			  </div>
+		</div>
+	</div>
+	
+	</div>
+	
+	
+	<div id="b">
+		<div class="subc_content" style="text-indent:0">
+		
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			<div class="univer_model" style="width:96%">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div>
+	
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" height="153" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">报表名称</th>
+					<th width="81">频度</th>
+					<th width="80">起始时间</th>
+					<th width="80">截止时间</th>
+					<th width="76">上传时间</th>
+					<th width="76">发布机关</th>
+					<th width="54">状态</th>
+				
+				   
+				  </tr>
+				  <tr>
+					<td>关于规范商业银行使用外部信用评级的通知</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td >关于进一步规范银信理财合作业务的通知</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>关于进一步加强和规范非现场报表报送工作</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+					
+				  </tr>
+				  <tr>
+					<td>行政许可工作规程</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td></td>
+					<td>长治农信社</td>
+					<td align="center">未上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>关于对实施新资本协议相关指引征求意见</td>
+					<td>季</td>
+					<td>&nbsp;</td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				  </tr>
+				</table>
+				</div>
+			  </div>
+		</div>
+	</div>
+
+
+
+	<div id="d">
+		<div class="subc_content" style="text-indent:0">
+		
+		
+			 <div class="univer_model" style="width:96%">
+			 <table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+			</div>
+			<div class="univer_model output" style="width:96%">
+
+				<table width="551" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">报表名称</th>
+				
+					<th width="80">开始时间</th>
+					<th width="76">截止时间</th>
+				
+				  </tr>
+				  <tr>
+					<td>三农服务情况汇报</td>
+					<td>2009-12-1</td>
+					<td>2009-12-31</td>
+					
+				  </tr>
+				</table>
+				</div>
+		</div>
+	</div>
+
+	</div>
+	
+	<div id="c">
+		<div class="subc_content" style="text-indent:0">
+		
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			<div class="univer_model" style="width:96%">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="" selected="selected">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div>
+	
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" height="153" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">报表名称</th>
+					<th width="81">频度</th>
+					<th width="80">起始时间</th>
+					<th width="80">截止时间</th>
+					<th width="76">上传时间</th>
+					<th width="76">发布机关</th>
+					<th width="54">状态</th>
+				
+				   
+				  </tr>
+				  <tr>
+					<td>季度风险分析报告</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td >年度监管报告</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>监管评级报告</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+					
+				  </tr>
+				</table>
+				</div>
+			  </div>
+		</div>
+	</div>
+
+	<!--anpai-->
+	<div class="login_content" style="width:790px;">
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:340px;">
+		<div class="title" style="width:18%">本机关安排的任务a</div>
+		<div class="titlebg" style=" margin-top:0px; width:82%">&nbsp;</div>
+		<div id="y" style="float:left;margin-top:10px"></div>
+		<div id="a1">
+		<div class="subc_content" style="text-indent:0">
+		
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+	<div><input name="submit" type="submit" class="buttonStyle" id="opener" value=" 发布任务 "/></div>
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" height="153" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">报表名称</th>
+					<th width="81">频度</th>
+					<th width="80">起始时间</th>
+					<th width="80">截止时间</th>
+					<th width="76">上传时间</th>
+					<th width="76">发布机关</th>
+					<th width="54">状态</th>
+				
+				   
+				  </tr>
+				  <tr>
+					<td>D600014A小金融机构主要项目表(月报）</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td >D600013A农村中小金融机构主要项目表（季报）</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>D600033A 农村合作金融机构风险监管指标表（季报）</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+					
+				  </tr>
+				  <tr>
+					<td>XX大额贷款统计表</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td></td>
+					<td>长治农信社</td>
+					<td align="center">未上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>农村合作金融机构风险监管指标表（季报）</td>
+					<td>季</td>
+					<td>&nbsp;</td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				 
+				</table>
+				</div>
+			  </div>
+		</div>
+		</div>
+		<div id="b1">
+				<div class="subc_content" style="text-indent:0">
+		
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+	<div><input name="submit" type="submit" class="buttonStyle" id="opener1" value=" 发布任务 "/></div>
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" height="153" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">通报名称</th>
+					<th width="81">频度</th>
+					<th width="80">起始时间</th>
+					<th width="80">截止时间</th>
+					<th width="76">上传时间</th>
+					<th width="76">发布机关</th>
+					<th width="54">状态</th>
+				
+				   
+				  </tr>
+				  <tr>
+					<td>关于规范商业银行使用外部信用评级的通知</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td >关于进一步规范银信理财合作业务的通知</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>关于进一步加强和规范非现场报表报送工作</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+					
+				  </tr>
+				  <tr>
+					<td>行政许可工作规程</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td></td>
+					<td>长治农信社</td>
+					<td align="center">未上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>关于对实施新资本协议相关指引征求意见</td>
+					<td>季</td>
+					<td>&nbsp;</td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				  </tr>
+				</table>
+				</div>
+			  </div>
+		</div>
+		</div>
+		<div id="c1">
+		<div class="subc_content" style="text-indent:0">
+		<div><input name="submit" type="submit" class="buttonStyle" id="opener2" value=" 发布任务 "/></div>
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+	
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" height="153" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">报表名称</th>
+					<th width="81">频度</th>
+					<th width="80">起始时间</th>
+					<th width="80">截止时间</th>
+					<th width="76">上传时间</th>
+					<th width="76">发布机关</th>
+					<th width="54">状态</th>
+				
+				   
+				  </tr>
+				  <tr>
+					<td>季度风险分析报告</td>
+					<td>月</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td >年度监管报告</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+				
+				  </tr>
+				  <tr>
+					<td>监管评级报告</td>
+					<td>季</td>
+					<td></td>
+					<td>2009-12-31</td>
+					<td>2009-12-31</td>
+					<td>长治农信社</td>
+					<td align="center">已上报</td>
+					
+				  </tr>
+				</table>
+				</div>
+			  </div>
+		</div>
+		</div>
+		<div id="d1">
+		
+		<div class="subc_content" style="text-indent:0">
+		<div><input name="submit" type="submit" class="buttonStyle" id="opener2" value=" 发布任务 "/></div>
+			 <div class="univer_model output" style="width:96%">
+
+				<table width="551" border="0" cellpadding="0" cellspacing="0" align="center">
+				  <tr>
+					<th width="239">其他事项</th>
+				
+					<th width="80">开始时间</th>
+					<th width="76">截止时间</th>
+				
+				  </tr>
+				  <tr>
+					<td>三农服务情况汇报</td>
+					<td>2009-12-1</td>
+					<td>2009-12-31</td>
+					
+				  </tr>
+				</table>
+			
+		</div>
+	</div>
+		</div>
+		</div>
+	
+	<div><table><tr height="80px"><td>&nbsp;</td></tr></table></div></div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;
+	</div>
+	<div style="height:1px">
+	</div>
+	     <div id="dialog" title="添加任务">
+		 <div class="univer_model">
+           <table  width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tr>
+			<td>报表名称：</td>
+			<td colspan="1" align="left"><input name="" type="text" size="70"  /></td>
+			</tr>
+			<tr>
+			<td>模版上传：</td>
+			
+			<td align="left" id="t2 "><input name="" type="text" /> <input name="" type="button"  value="浏览文件" class="buttonStyle"/></td>
+			
+			</tr>
+						<tr>
+			<td>上报时间： </td>			
+			<td align="left" id="f1"><input name="" type="text" /> 至 <input name="" type="text" /></td>
+			
+			</tr>
+			<tr>
+			<td>频度报表<input name="freq" id="freq" type="checkbox" value="" onclick="choose1()"/></td>
+			<td align="left" id="f3" style="display:none;" colspan="1">
+				<select name="select1" id="select1"><option value="-999">全部</option>
+					<option value="">月</option>
+					<option value="">季</option>
+					<option value="">半年</option>
+					<option value="">年</option>
+				</select></td>
+			
+			</tr>
+									<tr>
+			<td>督察督办<input name="freq" id="freq" type="checkbox" value="" onclick="choose1()"/></td>
+						
+			</tr>	
+
+			
+		
+			<tr>
+			<td>任务范围：</td>
+			<td align="left" colspan="2"><div class="subc6" style="width:80px ; margin:5px 0px 0px 0px; float:left; height:470px;">
+	
+	<div class="maincontent_right">
+
+				<div class="TreeWrap">
+<div class="MenuBox" id="Menu_0">
+<div class="titBox"><h3><a href="javascript:showMenu(0);" ><input type="checkbox" name="city">山西省银监局</a></h3></div>
+<div class="txtBox"><ul>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_0">
+	<div class="MenuBox" id="Menu_2">
+<div class="titBox"><h3><a href="javascript:showMenu(2);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太原市</a></h3></div>
+<div class="txtBox"><ul>
+
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_1">
+		<div class="titBox">
+        	<h5><a href="#" ><input type="checkbox" name="county">古交市</a></h5>
+    	</div>
+
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_2">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(2);" ><input type="checkbox" name="county">清徐县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_3">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(3);" ><input type="checkbox" name="county">阳曲县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_4">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(4);" ><input type="checkbox" name="county">娄烦县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></li>
+<li>
+<div class="ChildMenuBox" id="">
+<div class="MenuBox" id="Menu_1">
+<div class="titBox"><h3><a href="javascript:showMenu(1);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大同市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_5">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(5);" ><input type="checkbox" name="county">大同南效区</a></h5>
+    	</div>
+		
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_6">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(6);" ><input type="checkbox" name="county">阳高县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_7">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(7);" ><input type="checkbox" name="county">天镇县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox2" id="ChildMenu_8">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(8);" ><input type="checkbox" name="county">广灵县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_9">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(9);" ><input type="checkbox" name="county">灵丘县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></div></li>
+			</div>
+		</div>
+			 
+			
+			 
+			  </div>
+		</div>
+	
+	
+	
+	</td>
+			</tr>
+			<tr>
+			<td align="center" colspan="4"><input name="" type="button"  value="发布" class="buttonStyle" id="closedialog" /></td>
+			</tr>
+			</table>
+			</div>
+         </div>
+		 
+	   	     <div id="dialog1" title="添加任务">
+		 <div class="univer_model">
+           <table  width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tr>
+			<td>通报名称：</td>
+			<td colspan="1" align="left"><input name="" type="text" size="70"  /></td>
+			</tr>
+			
+			<tr>
+			<td>上报时间： </td>			
+			<td align="left" id="f1"><input name="" type="text" /> 至 <input name="" type="text" /></td>
+			
+			</tr>
+			<tr>
+			<td>频度通报<input name="freq" id="freq2" type="checkbox" value="" onclick="choose2()"/></td>
+			<td align="left" id="f23" style="display:none;" colspan="1">
+				<select name="select1" id="select1"><option value="-999">全部</option>
+					<option value="">月</option>
+					<option value="">季</option>
+					<option value="">半年</option>
+					<option value="">年</option>
+				</select></td>
+			
+			</tr>
+									<tr>
+			<td>督察督办<input name="freq" id="freq" type="checkbox" value="" onclick="choose1()"/></td>
+						
+			</tr>	
+
+			
+		
+			<tr>
+			<td>任务范围：</td>
+			<td align="left" colspan="2"><div class="subc6" style="width:80px ; margin:5px 0px 0px 0px; float:left; height:470px;">
+	
+	<div class="maincontent_right">
+
+				<div class="TreeWrap">
+<div class="MenuBox" id="Menu_3">
+<div class="titBox"><h3><a href="javascript:showMenu(3);" ><input type="checkbox" name="city">山西省银监局</a></h3></div>
+<div class="txtBox"><ul>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_0">
+	<div class="MenuBox" id="Menu_4">
+<div class="titBox"><h3><a href="javascript:showMenu(4);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太原市</a></h3></div>
+<div class="txtBox"><ul>
+
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_1">
+		<div class="titBox">
+        	<h5><a href="#" ><input type="checkbox" name="county">古交市</a></h5>
+    	</div>
+
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_2">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(2);" ><input type="checkbox" name="county">清徐县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_3">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(3);" ><input type="checkbox" name="county">阳曲县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_4">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(4);" ><input type="checkbox" name="county">娄烦县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></li>
+<li>
+<div class="ChildMenuBox" id="">
+<div class="MenuBox" id="Menu_5">
+<div class="titBox"><h3><a href="javascript:showMenu(5);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大同市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_5">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(5);" ><input type="checkbox" name="county">大同南效区</a></h5>
+    	</div>
+		
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_6">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(6);" ><input type="checkbox" name="county">阳高县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_7">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(7);" ><input type="checkbox" name="county">天镇县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox2" id="ChildMenu_8">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(8);" ><input type="checkbox" name="county">广灵县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_9">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(9);" ><input type="checkbox" name="county">灵丘县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></div></li>
+			</div>
+		</div>
+			 
+			
+			 
+			  </div>
+		</div>
+	
+	
+	
+	</td>
+			</tr>
+			<tr>
+			<td align="center" colspan="4"><input name="" type="button"  value="发布" class="buttonStyle" id="closedialog1" /></td>
+			</tr>
+			</table>
+			</div>
+         </div>
+		 
+		 	     <div id="dialog2" title="添加任务">
+		 <div class="univer_model">
+           <table  width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tr>
+			<td>其他事项：</td>
+			<td colspan="1" align="left"><input name="" type="text" size="70"  /></td>
+			</tr>
+			
+						<tr>
+			<td>上报时间： </td>			
+			<td align="left" id="f1"><input name="" type="text" /> 至 <input name="" type="text" /></td>
+			
+			</tr>
+			
+									<tr>
+			<td>督察督办<input name="freq" id="freq" type="checkbox" value="" onclick="choose1()"/></td>
+						
+			</tr>	
+
+			
+		
+			<tr>
+			<td>任务范围：</td>
+			<td align="left" colspan="2"><div class="subc6" style="width:80px ; margin:5px 0px 0px 0px; float:left; height:470px;">
+	
+	<div class="maincontent_right">
+
+				<div class="TreeWrap">
+<div class="MenuBox" id="Menu_6">
+<div class="titBox"><h3><a href="javascript:showMenu(6);" ><input type="checkbox" name="city">山西省银监局</a></h3></div>
+<div class="txtBox"><ul>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_0">
+	<div class="MenuBox" id="Menu_7">
+<div class="titBox"><h3><a href="javascript:showMenu(7);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太原市</a></h3></div>
+<div class="txtBox"><ul>
+
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_1">
+		<div class="titBox">
+        	<h5><a href="#" ><input type="checkbox" name="county">古交市</a></h5>
+    	</div>
+
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_2">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(2);" ><input type="checkbox" name="county">清徐县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_3">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(3);" ><input type="checkbox" name="county">阳曲县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_4">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(4);" ><input type="checkbox" name="county">娄烦县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></li>
+<li>
+<div class="ChildMenuBox" id="">
+<div class="MenuBox" id="Menu_8">
+<div class="titBox"><h3><a href="javascript:showMenu(8);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大同市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_5">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(5);" ><input type="checkbox" name="county">大同南效区</a></h5>
+    	</div>
+		
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_6">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(6);" ><input type="checkbox" name="county">阳高县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_7">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(7);" ><input type="checkbox" name="county">天镇县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox2" id="ChildMenu_8">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(8);" ><input type="checkbox" name="county">广灵县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_9">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(9);" ><input type="checkbox" name="county">灵丘县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></div></li>
+			</div>
+		</div>
+			 
+			
+			 
+			  </div>
+		</div>
+	
+	
+	
+	</td>
+			</tr>
+			<tr>
+			<td align="center" colspan="4"><input name="" type="button"  value="发布" class="buttonStyle" id="closedialog2" /></td>
+			</tr>
+			</table>
+			</div>
+         </div>
+	   
+	   	     <div id="dialog3" title="添加任务">
+
+		 <div class="univer_model">
+           <table  width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="table_info" style="margin:5px">
+			<tr>
+			<td>报告名称：</td>
+			<td colspan="1" align="left"><input name="" type="text" size="70"  /></td>
+			</tr>
+			
+						<tr>
+			<td>上报时间： </td>			
+			<td align="left" id="f1"><input name="" type="text" /> 至 <input name="" type="text" /></td>
+			
+			</tr>
+			<tr>
+			<td>频度报告<input name="freq" id="freq3" type="checkbox" value="" onclick="choose3()"/></td>
+			<td align="left" id="f33" style="display:none;" colspan="1">
+				<select name="select1" id="select1"><option value="-999">全部</option>
+					<option value="">月</option>
+					<option value="">季</option>
+					<option value="">半年</option>
+					<option value="">年</option>
+				</select></td>
+			
+			</tr>
+									<tr>
+			<td>督察督办<input name="freq" id="freq" type="checkbox" value="" onclick="choose1()"/></td>
+						
+			</tr>	
+
+			
+		
+			<tr>
+			<td>任务范围：</td>
+			<td align="left" colspan="2"><div class="subc6" style="width:80px ; margin:5px 0px 0px 0px; float:left; height:470px;">
+	
+	<div class="maincontent_right">
+
+				<div class="TreeWrap">
+<div class="MenuBox" id="Menu_9">
+<div class="titBox"><h3><a href="javascript:showMenu(9);" ><input type="checkbox" name="city">山西省银监局</a></h3></div>
+<div class="txtBox"><ul>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_0">
+	<div class="MenuBox" id="Menu_10">
+<div class="titBox"><h3><a href="javascript:showMenu(10);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;太原市</a></h3></div>
+<div class="txtBox"><ul>
+
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_1">
+		<div class="titBox">
+        	<h5><a href="#" ><input type="checkbox" name="county">古交市</a></h5>
+    	</div>
+
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_2">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(2);" ><input type="checkbox" name="county">清徐县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_3">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(3);" ><input type="checkbox" name="county">阳曲县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_4">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(4);" ><input type="checkbox" name="county">娄烦县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></li>
+<li>
+<div class="ChildMenuBox" id="">
+<div class="MenuBox" id="Menu_11">
+<div class="titBox"><h3><a href="javascript:showMenu(11);" ><input type="checkbox" name="city">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大同市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_5">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(5);" ><input type="checkbox" name="county">大同南效区</a></h5>
+    	</div>
+		
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_6">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(6);" ><input type="checkbox" name="county">阳高县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_7">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(7);" ><input type="checkbox" name="county">天镇县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox2" id="ChildMenu_8">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(8);" ><input type="checkbox" name="county">广灵县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_9">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(9);" ><input type="checkbox" name="county">灵丘县</a></h5>
+    	</div>
+		
+    </div>
+</li>
+</ul></div></div></div></li>
+			</div>
+		</div>
+			 
+			
+			 
+			  </div>
+		</div>
+	
+	
+	
+	</td>
+			</tr>
+			<tr>
+			<td align="center" colspan="4"><input name="" type="button"  value="发布" class="buttonStyle" id="closedialog3" /></td>
+			</tr>
+			</table>
+			</div>
+         </div>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<?xml version= '1.0' encoding= 'GB2312'?>
+<chart  numberSuffix='(%)' palette='1' showValues='0' yAxisValuesPadding='10' yAxisMaxValue ='100' >	
+	<categories>
+		<category label='清徐县联合社' />
+		<category label='阳曲县合作社' />
+		<category label='古交市合作社' />
+		<category label='阳高县联合社' />
+		<category label='天镇县联合社' />
+     </categories>
+
+	<dataset seriesName='流动性缺口率'>
+		<set value='34' />
+		<set value='64' />
+		<set value='63' />
+		<set value='23' />
+		<set value='34' />
+	</dataset>
+	
+	<dataset seriesName='风险资产利润率'>
+		<set value='73' />
+		<set value='83' />
+		<set value='9' />
+		<set value='18' />
+		<set value='48' />
+	</dataset>
+	
+	<dataset seriesName='不良贷款率'>
+		<set value='23' />
+		<set value='15' />
+		<set value='33' />
+		<set value='24' />
+		<set value='11' />
+	</dataset>
+
+</chart>

@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title></title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <style>
+  #city{
+  position:relative;
+  background:#BBB;
+  border:1px solid #000;
+  margin-top:100px;
+  } 
+  #in{
+  position:absolute;
+  width:800px;
+  border:1px solid #000;
+  top:18px;
+  left:0px;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  }
+  #in li{
+    float:left;
+    margin-left:6px;
+  }
+  .xian{
+  position:absolute;
+  width:800px;
+  border:1px solid #000;
+  top:30px;
+  left:0px;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  }
+  .xian li{
+    float:left;
+    margin-left:6px;
+  }
+ </style>
+</head>
+<body>
+
+ <div id="city">北京0
+  <ul id="in" style="display:none;">
+      <li>北京1</li>
+      <li>北京2</li>
+      <li>北京3</li>
+      <li>北京4</li>
+      <li>北京5</li>
+      <li>北京6</li>
+      <li>北京7</li>
+      <li>北京8</li>
+  </ul>
+    <ul name="xian" style="display:none;">
+      <li>北京1</li>
+      <li>北京2</li>
+      <li>北京3</li>
+      <li>北京4</li>
+      <li>北京5</li>
+      <li>北京6</li>
+      <li>北京7</li>
+      <li>北京8</li>
+  </ul>
+ </div>
+
+
+<script>
+
+   var city = document.getElementById("city");
+   var in_ = document.getElementById("in");
+   var lis = in_.getElementsByTagName("li");
+   var lis2 = document.getElementsByName("xian");
+   for(var i=0;i<lis.length;i++){
+     lis[i].onclick=function(){
+     city.firstChild.nodeValue =  this.innerHTML;
+	 lis2[0].style.display="";
+  	// in_.style.display="none";
+  	}
+   }
+   city.onmouseover=function(){
+      in_.style.display="";
+   }
+   city.onmouseout=function(){
+      in_.style.display="none";
+   }
+</script>
+</body>
+</html>

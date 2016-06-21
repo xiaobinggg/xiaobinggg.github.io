@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+<script type="text/javascript" src="scripts/dtree.js"></script>
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+<style type="text/css" media="all">
+* {
+	margin: 0;
+	padding: 0
+}
+
+body{
+margin-left:50px;
+font-size:12px;
+background:url(../imgs/bg.gif);
+}
+a,a:visited {color:#333;text-decoration:none;}
+a:hover {color:#f60;}
+ul,li {margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4,h5,h6 {margin:0;padding:0;}
+h1 {padding:5px;color:#900;
+font:24px bold "Geneva","宋体", "Arial", "Helvetica",sans-serif;}
+.TreeWrap {width:300px;}
+.MenuBox .titBox a,
+.MenuBox .titBox a:visited,
+.MenuBox2 .titBox a,
+.MenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:40px;color:#003;font-size:12px;display:block;}
+.MenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.MenuBox2 .txtBox {display:none;}
+.MenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.MenuBox .txtBox .num {color:#e00;}
+.MenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.MenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 0%;}
+
+
+
+
+.ChildMenuBox .titBox a,
+.ChildMenuBox .titBox a:visited,
+.ChildMenuBox2 .titBox a,
+.ChildMenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:0px;color:#003;font-size:12px;display:block;}
+.ChildMenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.ChildMenuBox2 .txtBox {display:none;}
+.ChildMenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.ChildMenuBox .txtBox .num {color:#e00;}
+.ChildMenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.ChildMenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 50%;}
+
+.timechoose{
+	margin-top:20px;
+}
+.reportchoose{
+    margin-top:20px;
+}
+.maincontent{
+	width:700px;
+}
+.maincontent_left
+{   
+    border-style:solid;
+	border-color:#CCCCCC;
+	float:left;
+	margin-top:10px;
+	margin-right:20px;
+	width:250px;
+	height:400px;
+	overflow-y:scroll;
+}
+.maincontent_right
+{   
+    border-style:solid;
+	border-color:#CCCCCC;
+	float:left;
+	margin-top:10px;
+	margin-left:20px;
+	width:590px;
+	height:400px;
+	overflow-y:scroll;
+}
+.titlespan{
+    width:100px;
+	display:inline;
+    text-align:left;
+	margin-right:200px;
+}
+.titlebox{
+    width:600px;
+	height:20px;
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:5px;
+}
+.ressultbutton{
+position:relative;
+	margin-top:420px;
+}
+.ressultbutton input{
+    margin-top:30px;
+	margin-right:150px;
+}
+.STYLE1 {width: 100px; display: inline; text-align: left; margin-right: 200px; font-size: 14px; }
+</style>
+<script type="text/javascript">
+<!--
+function ExChgClsName(Obj,NameA,NameB){
+var Obj=document.getElementById(Obj)?document.getElementById(Obj):Obj;
+Obj.className=Obj.className==NameA?NameB:NameA;
+}
+function showMenu(iNo){
+ExChgClsName("Menu_"+iNo,"MenuBox","MenuBox2");
+}
+function showChildMenu(iNo){
+ExChgClsName("ChildMenu_"+iNo,"ChildMenuBox","ChildMenuBox2");
+}
+-->
+</script>
+	<script>
+	<!-- 
+function Dsy() 
+{ 
+this.Items = {}; 
+} 
+Dsy.prototype.add = function(id,iArray) 
+{ 
+this.Items[id] = iArray; 
+} 
+Dsy.prototype.Exists = function(id) 
+{ 
+if(typeof(this.Items[id]) == "undefined") return false; 
+return true; 
+} 
+
+function change(v){ 
+var str="0"; 
+for(i=0;i <v;i++){ str+=("_"+(document.getElementById(s[i]).selectedIndex-1));}; 
+var ss=document.getElementById(s[v]); 
+with(ss){ 
+  length = 0; 
+  options[0]=new Option(opt0[v],opt0[v]); 
+  if(v && document.getElementById(s[v-1]).selectedIndex>0 || !v) 
+  { 
+  if(dsy.Exists(str)){ 
+    ar = dsy.Items[str]; 
+    for(i=0;i <ar.length;i++)options[length]=new Option(ar[i],ar[i]); 
+    if(v)options[1].selected = true; 
+  } 
+  } 
+  if(++v <s.length){change(v);} 
+} 
+} 
+
+var dsy = new Dsy(); 
+
+dsy.add("0",["报表","报告","通报","督察督办","监管措施","行政许可","三农事项","其他"]); 
+
+dsy.add("0_0",["2011年7月","2011年6月","2011年5月","2011年4月","2011年3月","2011年2月","2011年1月"]); 
+
+dsy.add("0_0_0",["全省农合机构部分行业贷款情况汇总表","房地产行业贷款情况统计表","投资情况统计表","涉农贷款监测表"]); 
+dsy.add("0_0_1",["全省农合机构部分行业贷款情况汇总表","房地产行业贷款情况统计表","投资情况统计表","涉农贷款监测表"]); 
+dsy.add("0_0_2",["全省农合机构部分行业贷款情况汇总表","房地产行业贷款情况统计表","投资情况统计表","涉农贷款监测表"]); 
+dsy.add("0_0_3",["全省农合机构部分行业贷款情况汇总表","房地产行业贷款情况统计表","投资情况统计表","涉农贷款监测表"]); 
+dsy.add("0_0_4",["全省农合机构部分行业贷款情况汇总表","房地产行业贷款情况统计表","投资情况统计表","涉农贷款监测表"]); 
+dsy.add("0_0_5",["全省农合机构部分行业贷款情况汇总表","房地产行业贷款情况统计表","投资情况统计表","涉农贷款监测表"]); 
+dsy.add("0_0_6",["全省农合机构部分行业贷款情况汇总表","房地产行业贷款情况统计表","投资情况统计表","涉农贷款监测表"]); 
+
+dsy.add("0_1",["2011年7月","2011年6月","2011年5月","2011年4月","2011年3月","2011年2月","2011年1月"]); 
+dsy.add("0_1_0",["季度风险分析报告","监管评级报告","XXX现场检查报告"]); 
+dsy.add("0_1_1",["季度风险分析报告","监管评级报告","XXX现场检查报告"]); 
+dsy.add("0_1_2",["季度风险分析报告","监管评级报告","XXX现场检查报告"]); 
+dsy.add("0_1_3",["季度风险分析报告","监管评级报告","XXX现场检查报告"]); 
+dsy.add("0_1_4",["季度风险分析报告","监管评级报告","XXX现场检查报告"]); 
+dsy.add("0_1_5",["季度风险分析报告","监管评级报告","XXX现场检查报告"]); 
+dsy.add("0_1_6",["季度风险分析报告","监管评级报告","XXX现场检查报告"]); 
+
+
+dsy.add("0_2",["省级","市级","县级"]); 
+dsy.add("0_2_0",["关于规范商业银行使用外部信用评级的通知","	关于进一步规范银信理财合作业务的通知"]); 
+dsy.add("0_2_1",["关于进一步加强和规范非现场报表报送工作","行政许可工作规程"]); 
+dsy.add("0_2_2",["行政许可工作规程","新会计准则准度培训"]); 
+
+
+
+dsy.add("0_3",["2011年7月","2011年6月","2011年5月","2011年4月","2011年3月","2011年2月","2011年1月"]); 
+dsy.add("0_3_0",["监管通报","日常工作"]); 
+dsy.add("0_3_1",["监管通报","日常工作"]);
+dsy.add("0_3_2",["监管通报","日常工作"]);
+dsy.add("0_3_3",["监管通报","日常工作"]);
+dsy.add("0_3_4",["监管通报","日常工作"]);
+dsy.add("0_3_5",["监管通报","日常工作"]);
+dsy.add("0_3_6",["监管通报","日常工作"]);
+
+
+dsy.add("0_4",["2011年7月","2011年6月","2011年5月","2011年4月","2011年3月","2011年2月","2011年1月"]); 
+dsy.add("0_4_0",["XX县监管约见谈话","XX县监管诫勉谈话","XX县监管处罚决定"]); 
+dsy.add("0_4_1",["XX县监管约见谈话","XX县监管诫勉谈话","XX县监管处罚决定"]); 
+dsy.add("0_4_2",["XX县监管约见谈话","XX县监管诫勉谈话","XX县监管处罚决定"]); 
+dsy.add("0_4_3",["哥打巴鲁 Kota Baharu","道北 Tumpat","哥登峇鲁 Kota Bharu","巴西马 Pasir Mas"]); 
+dsy.add("0_4_4",["哥打巴鲁 Kota Baharu","道北 Tumpat","哥登峇鲁 Kota Bharu","巴西马 Pasir Mas"]); 
+dsy.add("0_4_5",["哥打巴鲁 Kota Baharu","道北 Tumpat","哥登峇鲁 Kota Bharu","巴西马 Pasir Mas"]); 
+dsy.add("0_4_6",["哥打巴鲁 Kota Baharu","道北 Tumpat","哥登峇鲁 Kota Bharu","巴西马 Pasir Mas"]); 
+
+
+
+dsy.add("0_5",["机构","人员","业务","其他"]); 
+dsy.add("0_5_0",["机构行政许可事项"]); 
+dsy.add("0_5_1",["人员行政许可事项"]); 
+dsy.add("0_5_2",["业务行政许可事项"]); 
+dsy.add("0_5_3",["其他行政许可事项"]); 
+
+
+
+dsy.add("0_6",["2011年7月","2011年6月","2011年5月","2011年4月","2011年3月","2011年2月","2011年1月"]); 
+dsy.add("0_6_0",["三农事项汇报1"]); 
+dsy.add("0_6_1",["三农事项汇报1"]); 
+dsy.add("0_6_2",["三农事项汇报1"]); 
+dsy.add("0_6_3",["三农事项汇报1"]); 
+dsy.add("0_6_4",["三农事项汇报1"]); 
+dsy.add("0_6_5",["三农事项汇报1"]); 
+dsy.add("0_6_6",["三农事项汇报1"]); 
+dsy.add("0_6_7",["三农事项汇报1"]); 
+ 
+
+
+dsy.add("0_7",["其他"]); 
+
+dsy.add("0_7_0",["其他事项1","其他事项2","其他事项3"]); 
+ 
+
+
+
+//--> 
+
+	
+	<!-- 
+//** Power by Fason(2004-3-11) 
+//** Email:fason_pfx@hotmail.com 
+
+var s=["s1","s2","s3"]; 
+var opt0 = ["选择类别","",""]; 
+function setup() 
+{ 
+for(i=0;i <s.length-1;i++) 
+  document.getElementById(s[i]).onchange=new Function("change("+(i+1)+")"); 
+change(0); 
+} 
+//--> 
+	</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body  onload="setup()">
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />考核评比<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />评比发布</div>
+	</div>
+
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:790px;">
+		<div class="title" style="width:12%">评比发布</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			 <div class="univer_model output" style="width:96%">
+			 评比事项：<input type="text" size="85"  /><br>
+			  评比时间：
+			 <input type="text" value="2011-03-04" />至
+			 <input type="text" value="2011-03-18" /><br>
+			 评比内容：
+			 <select id="s1"> <option>选择类别 </option> </select> 
+			 
+			 <select id="s2"> <option>省份、州 </option> </select> 
+			 
+			 <select id="s3" style="width:40%"> <option>地级市、县 </option> </select> <br>
+			 
+			 
+			<div class="maincontent_right">
+			评比范围：
+				<div class="TreeWrap">
+<div class="MenuBox" id="Menu_0">
+<div class="titBox"><h3><a href="javascript:showMenu(0);" ><input type="checkbox" name="city">太原市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_0">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(0);" ><input type="checkbox" name="county">太原城区</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">太原城区联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">太原城区合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">太原城区农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_1">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(1);" ><input type="checkbox" name="county">古交市</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">古交市联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county" checked="checked">古交市合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">古交市农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_2">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(2);" ><input type="checkbox" name="county">清徐县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county" checked="checked">清徐县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">清徐县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">清徐县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_3">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(3);" ><input type="checkbox" name="county">阳曲县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">阳曲县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county" checked="checked">阳曲县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">阳曲县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_4">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(4);" ><input type="checkbox" name="county">娄烦县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">娄烦县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">娄烦县合作市</a></li>
+				<li class="Lst"><a href="#;" ><input type="checkbox" name="countyt">娄烦县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+</ul></div></div>
+<div class="MenuBox" id="Menu_1">
+<div class="titBox"><h3><a href="javascript:showMenu(1);" ><input type="checkbox" name="city">大同市</a></h3></div>
+<div class="txtBox"><ul>
+<li><div class="ChildMenuBox2" id="ChildMenu_5">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(5);" ><input type="checkbox" name="county">大同南效区</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">大同南效区联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">大同南效区合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">大同南效区农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+     
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_6">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(6);" ><input type="checkbox" name="county">阳高县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county" checked="checked">阳高县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">阳高县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">阳高县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox" id="ChildMenu_7">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(7);" ><input type="checkbox" name="county">天镇县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county" checked="checked">天镇县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">天镇县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">天镇县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li>
+	<div class="ChildMenuBox2" id="ChildMenu_8">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(8);" ><input type="checkbox" name="county">广灵县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">广灵县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">广灵县合作市</a></li>
+				<li class="Lst"><a href="#" ><input type="checkbox" name="countyt">广灵县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+<li class="Lst">
+	<div class="ChildMenuBox2" id="ChildMenu_9">
+		<div class="titBox">
+        	<h5><a href="javascript:showChildMenu(9);" ><input type="checkbox" name="county">灵丘县</a></h5>
+    	</div>
+		<div class="txtBox">
+	        <ul>
+		  		<li><a href="#" ><input type="checkbox" name="county">灵丘县联合社</a></li>
+				<li><a href="#" ><input type="checkbox" name="county">灵丘县合作市</a></li>
+				<li class="Lst"><a href="#;" ><input type="checkbox" name="countyt">灵丘县农业社</a></li>
+		   </ul>
+	    </div>
+    </div>
+</li>
+</ul></div></div>
+			</div>
+		</div>
+			 
+			<div class="ressultbutton" align="center">
+		<form action="#">
+			<input type="submit" class="buttonStyle" value="评比发布" />
+		</form>	
+		</div>	 
+			 
+			  </div>
+		</div>
+	</div>
+	</div>
+
+	</div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+	
+	
+</body>
+</html>
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+<script type="text/javascript" src="scripts/dtree.js"></script>
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<link rel="stylesheet" href="css/animate/demos.css">
+	
+	<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+	<script language="javascript">
+		
+
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default = 1000;
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+{
+    var shadow = document.createElement("div");
+    shadow.setAttribute("id","shadow");
+    shadow.style.zIndex="10";
+
+    
+    document.body.appendChild(shadow);
+}
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+-->
+
+
+		</script>
+
+	
+	<script>
+
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$( "#dialog" ).dialog({
+			autoOpen: false,
+			height:'auto',
+			width:'auto'
+			//show: "blind",
+			//hide: "explode"
+		});
+
+		$( "#opener1" ).click(function() {
+			$( "#dialog" ).dialog("open");
+			return false;
+		});
+		$( "#opener2" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener3" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+		$( "#opener4" ).click(function() {
+			$( "#dialog" ).dialog( "open" );
+			return false;
+		});
+	});
+	</script>
+	</head>
+
+<body>
+<div align="center">
+<div class="univer_model" align="right"><img src="images/icons/application_go.png" title="导出" />导出</div>
+           <div class="univer_model">
+             <table border="1" cellspacing="0" cellpadding="0" align="center" height="500px">
+			  <tr>
+				<td width="61" height="73" colspan="2"><p align="center">姓名 </p></td>
+				<td width="91" colspan="3"><p align="center">冯文龙</p></td>
+				<td width="84" colspan="2"><p align="center">性别 </p></td>
+				<td width="91" colspan="2"><p align="center">男</p></td>
+				<td width="53"><p align="center">出生 <br />
+				  年月 </p></td>
+				<td width="126" colspan="2"><p align="center">1966-05</p></td>
+				<td width="125" rowspan="3"><p align="center"><img src="images/gaoguan1.jpg" width="152" height="186" /></p>
+				  </td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="61" height="70" colspan="2"><p align="center">籍贯 </p></td>
+				<td width="91" colspan="3"><p align="center">江苏省常州市</p></td>
+				<td width="84" colspan="2"><p align="center">政治 <br />
+				  面貌 </p></td>
+				<td width="91" colspan="2"><p align="center">中共党员</p></td>
+				<td width="53"><p align="center">民族 </p></td>
+				<td width="126" colspan="2"><p align="center">汉</p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="111" height="34" colspan="4"><p align="center">经济工作年限 </p></td>
+				<td width="125" colspan="3"><p align="center">20</p></td>
+				<td width="144" colspan="3"><p align="center">金融从业年限 </p></td>
+				<td width="126" colspan="2"><p align="center">18</p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="111" colspan="4"><p align="center">学　　历 </p></td>
+				<td width="125" colspan="3"><p>硕士</p></td>
+				<td width="144" colspan="3"><p align="center">毕业院校及专业 </p></td>
+				<td width="251" colspan="4"><p>北京大学经济学</p></td>
+			  </tr>
+			  <tr>
+				<td width="111" colspan="4"><p align="center">专业特长 </p></td>
+				<td width="125" colspan="3"><p>金融分析</p></td>
+				<td width="144" colspan="3"><p align="center">专业技术职称 </p></td>
+				<td width="251" colspan="4"><p>&nbsp;</p></td>
+			  </tr>
+			  <tr>
+				<td width="111" colspan="4"><p align="center">身份证号码 </p></td>
+				<td width="125" colspan="3"><p>3212987773027750563819346</p></td>
+				<td width="144" colspan="3"><p align="center">护照号码 </p></td>
+				<td width="251" colspan="4"><p>8297827510989813491</p></td>
+			  </tr>
+			  <tr>
+				<td width="111" colspan="4"><p align="center">现任职务 </p></td>
+				<td width="519" colspan="9"><p>***行长</p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="48"><p align="center">简 </p>
+					<p align="center">历 </p></td>
+				<td width="581" colspan="12"><p align="left">&nbsp;</p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="48" rowspan="4"><p align="center">主要家庭成员及社会关系 </p></td>
+				<td width="62" colspan="3"><p align="center">关系 </p></td>
+				<td width="119" colspan="2"><p align="center">姓名 </p></td>
+				<td width="61" colspan="2"><p align="center">年龄 </p></td>
+				<td width="90" colspan="3"><p align="center">政治面貌 </p></td>
+				<td width="249" colspan="2"><p align="center">单位及职务 </p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="62" colspan="3"><p align="center">父亲</p></td>
+				<td width="119" colspan="2"><p align="center">冯**</p></td>
+				<td width="61" colspan="2"><p align="center">74</p></td>
+				<td width="90" colspan="3"><p align="center">中共党员</p></td>
+				<td width="249" colspan="2"><p align="center">****</p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="62" colspan="3"><p align="center">母亲</p></td>
+				<td width="119" colspan="2"><p align="center">***</p></td>
+				<td width="61" colspan="2"><p align="center">73</p></td>
+				<td width="90" colspan="3"><p align="center">群众</p></td>
+				<td width="249" colspan="2"><p align="center">*****</p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="62" colspan="3"><p align="center">&nbsp;</p></td>
+				<td width="119" colspan="2"><p align="center">&nbsp;</p></td>
+				<td width="61" colspan="2"><p align="center">&nbsp;</p></td>
+				<td width="90" colspan="3"><p align="center">&nbsp;</p></td>
+				<td width="249" colspan="2"><p align="center">&nbsp;</p></td>
+				<td width="1"></td>
+			  </tr>
+			  <tr>
+				<td width="69" colspan="3"><p align="center">个人奖惩情况 </p></td>
+				<td width="560" colspan="10"><p align="center">奖励</p></td>
+				<td width="1"></td>
+			  </tr>
+			</table>
+    </div>
+	</div>
+	</body>
+	</html>

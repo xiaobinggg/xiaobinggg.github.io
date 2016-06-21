@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/area.selector.css" />
+<script src="scripts/jquery.js"></script>
+<script src="scripts/region.js"></script>
+<script src="scripts/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="scripts/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/area.selector.js"></script>
+
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.select_handle').selector({seletedResultor:$('.selected_result'),seletedResulId:$('#selected_result_id')});
+});
+</script>
+<script type="text/javascript">
+window.onload = function(){
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("");//最外层框架样式
+	tabPage.setTabObj([{title:"监管指标",id:"a"},{title:"经营指标",id:"b"},{title:"其他",id:"c"}	]);//增加选项菜单
+	tabPage.addedTo("x");
+}
+
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #feda00}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:860px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0" style="margin-bottom:20px"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />基本情况<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />风险状况</div>
+</div>
+<div id="x" style="float:left;width:805px;margin-right:10px; margin-top:10px"></div>
+<div id="a">
+		<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px;height:760px;">
+		<div class="title" style="width:12%">监管指标</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		<div style=" margin-bottom:10px; float:right"><input name="导出" type="button" class="buttonStyle" value="导出" style="margin-right:10px"/></div>
+
+			<table id="table_info" border="0" cellspacing="0"  cellpadding="0" align="center" style="margin:0px 5px 5px 0px">
+										<tbody>
+											<tr>
+											  <th colspan="2"  rowspan="2">指标类别</th>
+											  <th width="143"  rowspan="2">指标名称</th>
+											  <th width="43"  rowspan="2" align="center" valign="middle">监管达标标准</th>
+											  <th width="56" rowspan="2">实际数据</th>
+											  
+											  <th colspan="2">变动情况</th>
+											  <th width="46" colspan="2" rowspan="2">图例</th>
+											</tr>
+											<tr>
+											  <th width="42">较上月</th>
+										      <th width="58">较上季</th>
+										  </tr>
+											
+											
+											<tr>
+											  <td width="44" rowspan="11">风险水平</td>
+											  <td width="185" rowspan="3">流动性风险</td>
+											  <td>流动性比例</td>
+											  <td>≥25%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>核心负债依存度 </td>
+											  <td>≥60%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>流动性缺口率 </td>
+											  <td>≥-10%</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td rowspan="5">信用风险</td>
+											  <td>不良资产率</td>
+											  <td>≤4%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>不良贷款率</td>
+											  <td>≤5%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>单一集团客户授信集中度</td>
+											  <td>≤15%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>单一客户贷款集中度</td>
+											  <td>≤10%</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>全部关联度 </td>
+											  <td>≤50%</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td rowspan="2">市场风险</td>
+											  <td>累计外汇敞口头寸比例</td>
+											  <td>≤20%</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>利率风险敏感度 </td>
+											  <td>&nbsp;</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+										  <tr>
+										    <td>操作风险</td>
+											  <td>操作风险损失率</td>
+											  <td>&nbsp;</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td rowspan="6">风险迁徙</td>
+											  <td rowspan="3">正常类贷款</td>
+											  <td>正常贷款迁徙率</td>
+											  <td>≤0.5%</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+										  <tr>
+										    <td>正常类贷款迁徙率</td>
+											  <td>&nbsp;</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>关注类贷款迁徙率</td>
+											  <td>≤1.5%</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+										  <tr>
+										    <td rowspan="3">不良贷款</td>
+											  <td>不良贷款迁徙率</td>
+											  <td>&nbsp;</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>次级贷款迁徙率</td>
+											  <td>≤30%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>可疑类贷款迁徙率</td>
+											  <td>≤40%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td rowspan="7">风险抵补</td>
+											  <td rowspan="3">盈利能力</td>
+											  <td>成本收入比</td>
+											  <td>≤45%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>资产利润率</td>
+											  <td>≥0.6%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>资本利润率</td>
+											  <td>≥11%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td rowspan="2">准备金充足程度</td>
+											  <td>资产损失准备充足率</td>
+											  <td>＞100%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>贷款准备充足率</td>
+											  <td>＞100%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td rowspan="2">资本充足程度</td>
+											  <td>资本充足率</td>
+											  <td>≥8%</td>
+											  <td bgcolor="#FFFFFF">&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>核心资本充足率</td>
+											  <td>≥4%</td>
+											   <td bgcolor="#FFFFFF">&nbsp;</td>
+											   <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+										  <tr><td colspan="9"><img src="images/color.jpg" /></td></tr>
+										</tbody>
+										</table>
+			  </div>
+		</div>
+	</div>
+	</div>
+	<div id="b">
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:760px">
+		<div class="title" style="width:12%">经营指标</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		<div style=" margin-bottom:10px; float:right"><input name="导出" type="button" class="buttonStyle" value="导出" style="margin-right:10px"/></div>
+			 <table id="table_info" border="0" cellspacing="0"  cellpadding="0" align="center" style="margin:0px 5px 5px 0px">
+										<tbody>
+											<tr>
+											<tr>
+											  <th rowspan="2">指标名称</th>
+											  <th rowspan="2">本期值</th>
+											  <th width="80px" colspan="2">变动情况</th>
+											 
+											  <th rowspan="2">图例</th>
+											</tr>
+											<tr>
+											  <th>较上月</th>
+										      <th>较上季</th>
+										  </tr>
+											<tr>
+											  <td>资产总额 </td>
+												<td>&nbsp;</td>
+											   
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>负债总额 </td>
+											  <td>&nbsp;</td>
+											  
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											
+											<tr>
+											  <td>所有者权益 </td>
+											 <td>&nbsp;</td>
+											  
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											
+											
+											<tr>
+											  <td>存款总额</td>
+											 <td>&nbsp;</td>
+											  
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											
+										  <tr>
+											  <td>贷款总额 </td>
+											 <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											
+										 
+											<tr>
+											  <td>净利润</td>
+											  <td>&nbsp;</td>
+											   
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+										  <tr>
+											  <td>不良贷款</td>
+											  <td>&nbsp;</td>
+											   
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+										  <tr>
+											  <td>储蓄存款</td>
+											  <td>&nbsp;</td>
+											   
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+										  <tr>
+											  <td>涉农贷款</td>
+											  <td>&nbsp;</td>
+											   
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											
+										</tbody>
+										</table>
+			  </div>
+		</div>
+	</div>
+	</div>
+	<div id="c">
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:760px">
+		<div class="title" style="width:10%">其他</div>
+		<div class="titlebg" style=" margin-top:0px; width:90%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+		
+		<div>
+			  <table  border="0" cellspacing="0"  cellpadding="0" align="left" style="margin:0px 5px 5px 0px" width="100%">
+										<tbody>
+											 <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="85%"><a href="ziliao.html"onclick="window.open(this.href);return false">其他 </a></td>
+								   <td class="date">2011-07-11</td>
+								
+								  </tr>
+								  
+											
+										</tbody>
+										</table>
+										</div>
+			  </div>
+		</div>
+	</div>
+	</div>
+	</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+</body>
+</html>

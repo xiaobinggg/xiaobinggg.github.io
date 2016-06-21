@@ -1,0 +1,261 @@
+<html>
+<head>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css" >
+<!--
+body
+{
+margin-left:0PX;
+margin-top:0PX;
+margin-right:0PX;
+margin-bottom:0PX;
+}
+-->
+<!--
+.STYLE2 {
+font-size: small;
+font-family: "楷体_GB2312";
+}
+-->
+<!--
+.STYLE3 {
+font-size: small;
+font-family: "新宋体";
+}
+-->
+</style>
+<script language="javascript" type="text/javascript">
+
+function loadClass(dep)
+{
+alert(dep);
+try
+   { 
+    //清空原来项；
+    for(var i=form1.SltClass.length-1;i>=0;i--)
+    form1.SltClass.remove(i); 
+    if (dep=="" || dep=="=====请选择院系=====")
+    {
+     alert("请选择有效！");
+     return false;
+    }
+    var obj=new Array(2);
+    if (dep=="1")
+     {
+    obj[0]="";
+    obj[1]="";
+     }
+    if (dep=="2")
+     {
+    obj[0]="";
+    obj[1]="";
+     }
+    if (dep=="3")
+     {
+    obj[0]="";
+    obj[1]="";
+     }
+     if (dep=="3")
+     {
+    obj[0]="";
+    obj[1]="";
+     }
+   
+    if (obj==null) return false;      
+     var opt=new Option("","");
+    form1.SltClass.options[0]=opt; 
+    for(j=0;j<obj.length;j++)
+    　try
+     　 {
+     　   var opt=new Option(obj[j],obj[j]);
+     form1.SltClass.options[j+1]=opt;
+     　
+     　}catch(exception)
+     　{} 
+   }catch(ex)
+{alert(ex);} 
+return obj;
+}
+
+/*
+显示照片
+*/
+function ShowTempImage(imageID, fileID)
+{ 
+   var filePath = document.getElementById(fileID).value;
+  
+   var fileEx=filePath.split(".");
+   //debugger;
+   var fileExName = (fileEx[fileEx.length-1]).toLowerCase();
+  
+   //如果上传文件扩展名不是jpg或gif将不显示临时图片
+   if ( fileExName=="jpg" || fileExName == "gif" || fileExName == "bmp" )
+   {
+    document.getElementById(imageID).src = filePath;
+   }
+   else
+   {
+    document.getElementById(imageID).src = "../img/zanwu.jpg";
+   }
+}
+
+/*
+核对两次密码是否一致
+*/
+function checkPassword()
+{
+if (form1.pwd1.value!=form1.pwd2.value)
+   {
+    alert("两次的密码不一致");
+    return false;
+   }
+   return true;
+}
+
+/*
+
+*/
+function register()
+{
+   var str="学号："+form1.txtNumber.value+"\r\n";
+   str=str+"姓名："+form1.txtName.value+"\r\n";
+   var sex;//性别
+   var aa = document.getElementsByName("sex");
+   for (var i=0; i<aa.length; i++)
+   {
+   if(aa[i].checked){
+   sex=aa[i].value;
+   }
+   }
+   str=str+"性别："+sex+"\r\n"; 
+   str=str+"密码："+form1.pwd2.value+"\r\n";
+   str=str+"出生年月："+form1.txtBirthday.value+"\r\n";
+   str=str+"联系电话："+form1.TxtPhone.value+"\r\n";
+   str=str+"QQ:"+form1.txtQQ.value+"\r\n";
+   str=str+"EMail:"+form1.txtEmail.value+"\r\n";
+   str=str+"身份证号："+form1.TxtID.value+"\r\n";
+   str=str+"考生类型："+form1.SType.value+"\r\n";
+   str=str+"所在院系："+form1.SltDepartment.value+"\r\n";
+   str=str+"所在班级："+form1.SltClass.value+"\r\n";
+   alert(str);
+}
+
+</script>
+
+
+<title></title>
+</head>
+
+<body style="text-align:center">
+<div class="univer_model output" style="width:660px" align="center">
+<form id="form1" runat="server">
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px">
+<tr>
+
+<tr>
+<td align="right" width="30%" height="15">姓名：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">性别：</td>
+<td align="left" width="70%"><input type="radio" name="radiobutton" value="男" checked="checked" />男<input type="radio" name="radiobutton" value="女" />女<span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">近照：</td>
+<td align="left" width="70%">请上传3.8*5cm &nbsp;&nbsp;<input id="File1" type="file" name="File1" onChange="ShowTempImage'photo','File1';" /><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">出生年月：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">籍贯：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">政治面貌：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">民族：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">经济工作年限：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">金融从业年限：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">学历：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">毕业院校及专业：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">专业特长：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">专业技术职称：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">身份证号码：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">护照号码：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">现任职务：</td>
+<td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">简历：</td>
+<td align="left" width="70%"><textarea name="textarea" rows="5" cols="50"></textarea><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">家庭主要成员及关系：</td>
+<td align="left" width="70%"><textarea name="textarea" rows="5" cols="50"></textarea><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr>
+<td align="right" width="30%" height="15">个人奖惩情况：</td>
+<td align="left" width="70%"> <textarea name="textarea" rows="5" cols="50"></textarea><span style="color:#FF0000">*</span></td>
+</tr>
+
+<tr align="center">
+<td colspan="2" height="25" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="保存" class="buttonStyle" onClick="register();"></td>
+</tr>
+</table>
+
+</form>
+</div>
+</body>
+</html>
+

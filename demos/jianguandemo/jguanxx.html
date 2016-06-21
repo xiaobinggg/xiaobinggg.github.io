@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/area.selector.css" />
+<script src="scripts/jquery.js"></script>
+<script src="scripts/region.js"></script>
+<script src="scripts/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="scripts/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/area.selector.js"></script>
+
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.select_handle').selector({seletedResultor:$('.selected_result'),seletedResulId:$('#selected_result_id')});
+});
+</script>
+<script type="text/javascript">
+window.onload = function(){
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("");//最外层框架样式
+	tabPage.setTabObj([{title:"风险状况",id:"a"},{title:"新增风险",id:"b"},{title:"监管指标",id:"c"},{title:"其他",id:"d"}]);//增加选项菜单
+	tabPage.addedTo("x");
+}
+
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;height:830px">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />基本情况<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />监管信息</div>
+</div>
+		<div class="subc55" style="width:805px; margin:5px 0px 0px 0px;height:400px;">
+		<div class="title" style="width:15%">图片展示</div>
+		<div class="titlebg" style=" margin-top:0px; width:85%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0; ">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			  <table border="0" cellspacing="0" cellpadding="0" width="805px">
+			  	   <tr>
+				   	<td align="center">
+					<div style="margin-left:5px;">
+					<script language="javascript">
+					function topimg(simg)
+					{
+					var strimg=simg;
+					var strimg1="";
+					var strimg2="";
+					var strimg3="";
+					var allstrimg="";
+					 if (strimg.length>16)
+					 {
+					 strimg1=strimg.substring(0, 16);
+					 allstrimg=strimg1 + "...";
+					 }
+					  if (strimg.length<=16)
+					 {
+					 allstrimg=strimg;
+					 }
+					return allstrimg;
+					}
+					var focus_width=310;
+					var focus_height=250;
+					var text_height=24;
+					var links="";
+					var pics="";
+					var texts="";
+						var imgUrl=new Array();
+						var imgLink=new Array();
+						var imgTz=new Array();
+						var adNum=0;
+						var kk = 0;
+						var swf_height = focus_height+text_height;
+					imgUrl[kk]  = 'img/1.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/2.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/3.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/4.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/5.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '当日活动';
+						kk++;
+					var imgNum = imgUrl.length>6?6:imgUrl.length;
+						for (i=0;i<imgNum;i++) {
+							if(i==0){
+								pics += imgUrl[i];
+								links += imgLink[i];
+								texts += imgTz[i];
+							}else{
+								pics += "|" + imgUrl[i];
+								links += "|" + imgLink[i];
+								texts += "|" + imgTz[i];
+							}
+						}
+					
+					document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+					document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="img/photonews.swf"><param name="quality" value="high"><param name="bgcolor" value="#F0EFEF">');
+					document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+					document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+					document.write('<embed src="img/photonews.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#F0EFEF" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+					document.write('</object>');
+					</script>
+					</div>
+					</td>
+				   </tr>
+			  </table>
+			  </div>
+		</div>
+	</div>
+	
+	<div class="subc55" style="width:805px; margin:5px 0px 0px 0px;height:380px;">
+		<div class="title" style="width:15%">监管动态</div>
+		<div class="titlebg" style=" margin-top:0px; width:85%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0; ">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			  <table border="0" cellspacing="0" cellpadding="0" width="805px">
+			  	   <tr>
+				   	<td align="center">
+					</td>
+				   </tr>
+					<tr>
+				   <td>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;上半年着重抓了以下工作：<br>
+一、抓规范，全面推进监管有效性建设
+（一）规范非现场监管，提高综合分析能力。一是规范操作，提高监管时效性。<br>今年是银行业全面推行《非现场监管信息系统》的第一年，为进一步发挥非现场监管发现问题、判断风险、指导监管的作用，督促大型银行分别完成<br>了2006年、2007年和2008年1月、2月的报表报送审核工作。并于6月中旬，邀请云南银监局3名专业人员为分局机关、办事处、各银行业机构相关人员<br>
+讲授。
+				   </td>
+				 </tr>
+			  </table>
+			  </div>
+		</div>
+	</div>
+	
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+	</div>
+</body>
+</html>

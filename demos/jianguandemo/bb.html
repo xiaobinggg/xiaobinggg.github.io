@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/thd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/area.selector.css" />
+<script src="scripts/jquery.js"></script>
+<script src="scripts/region.js"></script>
+<script src="scripts/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="scripts/jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="scripts/area.selector.js"></script>
+
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.select_handle').selector({seletedResultor:$('.selected_result'),seletedResulId:$('#selected_result_id')});
+});
+</script>
+<script type="text/javascript">
+window.onload = function(){
+	var tabPage = new TabPage("dc");
+	tabPage.setTabPDivCss("");//最外层框架样式
+	tabPage.setTabObj([{title:"风险状况",id:"a"},{title:"新增风险",id:"b"},{title:"监管指标",id:"c"},{title:"其他",id:"d"}]);//增加选项菜单
+	tabPage.addedTo("x");
+}
+
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #FF3399}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+	<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location">
+          <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />监管台帐<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />报表</div>
+	</div>
+	<!--div class="univer_model">
+		<table>
+		<tr>
+										<td  align="left">&nbsp;&nbsp;期数：<select name=""><option value="-999" selected="selected">--全部--</option>
+																<option value="">2011年6月</option>
+																<option value="">2011年5月</option>
+																<option value="">2011年4月</option>
+																<option value="">2011年3月</option>
+																<option value="">2011年2月</option>
+																<option value="">2011年1月</option>
+																<option value="">2010年12月</option>
+																<option value="">2010年11月</option>
+																<option value="">2010年10月</option>
+																<option value="">2010年9月</option>
+																<option value="">2010年8月</option>
+										</select></td>
+										<td width="10px">&nbsp;</td>
+										<td><a href="#" class="univer_btn">查询</a></td>
+										</tr>
+			</table>
+	</div-->	
+	<div class="subc6" style="width:800px; margin:5px 0px 0px 0px; margin-top:5px; height:780px;">
+		<div class="title" style="width:20%">基础类报表内容</div>
+		<div class="titlebg" style=" margin-top:0px; width:80%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+		<div class="list" style="margin-left:5px; margin-right:5px;">
+			  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+										<tbody>		
+										<tr>
+										<td><img src="images/headtopic.gif" /></td>
+										  <td width="70%"><a href="bb1.html">部分行业贷款情况统计表（分地区）</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td width="7%">月</td>
+									
+										 
+										  </tr>
+										<tr>
+										<td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">全省农合机构部分行业贷款情况汇总表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+									
+										 
+										 </tr>
+										<tr>
+										<td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">房地产行业贷款情况统计表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+									
+										  
+										  </tr>
+										<tr>
+										<td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">融资平台贷款及信政产品情况统计表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+										
+										 
+										  </tr>
+										<tr>
+										<td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">投资情况统计表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+									
+										 
+										  </tr>
+										<tr>
+										<td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">大额贷款情况统计表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+										
+										 
+										  </tr> 
+										  <tr>
+										  <td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">资产与股本金变动情况监测表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+									
+										  
+										  </tr>
+										   <tr>
+										   <td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">涉农贷款监测表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+								
+										  
+										  </tr>
+										  <tr>
+										  <td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">山西省农合机构主要监管指标规划落实情况表</a></td>
+										  <td width="10%">2011-7-1</td>
+										   <td width="10%">2011-7-7</td>
+										  <td>月</td>
+										
+										 
+										  </tr>
+										  <tr>
+										  <td><img src="images/headtopic.gif" /></td>
+										  <td><a href="bb1.html">其他</a></td>
+										  <td>&nbsp;</td>
+										
+										 
+										  </tr>
+										  </tbody>
+										  </table>
+			  </div>
+		</div>
+	</div>
+	</div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle; margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	<div style="height:1px">
+	</div>
+</body>
+</html>
+

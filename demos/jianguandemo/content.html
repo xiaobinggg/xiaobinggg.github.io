@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/tab.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/thd.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script language="javascript"> 
+var count=1;
+$(document).ready(function(){   
+  window.setInterval(function () {  
+  flush3D()}, 8000);  
+});  
+function flush3D(){
+//document.getElementById("Column3D").Play();
+if(count>=3){
+	count=1;
+}else{
+	count++;
+}
+document.getElementById("Column3D").src="Column3D"+count+".html";
+
+Column3D.location.reload();
+//window.myFrame.location.reload();
+//$("#test1").html($("#test2").html()).fadeIn("slow");
+
+}
+
+
+
+function switchTag(tag,content) 
+{ 
+// alert(tag); 
+// alert(content); 
+for(i=1; i <6; i++) 
+{ 
+if ("tag"+i==tag) 
+{ 
+document.getElementById(tag).getElementsByTagName("a")[0].className="selectli"+i; 
+document.getElementById(tag).getElementsByTagName("a")[0].getElementsByTagName("span")[0].className="selectspan"+i; 
+}else{ 
+document.getElementById("tag"+i).getElementsByTagName("a")[0].className=""; 
+document.getElementById("tag"+i).getElementsByTagName("a")[0].getElementsByTagName("span")[0].className=""; 
+} 
+if ("content"+i==content) 
+{ 
+document.getElementById(content).className=""; 
+}else{ 
+document.getElementById("content"+i).className="hidecontent"; 
+} 
+document.getElementById("content").className=content; 
+} 
+} 
+</script> 
+<style type="text/css">
+
+<!--
+.STYLE1 {color: #00CC66}
+.STYLE2 {color: #00CC33}
+.STYLE3 {color: #feda00}
+.STYLE4 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<div class="login_content" style="width:815px;" >
+		<table>
+		<tr>
+		<td>
+					<div>
+					<iframe src="Column3D1.html" width="485" height="300" scrolling="no" frameborder="0" name="Column3D" id="Column3D"></iframe>
+       				</div>
+					</td>
+					<td>
+					<div style="margin-left:5px;">
+					<script language="javascript">
+					function topimg(simg)
+					{
+					var strimg=simg;
+					var strimg1="";
+					var strimg2="";
+					var strimg3="";
+					var allstrimg="";
+					 if (strimg.length>16)
+					 {
+					 strimg1=strimg.substring(0, 16);
+					 allstrimg=strimg1 + "...";
+					 }
+					  if (strimg.length<=16)
+					 {
+					 allstrimg=strimg;
+					 }
+					return allstrimg;
+					}
+					var focus_width=310;
+					var focus_height=250;
+					var text_height=24;
+					var links="";
+					var pics="";
+					var texts="";
+						var imgUrl=new Array();
+						var imgLink=new Array();
+						var imgTz=new Array();
+						var adNum=0;
+						var kk = 0;
+						var swf_height = focus_height+text_height;
+					imgUrl[kk]  = 'img/1.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/2.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/3.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/4.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '会议召开';
+						kk++;
+					
+					imgUrl[kk]  = 'img/5.jpg';
+						imgLink[kk] = '#';
+						imgTz[kk] =  '党日活动';
+						kk++;
+					var imgNum = imgUrl.length>6?6:imgUrl.length;
+						for (i=0;i<imgNum;i++) {
+							if(i==0){
+								pics += imgUrl[i];
+								links += imgLink[i];
+								texts += imgTz[i];
+							}else{
+								pics += "|" + imgUrl[i];
+								links += "|" + imgLink[i];
+								texts += "|" + imgTz[i];
+							}
+						}
+					
+					document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+					document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="img/photonews.swf"><param name="quality" value="high"><param name="bgcolor" value="#F0EFEF">');
+					document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+					document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+					document.write('<embed src="img/photonews.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#F0EFEF" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+					document.write('</object>');
+					</script>
+					</div>
+					</td>
+					</tr>
+					</table>
+					<div class="subc1" style="width:485px; margin-top:5px">
+					<div id="container"> 
+					<div id="title"> 
+					<ul> 
+					<li id="tag1"><a href="ziliao.html"onclick="window.open(this.href);return false" onclick="switchTag('tag1','content1');this.blur();" class="selectli1"><span class="selectspan1">监管指标</span></a></li> 
+					<li id="tag2"><a href="ziliao.html"onclick="window.open(this.href);return false" onclick="switchTag('tag2','content2');this.blur();"><span>经营指标</span></a></li> 
+					<li id="tag3"><a href="ziliao.html"onclick="window.open(this.href);return false" onclick="switchTag('tag3','content3');this.blur();"><span>其他</span></a></li> 
+					</ul> 
+					</div> 
+					<div id="content" class="content1"> 
+					<div id="content1">
+					<table id="table_info" border="0" cellspacing="0"  cellpadding="0" align="center" style="margin:0px 5px 5px 0px">
+										<tbody>
+											<tr>
+											  <th colspan="2" rowspan="2">指标类别</th>
+											  <th  rowspan="2">指标名称</th>
+											  <th rowspan="2" align="center" valign="middle">监管达标标准</th>
+											  <th  rowspan="2">实际数据</th>
+											  
+											  <th colspan="2">变动情况</th>
+											  <th rowspan="2" colspan="2">图例</th>
+											</tr>
+											<tr>
+											  <th width="33">较上月</th>
+										      <th width="34">较上季</th>
+										  </tr>
+											
+											<tr>
+											  <td rowspan="2">风险抵补</td>
+											  <td rowspan="2">资本充足程度</td>
+											  <td>资本充足率 </td>
+											  <td>≥10.5%</td>
+											  <td bgcolor="#ffffff"><span style="color:#000000">11%</span></td>
+											 
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>核心资本充足率 </td> 
+											  <td>&nbsp;</td>
+											  <td bgcolor="#00CC66">4%</td>
+											 
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>风险水平</td>
+											  <td>信用风险</td>
+											  <td>不良贷款率 </td>
+											  <td>≤4%</td>
+											   <td bgcolor="#feda00">15%</td>
+											  
+											   <td>&nbsp;</td>
+										       <td>&nbsp;</td>
+									          <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td rowspan="2">风险抵补</td>
+											  <td rowspan="2">准备金充足程度</td>
+											  <td>拨备覆盖率 </td>
+											  <td>≥150%</td>
+											  <td bgcolor="#FF0000">60%</td>
+											 
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>贷款损失准备充足率 </td>
+											  <td>&nbsp;</td>
+											  <td bgcolor="#ffffff">77%</td>
+											 
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											
+									
+											<tr>
+											  <td colspan="8"><img src="images/color.jpg" /></td><td width="45"><a href= "javascript:parent.location= 'fxzk.html '; ">更多</a></td>
+										  </tr>
+										</tbody>
+										</table>
+
+					</div> 
+					<div id="content2" class="hidecontent">
+					<table id="table_info" border="0" cellspacing="0"  cellpadding="0" align="center" style="margin:0px 5px 5px 0px">
+										<tbody>
+											<tr>
+											<tr>
+											  <th rowspan="2">指标名称</th>
+											  <th rowspan="2">本期值</th>
+											  <th width="80px" colspan="2">变动情况</th>
+											 
+											  <th rowspan="2">图例</th>
+											</tr>
+											<tr>
+											  <th>较上月</th>
+										      <th>较上季</th>
+										  </tr>
+											
+											<tr>
+											  <td>资产总额 </td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>负债总额 </td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>所有者权益</td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>存款总额 </td>
+											  <td>&nbsp;</td>
+											  <td>&nbsp;</td>
+											 
+											  <td>&nbsp;</td>
+											  <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>贷款总额 </td>
+											  <td>&nbsp;</td>
+											   <td>&nbsp;</td>
+											  
+											   <td>&nbsp;</td>
+										      <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td>利润 </td>
+											  <td>&nbsp;</td>
+											   <td>&nbsp;</td>
+											  
+											   <td>&nbsp;</td>
+										      <td colspan="2"><img src="images/icons/featured.png" title="历史对比" />&nbsp;&nbsp;<img src="images/icons/premium.png" title="机构对比" /></td>
+										  </tr>
+											<tr>
+											  <td colspan="6"><a href= "javascript:parent.location= 'fxzk.html '; ">更多</a></td>
+										  </tr> 
+										</tbody>
+										</table>
+					</div> 
+					<div id="content3" class="hidecontent" style="text-align:left">
+					<table id="table_info" border="0" cellspacing="0"  cellpadding="0" align="left" style="margin:0px 5px 5px 0px">
+										<tbody align="left" style="padding-left:5px;">
+											<tr align="left">
+											  <th align="left"style="padding-left:5px;">其他</th>
+				
+											</tr>
+											
+											<tr style="padding-left:5px;">
+											  <td>&nbsp;&nbsp;&nbsp;监管过程中遇到的问题 </td>
+											  
+										  </tr>
+											<tr style="padding-left:5px;">
+											  <td>&nbsp;</td>
+											 
+										  </tr>
+											<tr style="padding-left:5px;">
+											  <td>&nbsp;</td>
+											  
+										  </tr>
+											<tr style="padding-left:5px;">
+											  <td>&nbsp; </td>
+											
+										  </tr>
+										<tr style="padding-left:5px;">
+											  <td>&nbsp;</td>
+											
+										  </tr>
+										  <tr style="padding-left:5px;">
+											  <td>&nbsp;</td>
+											
+										  </tr>
+										  <tr align="center"><td><a href="ziliao.html"onclick="window.open(this.href);return false">更多</a></td></tr>
+										</tbody>
+										</table>
+					</div> 
+					</div> 
+					</div> 
+					</div>
+						<div class="subc3" style="width:310px; margin-left:5px;">
+						<div class="title" style="width:37%">通知公告</div>
+						<div class="titlebg" style=" margin-top:0px; width:63%"><a href= "javascript:parent.location= 'tg.html '; "><img src="images/more.gif"  align="right" style="margin-top:7px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+						<table border="0" cellspacing="0" cellpadding="0" width="100%">
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="ziliao.html"onclick="window.open(this.href);return false">关于规范商业银行使用外部信用评级...</a></td>
+								   <td class="date" width="20%">2011.07.11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="ziliao.html"onclick="window.open(this.href);return false">关于进一步规范银信理财合作业务... </a></td>
+								   <td class="date">2011.07.11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">关于进一步加强和规范非现场报表...</a></td>
+								  <td class="date">2011.07.11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">行政许可工作规程</a></td>
+								  <td class="date">2011.07.11</td>
+								 </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">关于对实施新资本协议相关指引...</a></td>
+								  <td class="date">2011.07.11</td>
+								 </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="ziliao.html"onclick="window.open(this.href);return false">关于规范商业银行使用外部信用评级...</a></td>
+								   <td class="date" width="20%">2011.07.11</td>
+								  </tr>
+								  <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td><a href="ziliao.html"onclick="window.open(this.href);return false">关于进一步规范银信理财合作业务... </a></td>
+								   <td class="date">2011.07.11</td>
+								  </tr>
+								 <tr>
+								  <td><img src="images/headtopic.gif" /></td>
+								  <td><a href="ziliao.html"onclick="window.open(this.href);return false">关于进一步加强和规范非现场报表...</a></td>
+								  <td class="date">2011.07.11</td>
+								 </tr>
+								 <tr>
+								   <td><img src="images/headtopic.gif" /></td>
+								   <td width="75%"><a href="ziliao.html"onclick="window.open(this.href);return false">关于规范商业银行使用外部信用评级...</a></td>
+								   <td class="date" width="20%">2011.07.11</td>
+								  </tr>
+							  </table>
+							
+							  </div>
+						</div>
+					</div>
+						<div class="subc22" style="width:484px; margin:5px 0px 0px 0px; margin-top:0px">
+						<div class="title" style="width:26%">综合信息概述</div>
+						<div class="titlebg" style=" margin-top:0px; width:74%"><a href="ziliao.html"onclick="window.open(this.href);return false"><img src="images/more.gif"  align="right" style="margin-top:10px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+							    <table border="0" cellspacing="0" cellpadding="0">
+							
+								  <tr>
+								   <td><strong>农村中小金融机构</strong> ：农商行：19家；农合行：10家；农信社：61家；
+									存款总额为9732万元，贷款总额为73418万元</td>
+								 </tr>
+								
+								   <td><strong>新型农村中小金融机构</strong>：村镇银行：10家；贷款公司：5家；资金互
+									   助社：7家
+									存款总额为6814万元，贷款总额为4318万元</td>
+								</tr>
+								 
+							  </table>
+							  </div>
+						</div>
+					</div>
+					
+				
+					<div style="margin-left:5px;">
+					<div><a href= "javascript:parent.location= 'jgbg.html '; "><img src="images/jgbg.gif" style=" margin-left:5px; margin-top:10px" /></a></div>
+					</div>
+					<div style="margin-left:5px;">
+					<div><a href= "javascript:parent.location= 'jgpj.html '; "><img src="images/mnpj.gif" style=" margin-left:5px; margin-top:5px" /></a></div>
+					</div>
+					<div class="subc4" style="width:484px; margin:5px 0px 0px 0px; margin-top:5px">
+						<div class="title" style="width:20%">当地概况</div>
+						<div class="titlebg" style=" margin-top:0px; width:80%"><a href= "javascript:parent.location= 'qykg.html '; "><img src="images/more.gif"  align="right" style="margin-top:10px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px">
+							  <table border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+								   <td><img src="images/map.gif" /></td>
+									<td class="date">&nbsp;</td>
+								   <td width="279px">
+									  <table border="0" cellspacing="0" cellpadding="0" id="table_info">
+										<tbody>
+										<tr><td colspan="3"><strong>临汾市</strong></td></tr>
+										<tr>
+				
+										  <td><a href="">尧都区</a></td>
+										  <td><a href="">侯马市</a></td>
+										  <td><a href="">霍州市</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">曲沃县</a></td>
+										  <td><a href="">翼城县</a></td>
+										  <td><a href="">襄汾县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">洪洞县</a></td>
+										  <td><a href="">古县</a></td>
+										  <td><a href="">安泽县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">浮山县</a></td>
+										  <td><a href="">吉县</a></td>
+										  <td><a href="">蒲县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">乡宁县</a></td>
+										  <td><a href="">永和县</a></td>
+										  <td><a href="">大宁县</a></td>
+										  </tr>
+										<tr>
+										  <td><a href="">隰县</a></td>
+										  <td><a href="">汾西县</a></td>
+										  <td>&nbsp;</td>
+										  </tr> 
+										  </tbody>
+										  </table>
+									</td>
+								 </tr>
+							  </table>
+							  </div>
+						</div>
+					</div>
+					<div class="subc4" style="width:310px; margin-left:5px; margin-top:5px">
+						<div class="title" style="width:39%">工作完成情况</div>
+						<div class="titlebg" style=" margin-top:0px; width:61%"><a href= "javascript:parent.location= 'dcdb.html '; "><img src="images/more.gif"  align="right" style="margin-top:10px; margin-right:20px" /></a></div>
+						<div class="subc_content" style="text-indent:0">
+						<div class="list" style="margin-left:5px" style="width:300px; margin-left:5px;">
+							  <table  id="table_info" border="0" cellspacing="0" width="300px"  cellpadding="0" align="center">
+								  <tr>
+								   <td><img src="images/tu.gif" /></td>
+								 </tr>
+								
+							  </table>
+							  </div>
+						</div>
+					</div>
+				</div>
+</body>
+</html>

@@ -1,0 +1,1043 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+
+		<meta http-equiv="pragma" content="no-cache">
+
+		<meta http-equiv="cache-control" content="no-cache">
+
+		<meta http-equiv="expires" content="0"> 
+<link href="css/globalStyle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/animate/theme/jquery-ui-1.8.11.redmond.css">
+	<script src="scripts/animate/jquery-1.5.1.js"></script>
+	<script src="scripts/animate/jquery.ui.core.js"></script>
+	<script src="scripts/animate/jquery.ui.widget.js"></script>
+	<script src="scripts/animate/jquery.bgiframe-2.1.2.js"></script>
+	<script src="scripts/animate/jquery.ui.mouse.js"></script>
+	<script src="scripts/animate/jquery.ui.draggable.js"></script>
+	<script src="scripts/animate/jquery.ui.position.js"></script>
+	<script src="scripts/animate/jquery.ui.resizable.js"></script>
+	<script src="scripts/animate/jquery.ui.dialog.js"></script>
+	<script src="scripts/animate/jquery.effects.core.js"></script>
+	<script src="scripts/animate/jquery.effects.blind.js"></script>
+	<script src="scripts/animate/jquery.effects.explode.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker.js"></script>
+	<script src="scripts/datepicker/jquery.ui.datepicker-zh-CN1.js"></script>
+	<!--<link rel="stylesheet" href="../css/datepicker/demos.css" />-->
+	
+	<script>
+function selectAll(){
+
+if( document.getElementById('all').checked == true)
+{
+	checkbox1.checked = true;
+	checkbox2.checked = true;
+	checkbox3.checked = true;
+	checkbox4.checked = true;
+}
+else
+{
+	checkbox1.checked = false;
+	checkbox2.checked = false;
+	checkbox3.checked = false;
+	checkbox4.checked = false;
+}
+}
+
+function selectDate(){
+
+if( document.getElementById('DateS').checked == true)
+{
+	date.style.display='none';
+	calendar.style.display='';
+}
+else
+{
+	date.style.display='';
+	calendar.style.display='none';
+}
+}
+
+</script>
+	<script language="javascript">
+var intIndex=0;arrList = new Array();
+arrList[intIndex++] = "工商银行";
+arrList[intIndex++] = "建设银行";
+arrList[intIndex++] = "交通银行";
+arrList[intIndex++] = "农业银行";
+arrList[intIndex++] = "北京银行";
+arrList[intIndex++] = "浦发银行";
+arrList[intIndex++] = "中信银行";
+arrList[intIndex++] = "渤海银行";
+arrList[intIndex++] = "兴业银行";
+
+function smanPromptList(arrList,objInputId){
+this.style = "background:#E8F7EB;border: 1px solid #CCCCCC;font-size:14px;cursor: default;"
+if (arrList.constructor!=Array){alert('smanPromptList初始化失败:第一个参数非数组!');return ;
+}
+
+window.onload =function() {
+               arrList.sort(function(a,b){
+                   if(a.length>b.length)return 1;
+                 else if(a.length==b.length)return a.localeCompare(b);
+                 else return -1;
+             })
+			 
+var objouter=document.getElementById("__smanDisp") //显示的DIV对象
+var objInput = document.getElementById(objInputId); //文本框对象
+var selectedIndex=-1;
+var intTmp; //循环用的:)
+if (objInput==null) {alert('smanPromptList初始化失败:没有找到"'+objInputId+'"文本框');return ;}
+//文本框失去焦点
+
+objInput.onblur=function(){
+objouter.style.display='none';
+}
+
+//文本框按键抬起
+objInput.onkeyup=checkKeyCode;
+//文本框得到焦点
+objInput.onfocus=checkAndShow;
+function checkKeyCode(){
+var ie = (document.all)? true:false
+if (ie){
+var keyCode=event.keyCode
+if (keyCode==40||keyCode==38){ //下上
+   var isUp=false
+   if(keyCode==40) isUp=true ;
+   chageSelection(isUp)
+}else if (keyCode==13){//回车
+   outSelection(selectedIndex);
+}else{
+   checkAndShow()
+}
+}else{
+checkAndShow()
+}
+divPosition()
+}
+
+function checkAndShow(){
+   var strInput = objInput.value
+   if (strInput!=""){
+   divPosition();
+   selectedIndex=-1;
+   objouter.innerHTML ="";
+   for (intTmp=0;intTmp<arrList.length;intTmp++){
+   for(i=0;i<arrList[intTmp].length;i++){  
+if (arrList[intTmp].substr(i, strInput.length).toUpperCase()==strInput.toUpperCase()){
+     addOption(arrList[intTmp],strInput);
+   }
+}
+   }
+   objouter.style.display='';
+   }else{
+   objouter.style.display='none';
+}
+
+function addOption(value,keyw){
+var v=value.replace(keyw,"<b><font color=red>"+keyw+"</font></b>");
+   objouter.innerHTML +="<div onmouseover=\"this.className='sman_selectedStyle'\" onmouseout=\"this.className=''\" onmousedown=\"document.getElementById('"+objInputId+"').value='" + value + "'\">" + v + "</div>"  
+}
+}
+
+function chageSelection(isUp){
+if (objouter.style.display=='none'){
+objouter.style.display='';
+}else{
+if (isUp)
+   selectedIndex++
+else
+   selectedIndex--
+}
+
+var maxIndex = objouter.children.length-1;
+if (selectedIndex<0){selectedIndex=0}
+if (selectedIndex>maxIndex) {selectedIndex=maxIndex}
+for (intTmp=0;intTmp<=maxIndex;intTmp++){
+
+if (intTmp==selectedIndex){
+   objouter.children[intTmp].className="sman_selectedStyle";
+}else{
+   objouter.children[intTmp].className="";
+}
+}
+}
+
+function outSelection(Index){
+objInput.value = objouter.children[Index].innerText;
+objouter.style.display='none';
+}
+
+function divPosition(){
+objouter.style.top =getAbsoluteHeight(objInput)+getAbsoluteTop(objInput);
+objouter.style.left =getAbsoluteLeft(objInput);  
+objouter.style.width=getAbsoluteWidth(objInput)
+}
+}
+document.write("<div id='__smanDisp' style='position:absolute;display:none;" + this.style + "' onbulr> </div>");
+document.write("<style>.sman_selectedStyle{background-Color:#102681;color:#FFFFFF}</style>");
+function getAbsoluteHeight(ob){
+return ob.offsetHeight
+}
+function getAbsoluteWidth(ob){
+return ob.offsetWidth
+}
+function getAbsoluteLeft(ob){
+var s_el=0;el=ob;while(el){s_el=s_el+el.offsetLeft;el=el.offsetParent;}; return s_el
+}
+function getAbsoluteTop(ob){
+var s_el=0;el=ob;while(el){s_el=s_el+el.offsetTop ;el=el.offsetParent;}; return s_el
+}
+}
+smanPromptList(arrList,"inputer1");
+
+</script>
+
+	
+	<style>
+	  
+/*- Menu Tabs B--------------------------- */
+
+    #tabsB {
+	width:805px;
+	margin-top:2px;
+	margin-left:4px;
+      float:left;
+      width:100%;
+      background:#FFFFFF;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabsB ul {
+	margin:0;
+	padding:1px 1px 0 1px;
+	list-style:none;
+      }
+    #tabsB li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsB a {
+      float:left;
+      background:url("images/tableftB.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsB a span {
+      float:left;
+      display:block;
+      background:url("images/tabrightB.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsB a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsB a:hover span {
+      color:#000;
+      }
+    #tabsB a:hover {
+      background-position:0% -42px;
+      }
+    #tabsB a:hover span {
+      background-position:100% -42px;
+      }
+</style>
+
+<script language="javascript">
+		// increase the default animation speed to exaggerate the effect
+		$.fx.speeds._default = 1000;
+		$(function() {
+			$( "#infoedit" ).dialog({
+				autoOpen: false
+			});
+ 
+			$( "#infoeditbtn" ).click(function() {
+			createDiv();
+				$( "#infoedit" ).dialog( "open" );
+				return false;
+			});
+		});
+
+		$(function() {
+			$( "#datepicker" ).datepicker();
+			$( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd");
+		});
+
+		function createDiv()
+{
+    var shadow = document.createElement("div");
+    shadow.setAttribute("id","shadow");
+    shadow.style.zIndex="10";
+
+    
+    document.body.appendChild(shadow);
+}
+function hideDiv()
+{
+    var textUser=document.getElementById("textUser");
+    var user=document.getElementById("user");
+    user.value=textUser.value;
+
+    var box=document.getElementById("box");
+    var shadow=document.getElementById("shadow");
+    var btnShow=document.getElementById("btnShow");
+    
+    document.body.removeChild(box);
+    document.body.removeChild(shadow);
+    btnShow.disabled=false;   
+}
+-->
+</script>
+
+<title>自助分析</title>
+<style type="text/css" media="all">
+
+.TreeWrap {width:300px;}
+.MenuBox .titBox a,
+.MenuBox .titBox a:visited,
+.MenuBox2 .titBox a,
+.MenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:40px;color:#003;font-size:12px;display:block;}
+.MenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.MenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.MenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.MenuBox2 .txtBox {display:none;}
+.MenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.MenuBox .txtBox .num {color:#e00;}
+.MenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.MenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 0%;}
+.MenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 0%;}
+.ChildMenuBox .titBox a,
+.ChildMenuBox .titBox a:visited,
+.ChildMenuBox2 .titBox a,
+.ChildMenuBox2 .titBox a:visited {margin-left:10px;
+padding-left:0px;color:#003;font-size:12px;display:block;}
+.ChildMenuBox .titBox h3 a {
+background:url(images/ico_folder_open.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Fst a {
+background:url(images/ico_folder_open_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox .titBox h3.Lst a {
+background:url(images/ico_folder_open_lst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3 a {
+background:url(images/ico_folder.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Fst a {
+background:url(images/ico_folder_fst.gif) no-repeat 0 40%;}
+.ChildMenuBox2 .titBox h3.Lst a {
+line-height:250%;background:url(images/icon_exit.gif) no-repeat 0 0;}
+.ChildMenuBox2 .txtBox {display:none;}
+.ChildMenuBox .txtBox ul li {padding-left:65px;line-height:150%;}
+.ChildMenuBox .txtBox .num {color:#e00;}
+.ChildMenuBox .txtBox ul {
+background:url(images/line_y.gif) repeat-y 16px 0;}
+.ChildMenuBox .txtBox ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox2 ul li {
+background:url(images/t.gif) no-repeat 28px 50%;}
+.ChildMenuBox .txtBox ul li.Lst {
+background:url(images/t_lst.gif) no-repeat 28px 50%;}
+
+.timechoose{
+	margin-top:20px;
+}
+.reportchoose{
+    margin-top:20px;
+}
+.maincontent{
+	width:700px;
+}
+.maincontent_left
+{   
+    border-style:solid;
+	border-color:#CCCCCC;
+	float:left;
+	margin-top:10px;
+	margin-right:20px;
+	width:250px;
+	height:300px;
+}
+.maincontent_middle
+{   
+	float:left;
+	margin-top:10px;
+	width:250px;
+	height:100px;
+}
+.maincontent_right
+{   
+    border-style:solid;
+	border-color:#CCCCCC;
+	float:left;
+	margin-top:10px;
+	margin-left:20px;
+	width:400px;
+	height:400px;
+	overflow-y:scroll;
+}
+
+.ressultbutton{
+	margin-left:150px;
+}
+.ressultbutton input{
+    margin-top:30px;
+	margin-right:150px;
+}
+
+</style>
+<script type="text/javascript">
+<!--
+function ExChgClsName(Obj,NameA,NameB){
+var Obj=document.getElementById(Obj)?document.getElementById(Obj):Obj;
+Obj.className=Obj.className==NameA?NameB:NameA;
+}
+function showMenu(iNo){
+ExChgClsName("Menu_"+iNo,"MenuBox","MenuBox2");
+}
+function showChildMenu(iNo){
+ExChgClsName("ChildMenu_"+iNo,"ChildMenuBox","ChildMenuBox2");
+}
+-->
+</script>
+
+<script>
+function selectDate(){
+
+if( document.getElementById('DateS').checked == true)
+{
+	date.style.display='none';
+	calendar.style.display='';
+}
+else
+{
+	date.style.display='';
+	calendar.style.display='none';
+}
+}
+</script>
+
+<script>
+function selectTab(Obj){
+
+	document.getElementById('tab1').style.display = 'none';
+	document.getElementById('tab2').style.display = 'none';
+	document.getElementById('tab3').style.display = 'none';
+	document.getElementById('tab4').style.display = 'none';
+	document.getElementById(Obj).style.display = '';
+}
+</script>
+
+<script>
+function selectForm1(){
+	document.all.form1.options.length = 0;
+	var currSelectIndex = document.all.sl1.selectedIndex;
+	var varItem;
+	switch(currSelectIndex)
+	{
+		case 0:
+			varItem = new Option("Ⅰ. 资产",0);form1.options.add(varItem);
+			varItem = new Option("1. 现金",1);form1.options.add(varItem);
+			varItem = new Option("2. 贵金属",2);form1.options.add(varItem);
+			varItem = new Option("3. 存放中央银行款项",3);form1.options.add(varItem);
+			varItem = new Option("4. 存放同业款项",4);form1.options.add(varItem);
+			varItem = new Option("4.1 境内同业",5);form1.options.add(varItem);
+			varItem = new Option("4.2 境外同业",6);form1.options.add(varItem);
+			varItem = new Option("70.存放系统内款项",7);form1.options.add(varItem);
+			varItem = new Option("71.拨付营运资金",8);form1.options.add(varItem);
+			varItem = new Option("5. 应收利息",9);form1.options.add(varItem);
+			varItem = new Option("6. 贷款",10);form1.options.add(varItem);
+			varItem = new Option("7. 贸易融资",11);form1.options.add(varItem);
+			varItem = new Option("8. 贴现及买断式转贴现",12);form1.options.add(varItem);
+			varItem = new Option("9. 其他贷款",13);form1.options.add(varItem);
+			varItem = new Option("10. 拆放同业",14);form1.options.add(varItem);
+			varItem = new Option("11. 其他应收款",15);form1.options.add(varItem);
+			break;
+		case 1:
+			varItem = new Option("1.非应计贷款",0);form1.options.add(varItem);
+			varItem = new Option("2.委托及代理业务",1);form1.options.add(varItem);
+			varItem = new Option("2.1委托贷款资金",2);form1.options.add(varItem);
+			varItem = new Option("2.2委托投资资金",3);form1.options.add(varItem);
+			varItem = new Option("2.3委托贷款",4);form1.options.add(varItem);
+			varItem = new Option("2.4委托投资",5);form1.options.add(varItem);
+			varItem = new Option("2.5委托资金轧差",6);form1.options.add(varItem);
+			varItem = new Option("3.承兑汇票",7);form1.options.add(varItem);
+			varItem = new Option("4.保函",8);form1.options.add(varItem);
+			varItem = new Option("5. 应收利息",9);form1.options.add(varItem);
+			varItem = new Option("5.跟单信用证",10);form1.options.add(varItem);
+			varItem = new Option("6.承诺",11);form1.options.add(varItem);
+			varItem = new Option("6.1其中：不可无条件撤销的承诺",12);form1.options.add(varItem);
+			varItem = new Option("7.信用风险仍在银行的销售与购买协议",13);form1.options.add(varItem);
+			varItem = new Option("8.金融衍生品",14);form1.options.add(varItem);
+			break;
+		case 2:
+			varItem = new Option("1各项贷款",0);form1.options.add(varItem);
+			varItem = new Option("1.1正常类",1);form1.options.add(varItem);
+			varItem = new Option("1.2关注类",2);form1.options.add(varItem);
+			varItem = new Option("1.3次级类",3);form1.options.add(varItem);
+			varItem = new Option("1.4可疑类",4);form1.options.add(varItem);
+			varItem = new Option("1.5损失类",5);form1.options.add(varItem);	
+			break;
+	}
+}
+function selectForm2(){
+	document.all.form2.options.length = 0;
+	var currSelectIndex = document.all.sl2.selectedIndex;
+	var varItem;
+	switch(currSelectIndex)
+	{
+		case 0:
+			varItem = new Option("大型企业贷款",0);form2.options.add(varItem);
+			varItem = new Option("中型企业贷款",1);form2.options.add(varItem);
+			varItem = new Option("小型企业贷款",2);form2.options.add(varItem);
+			varItem = new Option("其中：单户授信小于500万的小型企业贷款",3);form2.options.add(varItem);
+			varItem = new Option("合计",4);form2.options.add(varItem);
+			break;
+		case 1:
+			varItem = new Option("涉农贷款",0);form2.options.add(varItem);
+			varItem = new Option("涉农贷款按照投向和用途分类",1);form2.options.add(varItem);
+			varItem = new Option("农村贷款",2);form2.options.add(varItem);
+			varItem = new Option("农户贷款",3);form2.options.add(varItem);
+			varItem = new Option("农户农林牧渔业贷款",4);form2.options.add(varItem);
+			varItem = new Option("农户消费和其他生产经营贷款",5);form2.options.add(varItem);
+			varItem = new Option("农村企业及各类组织贷款",6);form2.options.add(varItem);
+			varItem = new Option("农村企业及各类组织农林牧渔业贷款",7);form2.options.add(varItem);
+			varItem = new Option("农村企业及各类组织支农贷款",8);form2.options.add(varItem);
+			varItem = new Option("农村企业及各类组织其他生产贷款",9);form2.options.add(varItem);
+			varItem = new Option("城市企业及各类组织涉农贷款",10);form2.options.add(varItem);
+			varItem = new Option("城市企业及各类组织农林牧渔业贷款",11);form2.options.add(varItem);
+			varItem = new Option("城市企业及各类组织支农贷款",12);form2.options.add(varItem);
+			break;
+		case 2:
+			varItem = new Option("“三农”",0);form2.options.add(varItem);
+			varItem = new Option("其中：面向农户的小额信贷",1);form2.options.add(varItem);
+			varItem = new Option("重大工程建设",2);form2.options.add(varItem);
+			varItem = new Option("节能减排",3);form2.options.add(varItem);
+			varItem = new Option("科技创新",4);form2.options.add(varItem);
+			varItem = new Option("技术改造",5);form2.options.add(varItem);	
+			break;
+	}
+}
+</script>
+<style> 
+
+.white_content {
+ display: none;
+ top: 25%;
+ left: 25%;
+ width: 805px;
+ clear:both;margin:0 auto;
+ text-align:center;
+ background-color: white;
+ z-index:1002;
+ overflow: auto;
+}
+.black_overlay {
+ display: none;
+ position: absolute;
+ top: 0%;
+ left: 0%;
+ width: 100%;
+ HEIGHT: 100px;
+ background-color:#f5f5f5;
+ z-index:1001;
+ -moz-opacity: 0.8;
+ opacity:.80;
+ filter: alpha(opacity=80);
+}
+.close {
+ float:right;
+ clear:both;
+ 
+ text-align:right;
+ margin:0 0 6px 0
+}
+.close a {
+ color:#333;
+ text-decoration:none;
+ font-size:14px;
+ font-weight:700
+}
+.con {
+ text-indent:1.5pc;
+ line-height:21px
+}
+</style>
+
+</head>
+
+       
+<body style="text-align:center">
+<div class="login_content" align="center">
+	<iframe src="top.html" width="1000px" height="231px" scrolling="no" frameborder="0"></iframe>
+	</div>
+		<div class="login_content" style=" width:1010px;clear:both;margin:0 auto;height:830px;">
+		<table>
+			<tr>
+				<td>
+				<iframe src="menu.html" width="195px" height="830px" scrolling="no" frameborder="0"></iframe>
+				</td>
+				<td>
+<div class="login_content" style="width:805px;">
+	<div class="location">
+	  <div class="name"> 当前位置：<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />数据分析 <img src="images/icon_jt.gif" align="absmiddle" hspace="6" />自助分析</div>
+	</div>
+
+<div class="subc6" style="width:805px; margin:5px 0px 0px 0px; margin-top:5px; height:790px;">
+		<div class="title" style="width:12%">自助分析</div>
+		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
+		<div class="subc_content" style="text-indent:0">
+<div id="light1" class="white_content">
+		<div class="con">		
+			<table class="datalist">
+			<tr>
+				<th>时间点</th>
+			</tr>
+			<tr>
+				<td height="140">
+				<select multiple="multiple" id="" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px"  name="">
+												<option value="本期">本期</option>
+												<option value="上期">上期</option>
+												<option value="年初">年初</option>
+												<option value="去年同期">去年同期</option>
+												<option value="比上期">比上期</option>
+												<option value="比年初">比年初</option>
+												<option value="比去年同期">比去年同期</option>			
+				</select>
+				</td>
+			</tr>
+			  <tr>		
+			  <td>
+		        <input name="button" type="button" class="buttonStyle" onClick="hide_window('light1')" value=" 确 认"/>
+		      </td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+	
+	<div id="light" class="white_content">
+		<div class="con">		
+			<table class="datalist">
+			<tr>
+				<th>连续时间</th>
+			</tr>
+			<tr>
+				<td>开始时间<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate1()">
+				
+				<div id="date1"><select name="year" style="width:auto">
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>2009</option>
+				  </select>年
+				  <select name="month" style="width:auto">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+				  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+				  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+				  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+				  </select>月</div>
+			  <div id="calendar1" style="display:none"><input name="text" type="text" id="datepicker1" value="" size="30" /></div>
+			 </td>
+			  </tr>
+			  <tr>
+			  <td>结束时间<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate2()">
+				<div id="date2"><select name="year" style="width:auto">
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>2009</option>
+				  </select>年
+				  <select name="month" style="width:auto">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+				  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+				  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+				  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+				  </select>月</div>
+			  <div id="calendar2" style="display:none"><input name="text" type="text" id="datepicker2" value="" size="30" /></div>
+			  </td>
+			  </tr>
+			  <tr>		
+			  <td>
+		        <input name="button" type="button" class="buttonStyle" onClick="hide_window('light')" value=" 确 认"/>
+		     </td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+
+<div class="univer_model">
+	<table width="98%">
+		<tr>
+			<td width="3%"><input type="radio" name="pic" checked="checked" style="width:auto"></td>
+			<td width="22%"><img src="images/1.jpg"/></td>
+			<td width="3%"><input type="radio" name="pic" style="width:auto"></td>
+			<td width="22%"><img src="images/2.jpg"/></td>
+			<td width="3%"><input type="radio" name="pic" style="width:auto"></td>
+			<td width="22%"><img src="images/3.jpg"/></td>
+			<td width="3%"><input type="radio" name="pic" style="width:auto"></td>
+			<td width="22%"><img src="images/4.jpg"/></td>
+		</tr>
+	</table>
+</div>
+
+	<div class="univer_model">
+		<TABLE id="paramTable" width="98%" border="0" cellpadding="0" cellspacing="0">
+            <tr height="30">
+              <td width="9%"><input type="radio" name="time" style="width:auto" checked="checked" onClick="if(light1.style.display='none')  show_window('light');"/>开始时间<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate()">
+              </td>
+			  <td width="17%"  id="date"><select name="year" style="width:auto">
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>2009</option>
+				  </select>年
+				  <select name="month" style="width:auto">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+				  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+				  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+				  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+				  </select>月
+              </td>
+			  <td width="13%" id="calendar" style="display:none"><input name="text" type="text" id="datepicker" value="" size="30" /></td>
+			  <td width="10%">结束时间
+			    <input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate()">
+              </td>
+			  <td width="17%"  id="date"><select name="year" style="width:auto">
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>2009</option>
+				  </select>年
+				  <select name="month" style="width:auto">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+				  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+				  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+				  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+				  </select>月
+              </td>
+			  <td width="13%" id="calendar" style="display:none"><input name="text" type="text" id="datepicker" value="" size="30" /></td>
+			  <td width="8%"><input type="radio" name="time" style="width:auto" onClick="if(light.style.display='none') show_window('light1');"/>时间点
+              </td>
+			  <td width="10%">
+			  <select name="month" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 50px" multiple size="4" name="lstDate16">
+                  <option>本期</option>
+                  <option>上期</option>
+                  <option>年初</option>
+				  <option>去年同期</option>
+                  <option>比上期</option>
+                  <option>比年初</option>
+				  <option>比去年同期</option>
+				  </select>
+</td>
+			  <td width="5%"><input type="checkbox" name="time" style="width:auto" />图表 </td>
+			</tr>
+		</TABLE>
+	</div>
+	
+	<div id="tabsB">
+	  <ul>
+		<li><span><a href="javascript:selectTab('tab1')"><span> &nbsp;指 标&nbsp;  	</span></a></li>
+		<li><span><a href="javascript:selectTab('tab2')"><span> 1104报表 			   	</span></a></li>
+		
+	  </ul>
+	</div>
+		<div style="height:60%">
+			<div class="maincontent_left" style="width:300px;height:100px" id="tab1">
+			<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
+												<option value="不良贷款率">不良贷款率</option>
+												<option value="存贷款比例">存贷款比例</option>
+												<option value="贷款专项损失准备充足率">贷款专项损失准备充足率</option>
+												<option value="贷款损失准备覆盖率">贷款损失准备覆盖率</option>
+												<option value="超额备付率">超额备付率</option>
+												<option value="流动性比例">流动性比例</option>
+												<option value="农业贷款占各项贷款比例">农业贷款占各项贷款比例</option>				
+												<option value="核心负债依存度">核心负债依存度</option>
+												<option value="流动性缺口率">流动性缺口率</option>
+												<option value="非信贷资产不良率">非信贷资产不良率</option>
+												<option value="单一集团客户授信集中度">单一集团客户授信集中度</option>
+												<option value="授信集中度">授信集中度</option>
+												<option value="单一客户贷款集中度">单一客户贷款集中度</option>
+												<option value="单一客户贷款占全部贷款比例">单一客户贷款占全部贷款比例</option>			
+												<option value="全部关联度">全部关联度</option>
+												<option value="风险资产利润率">风险资产利润率</option>
+												<option value="不良贷款率">不良贷款率</option>
+												<option value="存贷款比例">存贷款比例</option>
+												<option value="贷款专项损失准备充足率">贷款专项损失准备充足率</option>
+												<option value="贷款损失准备覆盖率">贷款损失准备覆盖率</option>
+												<option value="超额备付率">超额备付率</option>	
+												<option value="流动性比例">流动性比例</option>
+												<option value="农业贷款占各项贷款比例">农业贷款占各项贷款比例</option>
+												<option value="资本利润率">资本利润率</option>
+												<option value="资产利润率">资产利润率</option>
+												<option value="调整资产利润率">调整资产利润率</option>
+												<option value="成本收入比率">成本收入比率</option>
+												<option value="资本充足率">资本充足率</option>
+												</select>
+												</div>
+			<div class="maincontent_left" id="tab2" style="width:300px;height:100px;display:none">
+				<table height="100%" border="1">
+				<tr height="5%">
+				<td><input type="text" style="width:auto" id="inputer1"></td>
+				<td><input type="text" style="width:auto" id="inputer1"></td>
+				</tr>
+				<tr height="95%">
+				<td>
+				<select id="sl1" style="FONT-SIZE: 9pt; WIDTH:120px; HEIGHT: 100px" size="4" name="sl1" onChange="selectForm1();">
+												<option value="1">GF01资产负债项目统计表.xls</option>
+												<option value="2">GF01资产负债项目统计表附注第Ⅰ部分：表外业务情况表</option>
+												<option value="3">GF01资产负债项目统计表附注第Ⅱ部分：贷款质量五级分类情况简表</option>
+												<option value="4">GF01资产负债项目统计表附注第Ⅲ部分：存贷款明细报表(一)</option>
+												<option value="5">GF01资产负债项目统计表附注第Ⅵ部分：各项垫款情况表</option>
+												<option value="6">GF01资产负债项目统计表附注第Ⅸ部分：存贷款月日均情况表</option>
+												<option value="7">GF01资产负债项目统计表附注第VII部分：贷款分行业情况表（按贷款投向）</option>
+												</select>
+												</td>
+				<td>
+				<select id="form1" style="FONT-SIZE: 9pt; WIDTH: 120px; HEIGHT: 100px;" multiple size="4" name="form1">
+												</select>
+												</td>
+					</tr>
+				</table>
+			</div>
+			<div class="maincontent_left" id="tab3" style="width:300px;height:100px;;display:none">
+				<table height="100%" border="1">
+				<tr height="5%">
+				<td><input type="text" style="width:auto" id="inputer1"></td>
+				<td><input type="text" style="width:auto" id="inputer2"></td>
+				</tr>
+				<tr height="95%">
+				<td>
+				<select id="sl2" style="FONT-SIZE: 9pt; WIDTH: 120px; HEIGHT: 100px" size="4" name="sl2" onChange="selectForm2();">
+												<option value="1">0监测统计报表6-大中小企业贷款统计表</option>
+												<option value="2">4款投向监测统计报表5-涉农贷款统计表</option>
+												<option value="3">5统计报表3-贷款按有保有压分类统计表</option>
+												</select>
+												</td>
+				<td>
+				<select id="form2" style="FONT-SIZE: 9pt; WIDTH: 120px; HEIGHT: 100px;" multiple size="4" name="form2">
+												</select>
+												</td>
+					</tr>
+				</table>
+			</div>
+			<div class="maincontent_left" id="tab4" style="width:300px;height:100px;display:none">
+				<input type="text" style="width:auto" id="inputer3">
+				<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
+												<option value="不良贷款率">不良贷款率</option>
+												<option value="存贷款比例">存贷款比例</option>
+												<option value="贷款专项损失准备充足率">贷款专项损失准备充足率</option>
+												<option value="贷款损失准备覆盖率">贷款损失准备覆盖率</option>
+												<option value="超额备付率">超额备付率</option>
+												<option value="流动性比例">流动性比例</option>
+												<option value="农业贷款占各项贷款比例">农业贷款占各项贷款比例</option>				
+												<option value="核心负债依存度">核心负债依存度</option>
+												<option value="流动性缺口率">流动性缺口率</option>
+												<option value="非信贷资产不良率">非信贷资产不良率</option>
+												<option value="单一集团客户授信集中度">单一集团客户授信集中度</option>
+												<option value="授信集中度">授信集中度</option>
+												<option value="单一客户贷款集中度">单一客户贷款集中度</option>
+												<option value="单一客户贷款占全部贷款比例">单一客户贷款占全部贷款比例</option>			
+												<option value="全部关联度">全部关联度</option>
+												<option value="风险资产利润率">风险资产利润率</option>
+												<option value="不良贷款率">不良贷款率</option>
+												<option value="存贷款比例">存贷款比例</option>
+												<option value="贷款专项损失准备充足率">贷款专项损失准备充足率</option>
+												<option value="贷款损失准备覆盖率">贷款损失准备覆盖率</option>
+												<option value="超额备付率">超额备付率</option>	
+												<option value="流动性比例">流动性比例</option>
+												<option value="农业贷款占各项贷款比例">农业贷款占各项贷款比例</option>
+												<option value="资本利润率">资本利润率</option>
+												<option value="资产利润率">资产利润率</option>
+												<option value="调整资产利润率">调整资产利润率</option>
+												<option value="成本收入比率">成本收入比率</option>
+												<option value="资本充足率">资本充足率</option>
+												</select>
+			</div>
+			<div style="height:100px;width:100px" class="maincontent_middle">
+			<table width="98%" height="100px">
+				<tr height="20%">
+					<td align="center">&nbsp;</td>
+				</tr>
+				<tr height="20%">
+					<td align="center"><input type="button" style="width:50%" value="->" class="buttonStyle"></td>
+				</tr>
+				<tr height="20%">
+					<td align="center"><input type="button" style="width:50%" value="<-" class="buttonStyle"></td>
+				</tr>
+				<tr height="20%">
+					<td align="center"><input type="button" style="width:50%" value="删除" class="buttonStyle"></td>
+				</tr>
+				<tr height="20%">
+					<td align="center">&nbsp;</td>
+				</tr>
+			</table>
+			</div>
+			<div style="height:100px;width:350px" class="maincontent_right">
+			</div>	
+		</div>
+<div id="tabsB">
+	<table><tr height="10px"><td>&nbsp;</td></tr></table>
+	<table>
+	<tr>
+		<td><input type="radio" name="jg" onClick="xnjg.style.display = '';bsjg.style.display = 'none';" checked="checked" style="width:auto">虚拟机构
+		</td>
+		<td><input type="radio" name="jg" onClick="xnjg.style.display = 'none';bsjg.style.display = '';" style="width:auto">报送机构</td>
+	</tr>
+		<tr>
+		<td colspan="2"><input type="text" style="width:130">&nbsp;&nbsp;<input name="" type="checkbox" value="全省">全省&nbsp;&nbsp;<input name="" type="checkbox" value="全市">全市&nbsp;&nbsp;<input name="" type="checkbox" value="全县">全县
+		</td>
+		
+	</tr>
+	</table>
+	</div>
+	<div style="height:60%">
+	<div id="xnjg" style="height:100px;width:300px" class="maincontent_left">
+	<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
+												<option value="太原城区联合社">太原城区联合社</option>
+												<option value="太原城区合作市">太原城区合作市</option>
+												<option value="太原城区农业社">太原城区农业社</option>
+												<option value="古交市联合社 ">古交市联合社 </option>
+												<option value="古交市合作市 ">古交市合作市 </option>
+												<option value="古交市农业社 ">古交市农业社 </option>
+												<option value="清徐县联合社 ">清徐县联合社 </option>				
+												<option value="清徐县合作市 ">清徐县合作市 </option>
+												<option value="清徐县农业社 ">清徐县农业社 </option>
+												<option value="阳曲县联合社">阳曲县联合社</option>
+												<option value="阳曲县合作市 ">阳曲县合作市 </option>
+												<option value="阳曲县农业社 ">阳曲县农业社 </option>
+												<option value="娄烦县联合社 ">娄烦县联合社 </option>
+												<option value="娄烦县合作市 ">娄烦县合作市 </option>			
+												<option value="娄烦县农业社">娄烦县农业社</option>
+												<option value="大同南效区联合社">大同南效区联合社</option>
+												<option value="大同南效区合作市">大同南效区合作市</option>
+												<option value="大同南效区农业社 ">大同南效区农业社 </option>
+												<option value="阳高县联合社 ">阳高县联合社 </option>
+												<option value="阳高县合作市">阳高县合作市</option>
+												<option value="阳高县农业社">阳高县农业社</option>	
+												<option value="天镇县联合社 ">天镇县联合社 </option>
+												<option value="天镇县合作市 ">天镇县合作市 </option>
+												<option value="天镇县农业社 ">天镇县农业社 </option>
+												<option value="广灵县联合社 ">广灵县联合社 </option>
+												<option value="广灵县合作市 ">广灵县合作市 </option>
+												<option value="广灵县农业社 ">广灵县农业社 </option>
+												<option value="灵丘县联合社 ">灵丘县联合社 </option>
+												<option value="灵丘县合作市 ">灵丘县合作市 </option>
+												<option value="灵丘县农业社 ">灵丘县农业社 </option>
+												</select>
+			</div>
+			<div id="bsjg" style="height:100px;width:300px;display:none" class="maincontent_left">
+	<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
+												<!--option value="太原城区联合社">太原城区联合社</option>
+												<option value="太原城区合作市">太原城区合作市</option>
+												<option value="太原城区农业社">太原城区农业社</option-->
+												<option value="古交市联合社 ">古交市联合社 </option>
+												<option value="古交市合作市 ">古交市合作市 </option>
+												<option value="古交市农业社 ">古交市农业社 </option>
+												<option value="清徐县联合社 ">清徐县联合社 </option>				
+												<option value="清徐县合作市 ">清徐县合作市 </option>
+												<option value="清徐县农业社 ">清徐县农业社 </option>
+												<option value="阳曲县联合社">阳曲县联合社</option>
+												<option value="阳曲县合作市 ">阳曲县合作市 </option>
+												<option value="阳曲县农业社 ">阳曲县农业社 </option>
+												<option value="娄烦县联合社 ">娄烦县联合社 </option>
+												<option value="娄烦县合作市 ">娄烦县合作市 </option>			
+												<option value="娄烦县农业社">娄烦县农业社</option>
+												<option value="大同南效区联合社">大同南效区联合社</option>
+												<option value="大同南效区合作市">大同南效区合作市</option>
+												<option value="大同南效区农业社 ">大同南效区农业社 </option>
+												<option value="阳高县联合社 ">阳高县联合社 </option>
+												<option value="阳高县合作市">阳高县合作市</option>
+												<option value="阳高县农业社">阳高县农业社</option>	
+												<option value="天镇县联合社 ">天镇县联合社 </option>
+												<option value="天镇县合作市 ">天镇县合作市 </option>
+												<option value="天镇县农业社 ">天镇县农业社 </option>
+												<option value="广灵县联合社 ">广灵县联合社 </option>
+												<option value="广灵县合作市 ">广灵县合作市 </option>
+												<option value="广灵县农业社 ">广灵县农业社 </option>
+												<option value="灵丘县联合社 ">灵丘县联合社 </option>
+												<option value="灵丘县合作市 ">灵丘县合作市 </option>
+												<option value="灵丘县农业社 ">灵丘县农业社 </option>
+												</select>
+			</div>
+		<div style="height:100px;width:100px" class="maincontent_middle">
+			<table width="98%" height="100%">
+				<tr height="20%">
+					<td align="center"></td>
+				</tr>
+				<tr height="20%">
+					<td align="center"><input type="button" style="width:50%" value="->" class="buttonStyle"></td>
+				</tr>
+				<tr height="20%">
+					<td align="center"><input type="button" style="width:50%" value="<-" class="buttonStyle"></td>
+				</tr>
+				<tr height="20%">
+					<td align="center"><input type="button" style="width:50%" value="删除" class="buttonStyle"></td>
+				</tr>
+				<tr height="20%">
+					<td align="center">&nbsp;</td>
+				</tr>
+			</table>
+			</div>
+			<div style="height:100px;width:350px" class="maincontent_right">
+			</div>
+	</div>
+	<div class="ressultbutton" align="center" style="width:805px;">
+		<form ><a href="zzfx_result.html"onclick="window.open(this.href);return false">
+			<input type="submit" value="查看分析结果" class="buttonStyle" /></a><input type="reset" value="全部清空" class="buttonStyle" />
+		</form>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle;margin-top:10px">   技术支持：南京科融数据系统有限公司&nbsp;&nbsp;</div>
+	</div>
+	</div>
+</body>
+</html>

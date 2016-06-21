@@ -1,0 +1,44 @@
+<?xml version= '1.0' encoding= 'GB2312'?>
+<chart numberSuffix='(%)' lineThickness='1' showValues='0' formatNumberScale='0' anchorRadius='2'   divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridAlpha='5' alternateHGridColor='CC3300' shadowAlpha='40' labelStep="2" numvdivlines='5' chartRightMargin="35" bgColor='FFFFFF,CC3300' bgAngle='270' bgAlpha='10,10'>
+	<categories>
+		<category label='2009-1' />
+		<category label='2009-2' />
+		<category label='2009-3' />
+		<category label='2009-4' />
+		<category label='2009-5' />
+    </categories>
+<dataset seriesName='清徐县联合社' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
+	<set value='34' />
+	<set value='64' />
+	<set value='63' />
+	<set value='23' />
+	<set value='34' />
+	</dataset>
+
+<dataset seriesName='古交市合作社' color='F1683C' anchorBorderColor='F1683C' anchorBgColor='F1683C'>
+	<set value='73' />
+	<set value='83' />
+	<set value='94' />
+	<set value='10' />
+	<set value='48' />
+</dataset>
+
+<dataset seriesName='天镇县联合社' color='2AD62A' anchorBorderColor='2AD62A' anchorBgColor='2AD62A'>
+	<set value='23' />
+	<set value='15' />
+	<set value='33' />
+	<set value='24' />
+	<set value='11' />
+</dataset>
+	<styles>                
+		<definition>
+                         
+			<style name='CaptionFont' type='font' size='12'/>
+		</definition>
+		<application>
+			<apply toObject='CAPTION' styles='CaptionFont' />
+			<apply toObject='SUBCAPTION' styles='CaptionFont' />
+		</application>
+	</styles>
+
+</chart>
