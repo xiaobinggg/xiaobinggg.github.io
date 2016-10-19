@@ -1,4 +1,4 @@
-
+==javascript==
 
 [[innerfunction|匿名函数]]  
 
