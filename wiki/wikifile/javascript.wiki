@@ -1,4 +1,4 @@
-
+==javascript==
 
 [[innerfunction|匿名函数]]  
 
@@ -6,4 +6,8 @@
 
 [[prototype|原型]]
 
+[[SVG]]
+
 [[index]]
+
+
