@@ -2,7 +2,7 @@
 
 - HiMapApp
 - HiOverLay
-	- HiPoint
+	- [[HiPoint]]
 	- HiIcon
 	- HiVectorIcon
 	- HiTitle
