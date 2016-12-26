@@ -307,7 +307,7 @@ $(document).ready(function() {
 
 });
 function beforunload(event) {  
-    event = event ? event : (window.event ? window.event : null);  
+    /*event = event ? event : (window.event ? window.event : null);  
     var myIE = myBrowser();  
     if (myIE=="IE") { // IE  
         var cy = event.clientY || event.target.event.clientY;  
@@ -321,7 +321,7 @@ function beforunload(event) {
         if (nodeName!="A") {  
             return "确定要离开本页面吗？";  
         }  
-    }  
+    }  */
 }  
 function myBrowser() {  
     var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
