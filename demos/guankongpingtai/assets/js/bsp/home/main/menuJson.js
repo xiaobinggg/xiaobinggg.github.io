@@ -43,12 +43,8 @@ var menuJson =
 		{id:"010510",name:"视频方案执行",click:"showVideoTourHtmlApp_new('B','视频方案执行','视频方案执行');"},
 		{id:"010511",name:"视频监控",click:"showVideoTourHtmlApp_new('B','视频监控','视频监控');"},
 		{id:"010512",name:"警力监督",click:"showPoliceSupervisionHtmlApp('advancemgr', 'PoliceSupervision', '2')"},
-		{id:"010513",name:"工作量统计",click:"showHtmlApp('guarddutymgr','Guard_Duty_Statistics', '工作量统计',1000,750);"},
-		{id:"010514",name:"信号方案监控1",click:"showHiCONConfig('guarddutymgr','HiCONConfig','信号方案监控');"},
-		{id:"010514",name:"信号方案监控2",click:"showHiCONConfig('guarddutymgr','HiCONConfig','信号方案监控');"},
-		{id:"010514",name:"信号方案监控3",click:"showHiCONConfig('guarddutymgr','HiCONConfig','信号方案监控');"},
-		{id:"010514",name:"信号方案监控4",click:"showHiCONConfig('guarddutymgr','HiCONConfig','信号方案监控');"},
-		{id:"010514",name:"信号方案",click:"showHiCONConfig('guarddutymgr','HiCONConfig','信号方案监控');"}
+		{id:"010513",name:"工作量统计",click:"showHtmlApp('guarddutymgr','Guard_Duty_Statistics', '工作量统计',1000,750);"}
+		
 	]}
 	                                	
 	
