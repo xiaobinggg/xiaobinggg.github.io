@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* reset marginesów oraz dopełnień */
+html, body, ul, li { margin: 0; padding: 6px; line-height: 1.2em;}
+br {line-height:8px; margin:0px;}
+
+/* reset wysokości linii i fontu */
+h1, h2, ul, li, p { margin: 0; padding: 0; }
+
+/* ustawienia globalne */
+html, body {font-family:georgia, verdana, tahoma, arial, sans-serif; font-size: 0.625em/1.5em; background:#f2f2f2; }
+a {color:#1c769a; text-decoration:none; font-size:1.1em;}
+a:hover {text-decoration:underline;}
+
+/* TYTUŁ */
+h2 {
+	font-size:1.3em;
+	text-align:center;
+	color:#414141;
+	margin-bottom:0px; padding:0px;
+}
+
+h3 {
+	font-size:0.8em;
+	text-align:center;
+	color:#8f8f8f;
+	margin-top:3px; padding-top:0px;
+}
+h3 a { 
+	color:#747474;
+}
+/* CONTENT */ 
+#content {
+	padding:10px;
+	border:solid 1px #dfdfdf;
+	background:#ffffff;
+	font-size:11px;
+	margin:0 auto;
+	overflow:hidden;
+	height:100%;
+}
+#content h1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px; 
+	color:#535353;
+}
+#content img {
+	padding:5px;
+	background:#f7f7f7;
+	border:solid 1px #464646;
+	margin:2px
+}
+
+#popdiv{
+	/*希望窗口有边框*/
+	border: 1px red solid;
+	width: 1300px;
+	height:600px;
+	/*控制窗口的位置*/
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	z-index:199;
+	display: none;
+}
+
+/*控制标题栏的背景色*/
+#title{
+	background-color: yellow;
+	/*控制标题栏左内边距*/
+	padding-left: 3px;
+	
+}
+
+#content{
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+#span{
+	padding-left: 180px;
+}
+
+a:LINK{
+	text-decoration: none;
+}
+
+a:HOVER {
+	color: red;
+}
+
+.popmenu ul li {
+	float:left;
+	display:block;
+	width:311px;
+	padding-top:2px;
+	margin-bottom:5px;
+	//background: url(../images/zakladka.png) top left no-repeat;
+	list-style:none;
+	overflow:visible;
+}
+.popmenu ul li a {
+	display:block;
+	height:34px; width:273px;
+	margin-top:0px;
+	padding-top:10px;
+	padding-left:35px;
+	font-size:14px;
+	color:#82846f;
+	outline:none;
+}
+.popmenu ul li .active {
+	//background:url(../images/on.png) top right no-repeat;
+}
+
+.popmenu ul li .inactive {
+	//background:url(../images/off.png) top right no-repeat;
+}
+.popmenu ul li ul {
+	
+	margin-top:-4px;
+	margin-bottom:20px;   
+}
+.popmenu ul li ul li ul {
+	margin-bottom:5px;
+}
+.popmenu ul li ul li {
+	display:block;
+	background:none;
+	font-size:12px;
+	list-style:circle;
+	color:#8f9d4c;
+	margin-bottom:0px;
+	margin-top:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:1px;
+	margin-left:35px;
+}
+.popmenu ul li ul li a {
+	background:none;
+	font-size:12px;
+	height:15px;
+	color:#8f9d4c;
+	padding-left:0px; 
+}

@@ -1,0 +1,308 @@
+body
+{
+   font:14px/180% Arial;
+   background-repeat:no-repeat;
+}
+html,body
+{
+   width:100%;
+   height:100%;
+}
+
+.hand{
+	cursor:pointer;
+}
+.ms-controller{
+    display:none;
+}
+/*首页topbar区域*/
+#top
+{
+	width: 100%;
+	height: 60px;
+	padding-left:0px;
+	background-color:#05112B;
+}
+.topTitle
+{
+	font-family: "Microsoft YaHei" ! important;
+	font-size:30px;
+	color:#FFFFFF;
+	padding-left:30px;
+	padding-top: 20px;
+	width:50%;
+	letter-spacing: 3px;
+	height:100%;
+	float: left;
+}
+.functionArea
+{
+	width:50%;
+	height:100%;
+	float: left;
+}
+.welcome
+{
+	color:#FFFFFF;
+	padding-left:150px;
+	text-align:center;
+	vertical-align:middle;
+	width:40%;
+}
+.btnArea
+{
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+    text-align:right;
+    padding: 15px 30px 0 0;
+}
+.btnImg{
+    width: 32px;
+    height: 32px;
+    display: block;
+    float: right;
+    margin-left: 18px;
+}
+#logoutTable
+{
+	font-family: "Microsoft YaHei" ! important;
+	font-size:12px;
+	font-weight:bold;
+	background-color:#FFFFFF;
+
+}
+.logoutTableChild
+{
+	color:#000000 ! important;
+}
+#logoutDetail
+{
+	display:none;
+	width:65px;
+	height:40px;
+	position:absolute;
+	right:20px;
+	top:40px;
+	background-color:#FFFFFF;
+	text-align:center;
+	z-index:100;
+}
+/*主界面区域*/
+#mainFrame
+{
+	width: 100%;
+	height: 300px;
+	background:url(../../../../image/bsp/home/tile/background.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	overflow:hidden;
+}
+#firstmenudiv
+{
+    width: 1000px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*向左点击功能区域*/
+.leftFunctionArea{
+	float:left;
+	width: 89px;
+    height: 100%;
+}
+.leftFunctionArea .directionImg{
+	position:absolute;
+	cursor:pointer;
+	z-index:99;
+	font-size:50px;
+	font-weight:bold;
+	padding-left: 0px;
+    width: 89px;}
+/*一级菜单区域*/
+.firstmenucontent
+{
+	position: absolute;
+	width: 800px;
+	height: 410px;
+	overflow: hidden;
+}
+.toplevelDiv{
+	position: relative !important;
+	width: 200px;
+    height: 210px;
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.overlyingDiv{
+	position: absolute !important;
+}
+#topMenuMoving
+{
+	position: absolute;
+	top:10px;
+	width: 1600px;
+	height: 400px;
+	overflow: hidden;
+}
+.eightDiv
+{
+	float:left;
+	width: 800px;
+	height: 400px;
+}
+.toplevelimg
+{
+	z-index:100;
+}
+/*向右点击功能区域*/
+.rightFunctionArea{
+	float:right;
+	width: 89px;
+    height: 100%;
+}
+ .rightFunctionArea .directionImg{
+ 	position:absolute;
+ 	cursor:pointer;
+ 	z-index:99;
+ 	font-size:50px;
+ 	font-weight:bold;
+ 	padding-right: 0px;
+    width: 89px
+}
+
+/* 二级菜单*/
+#secondmenudiv
+{
+	position:absolute;
+	top:60px;
+	width: 100%;
+	height:100%;
+	display:none;
+	padding-top: 8px;
+
+}
+#secondmenutitle
+{
+	width: 90%;
+	background-color:#34B0AE;
+	height:40px;
+	font-size:18px;
+	padding-top:9px;
+	font-family: "Microsoft YaHei" ! important;
+	color:white;
+	font-weight:bold;
+	text-align:center;
+	float:left;
+	letter-spacing: 2px;
+}
+#escarea{
+	width:10%;
+	height:40px;
+	padding-top:0px;
+	float:right;
+}
+.esc{
+	float:right;
+    padding-top: 2px;
+    padding-right: 5px;
+}
+
+#secondmenucontent
+{
+	width: 100%;
+	height:80%;
+	background:url(../../../../image/bsp/home/tile/menubg.png) !important;
+	overflow-x:auto;
+	overflow-y:auto;
+}
+.secondmenuname{
+	padding: 4px 0px 4px 17px;
+	background-color:#dce6df;
+}
+#secondmenuturnleft
+{
+	float:left;
+	width: 60px;
+	height:100%;
+}
+
+#secondmain
+{
+	width: 1200px;
+	height: 80%;
+	
+
+}
+#secondmenudetail
+{
+	float:left;
+	width:1200px;
+	margin-top:20px;
+}
+#secondmenuturnright
+{
+	float:right;
+	width: 60px;
+	height:100%;
+}
+.thirdmenu
+{
+	font-family: "Microsoft YaHei" ! important;
+	margin-left:15px;
+	width:130px !important;
+	float:left;
+	width:10%;
+	border:0px;
+	background-color:#dce6df;
+}
+.thirdmenu>.thirdmenutitle
+{
+	text-align:center;
+	color:white !important;
+	font-weight:bold !important;
+	background-color:#157B6A;
+	border:0px;
+	height:38px;
+}
+
+.thirdmenulist
+{
+	margin-bottom:0px !important;
+	font-weight:bold !important;
+}
+
+.leftpane{
+	width:3px;
+	background-color:red;
+	height:31px;
+	display:none;
+	float:left;
+    background-color:red;
+}
+.thirdmenulist .list-group-item
+{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	color:#171719 !important;
+}
+
+.thirdmenu
+{
+	float:left;
+	width:60px;
+}
+
+
+#mapdiv
+{
+	position:absolute;
+	top:60px;
+	width: 100%;
+	height:100%;
+	padding:0px;
+	display:none;
+}
