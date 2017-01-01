@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="assets/js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="assets/css/bsp/home/main/main.css" />
+
+<script type="text/javascript" src="assets/js/bsp/jquery/jquery-1.7.2.min.js"></script>
+
+<script type="text/javascript" src="assets/js/avalon/avalon.js"></script>
+<script type="text/javascript" src="assets/js/bsp/home/main/menuJson.js"></script>
+<script type="text/javascript" src="assets/js/bsp/home/main/main.js"></script>
+<script type="text/javascript" src="assets/js/bsp/jquery/jqueryrotate.js"></script>
+
+</head>
+<title>智能交通管控平台</title>
+<body>
+	<!-- 标题栏 -->
+	<div id="top">
+		<div class="topTitle">智能交通管控平台</div>
+		<div class="functionArea">
+			<div class="welcome"></div>
+			<div class="btnArea">
+			    <img id="loginImg" src="assets/image/bsp/home/tile/userview.png" class="btnImg"></img>&nbsp;&nbsp;
+				<img id="sysmanageImg" src="assets/image/bsp/home/tile/sysmanage.png" class="btnImg" />&nbsp;&nbsp;
+				<img id="mapImg" src="assets/image/bsp/home/tile/mapview.png" class="btnImg" />
+				<div id="logoutDetail">
+					<table id="logoutTable" class="table">
+						<tr>
+							<td><a class="logoutTableChild" href="javascript:void(0);" onclick="relogin();">重新登录</a></td>
+						</tr>
+						<tr>
+							<td><a  class="logoutTableChild" href="javascript:void(0);" onclick="showPassword();">修改密码</a></td>
+						</tr>
+						<tr>
+							<td><a class="logoutTableChild" href="javascript:void(0);" onclick="quit();">退出</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+       </div>
+	</div>
+
+	<!-- 内容栏 -->
+	<div id="mainFrame" ms-controller = "vm_index">
+		<!-- 一级菜单区 -->
+		<div id="firstmenudiv">
+			<div class="leftFunctionArea">
+				<img id="turnLeftImg"  class="directionImg" src="assets/image/bsp/home/tile/turnLeftNoClick.png" width="100px" height="90px" onclick="moveDiv(1)"/>
+			</div>
+			<div id="firstmenucontent" class="firstmenucontent">
+				<div id="topMenuMoving">
+					<div ms-for="el in @menus" class="eightDiv">
+						<div  ms-for="sel in el.group" class="toplevelDiv"  ms-click='@tmclick(sel)' >
+							<div  class="overlyingDiv" ms-mouseover="@circleOver(sel)" ms-mouseout="@circleOut(sel)">
+    							<img class="circleimg hand"   ms-attr="{id:sel.id,src:sel.circleurl,circleimgid:sel.id}" />
+    						</div>
+							<img class="toplevelimg hand" ms-attr="{src:sel.menucontenturl,menucontentid:sel.id}"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rightFunctionArea">
+				<img id="turnRightImg" class="directionImg" src="assets/image/bsp/home/tile/turnRight.png" width="100px" height="90px"  onclick="moveDiv(0)"/>
+			</div>
+		</div>
+
+		<!-- 二级菜单区 -->
+		<div id='secondmenudiv' >
+		<div class="secondtop">
+			<div id='secondmenutitle'></div>
+			<div id="escarea">
+				<img id="esc"  class="esc" src="assets/image/bsp/home/tile/closesecondmenu.png"/>
+			</div>
+		</div>
+			<div id='secondmenucontent'>
+
+			<div id="secondmain">
+				<div id='secondmenudetail'>
+					<div class='secondmenugroup'>
+					 	<div ms-for="el in @secondmenus" class="panel panel-default thirdmenu" ms-css="{'cursor':'pointer'}">
+
+							<div class="panel-heading thirdmenutitle" ms-css="{'background-color':@secondmenucolor}">
+						    <h3 class="panel-title" ms-click='@secondMClick(el)'>{{el.name}}</h3>
+						  </div>
+
+					  	<div class = "triangle" ms-visible='el.showtriangle' ms-css="{'border-color': @secondmenucolor_triangle}" style='margin-left:15px;width:10%;height:0px;border-width: 8px 8px 0 8px;border-style: solid;border-color: #157B6A transparent transparent transparent;'>
+					    </div>
+
+							<div  class="panel-body list-group thirdmenulist" style='padding:0px'>
+
+							  <div ms-for="sel in el.children" href="#"  ms-click='@secondMClick(sel)' class="list-group-item" style='border:0'>
+							  <div class="leftpane" ms-attr="{id:sel.id}" ms-css="{'background-color':@leftpanecolor}"></div>
+							  <div class="secondmenuname"  ms-attr="{secondmenunameid:sel.id,title:sel.name}" ms-mouseover="@sencondmenumouseover(sel)" ms-mouseout="@sencondmenumouseout(sel)">{{sel.shotname}}</div>
+							  </div>
+
+						  </div>
+
+
+					 	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 地图区 -->
+	<div id="mapdiv" style='overflow:hidden'>
+		<iframe id="MyMapFrameId" src="" scrolling="no" width="100%" height="100%" frameborder="0" style="margin: 0"></iframe>
+	</div>
+
+	</div>
+</body>
+</html>

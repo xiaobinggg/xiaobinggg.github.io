@@ -1,0 +1,42 @@
+    <html>
+    <head>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+        <title>HTML5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="content">
+        
+
+
+<div id="范围样式"><h1 id="范围样式">范围样式</h1></div>
+<pre>
+&lt;style scoped&gt;&lt;/style&gt;
+</pre>
+
+<p>
+如果在style中应用scoped属性，该样式会仅应用到标签的父元素和它的子元素中
+</p>
+
+<p>
+常用于代码块嵌套,web组件等  
+</p>
+
+<p>
+一个优雅的降级方案：
+</p>
+<pre>
+&lt;div id="comp1"&gt;
+	&lt;style scoped&gt;
+		#comp1.main{...}
+		#comp1.sub{...}
+		....
+	&lt;/style&gt;
+&lt;/div&gt;
+</pre>
+
+        </div>
+		<div>
+		</div>
+    </body>
+    </html>
