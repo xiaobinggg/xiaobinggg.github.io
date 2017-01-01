@@ -1,0 +1,21 @@
+
+
+= 范围样式 =
+{{{
+<style scoped></style>
+}}}
+
+如果在style中应用scoped属性，该样式会仅应用到标签的父元素和它的子元素中
+
+常用于代码块嵌套,web组件等  
+
+一个优雅的降级方案：
+{{{
+<div id="comp1">
+	<style scoped>
+		#comp1.main{...}
+		#comp1.sub{...}
+		....
+	</style>
+</div>
+}}}

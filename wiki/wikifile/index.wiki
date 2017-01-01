@@ -18,3 +18,5 @@
 [[HiMap]]
 
 [[taobao]]
+
+[[HTML5]]
