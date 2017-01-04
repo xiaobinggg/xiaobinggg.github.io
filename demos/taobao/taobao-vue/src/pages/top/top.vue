@@ -41,14 +41,20 @@ $tc-right-width:600px;
     .topcenter-left{
       width:$tc-left-width;
       height:inherit;
+      float:left;
+      background: yellow;
     };
     .topcenter-middle{
       width:$tc-middle-width;
       height:inherit;
+      float:left;
+      background: green;
     };
-    .topcenter-left{
+    .topcenter-right{
       width:$tc-right-width;
       height:inherit;
+      float:left;
+      background: red;
     };
   }
 }
