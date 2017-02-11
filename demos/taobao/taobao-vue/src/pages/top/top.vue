@@ -1,15 +1,17 @@
 <template>
   <div id="top" >
-    <div id="topcenter">
-      <div class="topcenter-left">
+    <div class="site-nav-bd">
+      <ul class="site-nav-ul site-nav-bd-l">
+        <li class="site-nav-li site-nav-menu">xiaobinggg0536</li>
+        <li class="site-nav-li site-nav-menu">xiaobinggg0536</li>
+        <li class="site-nav-li site-nav-menu">xiaobinggg0536</li>
 
-      </div>
-      <div class="topcenter-middle">
-
-      </div>
-      <div class="topcenter-right">
-
-      </div>
+      </ul>
+      <ul class="site-nav-ul site-nav-bd-r">
+        <li class="site-nav-li site-nav-menu">我的淘宝</li>
+        <li class="site-nav-li site-nav-menu">购物车</li>
+        <li class="site-nav-li site-nav-menu">收藏家</li>
+      </ul>
     </div>
 
   </div>
@@ -23,9 +25,6 @@ export default {
 <style lang="scss" scoped>
 $tc-height:36px;
 $tc-width:1190px;
-$tc-left-width:250px;
-$tc-middle-width:340px;
-$tc-right-width:600px;
 
 #top{
   height:$tc-height;
@@ -34,27 +33,26 @@ $tc-right-width:600px;
   background:{
     color:#F5F5F5
   };
-  #topcenter{
+  .site-nav-bd{
     width:$tc-width;
     margin:0 auto;
     height:100%;
-    .topcenter-left{
-      width:$tc-left-width;
+    .site-nav-ul{
+      list-style: none;
+      display: block;
       height:inherit;
-      float:left;
-      background: yellow;
+      padding: 0;
+      margin: 0;
     };
-    .topcenter-middle{
-      width:$tc-middle-width;
-      height:inherit;
+    .site-nav-li{
       float:left;
-      background: green;
+      display: inline-block;
+    }
+    .site-nav-bd-l{
+      float:left;
     };
-    .topcenter-right{
-      width:$tc-right-width;
-      height:inherit;
-      float:left;
-      background: red;
+    .site-nav-bd-r{
+      float:right;
     };
   }
 }
