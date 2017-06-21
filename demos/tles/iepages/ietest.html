@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ie页面测试</title>
+  <style>
+    body {
+      margin: 0px;
+      overflow: hidden
+    }
+  </style>
+  <script type="text/javascript" src="HiMsg.js"></script>
+  <script type="text/javascript">
+    var num = 0;
+    setInterval(function () {
+      num += 1;
+      hiMsg.sendMsg('msg' + num);
+      document.getElementById('msgid').innerHTML = '发送消息：msg' + num;
+    }, 3000);
+  </script>
+</head>
+<body scroll="no">
+IE页面测试
+<div id="msgid"></div>
+</body>
+</html>
