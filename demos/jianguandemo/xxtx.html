@@ -16,13 +16,13 @@ margin-bottom:0PX;
 <!--
 .STYLE2 {
 font-size: small;
-font-family: "¿¬Ìå_GB2312";
+font-family: "æ¥·ä½“_GB2312";
 }
 -->
 <!--
 .STYLE3 {
 font-size: small;
-font-family: "ĞÂËÎÌå";
+font-family: "æ–°å®‹ä½“";
 }
 -->
 </style>
@@ -33,12 +33,12 @@ function loadClass(dep)
 alert(dep);
 try
    { 
-    //Çå¿ÕÔ­À´Ïî£»
+    //æ¸…ç©ºåŸæ¥é¡¹ï¼›
     for(var i=form1.SltClass.length-1;i>=0;i--)
     form1.SltClass.remove(i); 
-    if (dep=="" || dep=="=====ÇëÑ¡ÔñÔºÏµ=====")
+    if (dep=="" || dep=="=====è¯·é€‰æ‹©é™¢ç³»=====")
     {
-     alert("ÇëÑ¡ÔñÓĞĞ§£¡");
+     alert("è¯·é€‰æ‹©æœ‰æ•ˆï¼");
      return false;
     }
     var obj=new Array(2);
@@ -67,20 +67,20 @@ try
      var opt=new Option("","");
     form1.SltClass.options[0]=opt; 
     for(j=0;j<obj.length;j++)
-    ¡¡try
-     ¡¡ {
-     ¡¡   var opt=new Option(obj[j],obj[j]);
+    ã€€try
+     ã€€ {
+     ã€€   var opt=new Option(obj[j],obj[j]);
      form1.SltClass.options[j+1]=opt;
-     ¡¡
-     ¡¡}catch(exception)
-     ¡¡{} 
+     ã€€
+     ã€€}catch(exception)
+     ã€€{} 
    }catch(ex)
 {alert(ex);} 
 return obj;
 }
 
 /*
-ÏÔÊ¾ÕÕÆ¬
+æ˜¾ç¤ºç…§ç‰‡
 */
 function ShowTempImage(imageID, fileID)
 { 
@@ -90,7 +90,7 @@ function ShowTempImage(imageID, fileID)
    //debugger;
    var fileExName = (fileEx[fileEx.length-1]).toLowerCase();
   
-   //Èç¹ûÉÏ´«ÎÄ¼şÀ©Õ¹Ãû²»ÊÇjpg»ògif½«²»ÏÔÊ¾ÁÙÊ±Í¼Æ¬
+   //å¦‚æœä¸Šä¼ æ–‡ä»¶æ‰©å±•åä¸æ˜¯jpgæˆ–gifå°†ä¸æ˜¾ç¤ºä¸´æ—¶å›¾ç‰‡
    if ( fileExName=="jpg" || fileExName == "gif" || fileExName == "bmp" )
    {
     document.getElementById(imageID).src = filePath;
@@ -102,13 +102,13 @@ function ShowTempImage(imageID, fileID)
 }
 
 /*
-ºË¶ÔÁ½´ÎÃÜÂëÊÇ·ñÒ»ÖÂ
+æ ¸å¯¹ä¸¤æ¬¡å¯†ç æ˜¯å¦ä¸€è‡´
 */
 function checkPassword()
 {
 if (form1.pwd1.value!=form1.pwd2.value)
    {
-    alert("Á½´ÎµÄÃÜÂë²»Ò»ÖÂ");
+    alert("ä¸¤æ¬¡çš„å¯†ç ä¸ä¸€è‡´");
     return false;
    }
    return true;
@@ -119,9 +119,9 @@ if (form1.pwd1.value!=form1.pwd2.value)
 */
 function register()
 {
-   var str="Ñ§ºÅ£º"+form1.txtNumber.value+"\r\n";
-   str=str+"ĞÕÃû£º"+form1.txtName.value+"\r\n";
-   var sex;//ĞÔ±ğ
+   var str="å­¦å·ï¼š"+form1.txtNumber.value+"\r\n";
+   str=str+"å§“åï¼š"+form1.txtName.value+"\r\n";
+   var sex;//æ€§åˆ«
    var aa = document.getElementsByName("sex");
    for (var i=0; i<aa.length; i++)
    {
@@ -129,16 +129,16 @@ function register()
    sex=aa[i].value;
    }
    }
-   str=str+"ĞÔ±ğ£º"+sex+"\r\n"; 
-   str=str+"ÃÜÂë£º"+form1.pwd2.value+"\r\n";
-   str=str+"³öÉúÄêÔÂ£º"+form1.txtBirthday.value+"\r\n";
-   str=str+"ÁªÏµµç»°£º"+form1.TxtPhone.value+"\r\n";
+   str=str+"æ€§åˆ«ï¼š"+sex+"\r\n"; 
+   str=str+"å¯†ç ï¼š"+form1.pwd2.value+"\r\n";
+   str=str+"å‡ºç”Ÿå¹´æœˆï¼š"+form1.txtBirthday.value+"\r\n";
+   str=str+"è”ç³»ç”µè¯ï¼š"+form1.TxtPhone.value+"\r\n";
    str=str+"QQ:"+form1.txtQQ.value+"\r\n";
    str=str+"EMail:"+form1.txtEmail.value+"\r\n";
-   str=str+"Éí·İÖ¤ºÅ£º"+form1.TxtID.value+"\r\n";
-   str=str+"¿¼ÉúÀàĞÍ£º"+form1.SType.value+"\r\n";
-   str=str+"ËùÔÚÔºÏµ£º"+form1.SltDepartment.value+"\r\n";
-   str=str+"ËùÔÚ°à¼¶£º"+form1.SltClass.value+"\r\n";
+   str=str+"èº«ä»½è¯å·ï¼š"+form1.TxtID.value+"\r\n";
+   str=str+"è€ƒç”Ÿç±»å‹ï¼š"+form1.SType.value+"\r\n";
+   str=str+"æ‰€åœ¨é™¢ç³»ï¼š"+form1.SltDepartment.value+"\r\n";
+   str=str+"æ‰€åœ¨ç­çº§ï¼š"+form1.SltClass.value+"\r\n";
    alert(str);
 }
 
@@ -155,102 +155,102 @@ function register()
 <tr>
 
 <tr>
-<td align="right" width="30%" height="15">ĞÕÃû£º</td>
+<td align="right" width="30%" height="15">å§“åï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">ĞÔ±ğ£º</td>
-<td align="left" width="70%"><input type="radio" name="radiobutton" value="ÄĞ" checked="checked" />ÄĞ<input type="radio" name="radiobutton" value="Å®" />Å®<span style="color:#FF0000">*</span></td>
+<td align="right" width="30%" height="15">æ€§åˆ«ï¼š</td>
+<td align="left" width="70%"><input type="radio" name="radiobutton" value="ç”·" checked="checked" />ç”·<input type="radio" name="radiobutton" value="å¥³" />å¥³<span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">½üÕÕ£º</td>
-<td align="left" width="70%">ÇëÉÏ´«3.8*5cm &nbsp;&nbsp;<input id="File1" type="file" name="File1" onChange="ShowTempImage'photo','File1';" /><span style="color:#FF0000">*</span></td>
+<td align="right" width="30%" height="15">è¿‘ç…§ï¼š</td>
+<td align="left" width="70%">è¯·ä¸Šä¼ 3.8*5cm &nbsp;&nbsp;<input id="File1" type="file" name="File1" onChange="ShowTempImage'photo','File1';" /><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">³öÉúÄêÔÂ£º</td>
+<td align="right" width="30%" height="15">å‡ºç”Ÿå¹´æœˆï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">¼®¹á£º</td>
+<td align="right" width="30%" height="15">ç±è´¯ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">ÕşÖÎÃæÃ²£º</td>
+<td align="right" width="30%" height="15">æ”¿æ²»é¢è²Œï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">Ãñ×å£º</td>
+<td align="right" width="30%" height="15">æ°‘æ—ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">¾­¼Ã¹¤×÷ÄêÏŞ£º</td>
+<td align="right" width="30%" height="15">ç»æµå·¥ä½œå¹´é™ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">½ğÈÚ´ÓÒµÄêÏŞ£º</td>
+<td align="right" width="30%" height="15">é‡‘èä»ä¸šå¹´é™ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">Ñ§Àú£º</td>
+<td align="right" width="30%" height="15">å­¦å†ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">±ÏÒµÔºĞ£¼°×¨Òµ£º</td>
+<td align="right" width="30%" height="15">æ¯•ä¸šé™¢æ ¡åŠä¸“ä¸šï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">×¨ÒµÌØ³¤£º</td>
+<td align="right" width="30%" height="15">ä¸“ä¸šç‰¹é•¿ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">×¨Òµ¼¼ÊõÖ°³Æ£º</td>
+<td align="right" width="30%" height="15">ä¸“ä¸šæŠ€æœ¯èŒç§°ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">Éí·İÖ¤ºÅÂë£º</td>
+<td align="right" width="30%" height="15">èº«ä»½è¯å·ç ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">»¤ÕÕºÅÂë£º</td>
+<td align="right" width="30%" height="15">æŠ¤ç…§å·ç ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">ÏÖÈÎÖ°Îñ£º</td>
+<td align="right" width="30%" height="15">ç°ä»»èŒåŠ¡ï¼š</td>
 <td align="left" width="70%"><input type="text" size="22"><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">¼òÀú£º</td>
+<td align="right" width="30%" height="15">ç®€å†ï¼š</td>
 <td align="left" width="70%"><textarea name="textarea" rows="5" cols="50"></textarea><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">¼ÒÍ¥Ö÷Òª³ÉÔ±¼°¹ØÏµ£º</td>
+<td align="right" width="30%" height="15">å®¶åº­ä¸»è¦æˆå‘˜åŠå…³ç³»ï¼š</td>
 <td align="left" width="70%"><textarea name="textarea" rows="5" cols="50"></textarea><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr>
-<td align="right" width="30%" height="15">¸öÈË½±³ÍÇé¿ö£º</td>
+<td align="right" width="30%" height="15">ä¸ªäººå¥–æƒ©æƒ…å†µï¼š</td>
 <td align="left" width="70%"> <textarea name="textarea" rows="5" cols="50"></textarea><span style="color:#FF0000">*</span></td>
 </tr>
 
 <tr align="center">
-<td colspan="2" height="25" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="±£´æ" class="buttonStyle" onClick="register();"></td>
+<td colspan="2" height="25" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="ä¿å­˜" class="buttonStyle" onClick="register();"></td>
 </tr>
 </table>
 

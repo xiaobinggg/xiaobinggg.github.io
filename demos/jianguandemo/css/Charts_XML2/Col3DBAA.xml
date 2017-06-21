@@ -1,14 +1,14 @@
 <?xml version= '1.0' encoding= 'GB2312'?>
 <chart  numberSuffix='(%)' palette='1' showValues='0' yAxisValuesPadding='10' yAxisMaxValue ='100' >	
 	<categories>
-		<category label='ÇåÐìÏØÁªºÏÉç' />
-		<category label='ÑôÇúÏØºÏ×÷Éç' />
-		<category label='¹Å½»ÊÐºÏ×÷Éç' />
-		<category label='Ñô¸ßÏØÁªºÏÉç' />
-		<category label='ÌìÕòÏØÁªºÏÉç' />
+		<category label='æ¸…å¾åŽ¿è”åˆç¤¾' />
+		<category label='é˜³æ›²åŽ¿åˆä½œç¤¾' />
+		<category label='å¤äº¤å¸‚åˆä½œç¤¾' />
+		<category label='é˜³é«˜åŽ¿è”åˆç¤¾' />
+		<category label='å¤©é•‡åŽ¿è”åˆç¤¾' />
      </categories>
 
-	<dataset seriesName='Á÷¶¯ÐÔÈ±¿ÚÂÊ'>
+	<dataset seriesName='æµåŠ¨æ€§ç¼ºå£çŽ‡'>
 		<set value='34' />
 		<set value='64' />
 		<set value='63' />
@@ -16,7 +16,7 @@
 		<set value='34' />
 	</dataset>
 	
-	<dataset seriesName='·çÏÕ×Ê²úÀûÈóÂÊ'>
+	<dataset seriesName='é£Žé™©èµ„äº§åˆ©æ¶¦çŽ‡'>
 		<set value='73' />
 		<set value='83' />
 		<set value='9' />
@@ -24,7 +24,7 @@
 		<set value='48' />
 	</dataset>
 	
-	<dataset seriesName='²»Á¼´û¿îÂÊ'>
+	<dataset seriesName='ä¸è‰¯è´·æ¬¾çŽ‡'>
 		<set value='23' />
 		<set value='15' />
 		<set value='33' />

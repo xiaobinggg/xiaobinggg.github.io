@@ -13,7 +13,7 @@
 		<category label='2010' />
      </categories>
 
-	<dataset seriesName='本期-上期'>
+	<dataset seriesName='鏈湡-涓婃湡'>
 		<set value='10' />
 		<set value='23' />
 		<set value='5' />
@@ -26,7 +26,7 @@
 		<set value='12' />
 	</dataset>
 	
-	<dataset seriesName='监管要求'>
+	<dataset seriesName='鐩戠瑕佹眰'>
 		<set value='45' />
 		<set value='55' />
 		<set value='53' />
@@ -39,7 +39,7 @@
 		<set value='14' />
 	</dataset>
 	
-	<dataset seriesName='规划要求'>
+	<dataset seriesName='瑙勫垝瑕佹眰'>
 		<set value='44' />
 		<set value='23' />
 		<set value='36' />

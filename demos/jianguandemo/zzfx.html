@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 		<meta http-equiv="pragma" content="no-cache">
 
@@ -61,19 +61,19 @@ else
 </script>
 	<script language="javascript">
 var intIndex=0;arrList = new Array();
-arrList[intIndex++] = "¹¤ÉÌÒøÐÐ";
-arrList[intIndex++] = "½¨ÉèÒøÐÐ";
-arrList[intIndex++] = "½»Í¨ÒøÐÐ";
-arrList[intIndex++] = "Å©ÒµÒøÐÐ";
-arrList[intIndex++] = "±±¾©ÒøÐÐ";
-arrList[intIndex++] = "ÆÖ·¢ÒøÐÐ";
-arrList[intIndex++] = "ÖÐÐÅÒøÐÐ";
-arrList[intIndex++] = "²³º£ÒøÐÐ";
-arrList[intIndex++] = "ÐËÒµÒøÐÐ";
+arrList[intIndex++] = "å·¥å•†é“¶è¡Œ";
+arrList[intIndex++] = "å»ºè®¾é“¶è¡Œ";
+arrList[intIndex++] = "äº¤é€šé“¶è¡Œ";
+arrList[intIndex++] = "å†œä¸šé“¶è¡Œ";
+arrList[intIndex++] = "åŒ—äº¬é“¶è¡Œ";
+arrList[intIndex++] = "æµ¦å‘é“¶è¡Œ";
+arrList[intIndex++] = "ä¸­ä¿¡é“¶è¡Œ";
+arrList[intIndex++] = "æ¸¤æµ·é“¶è¡Œ";
+arrList[intIndex++] = "å…´ä¸šé“¶è¡Œ";
 
 function smanPromptList(arrList,objInputId){
 this.style = "background:#E8F7EB;border: 1px solid #CCCCCC;font-size:14px;cursor: default;"
-if (arrList.constructor!=Array){alert('smanPromptList³õÊ¼»¯Ê§°Ü:µÚÒ»¸ö²ÎÊý·ÇÊý×é!');return ;
+if (arrList.constructor!=Array){alert('smanPromptListåˆå§‹åŒ–å¤±è´¥:ç¬¬ä¸€ä¸ªå‚æ•°éžæ•°ç»„!');return ;
 }
 
 window.onload =function() {
@@ -83,30 +83,30 @@ window.onload =function() {
                  else return -1;
              })
 			 
-var objouter=document.getElementById("__smanDisp") //ÏÔÊ¾µÄDIV¶ÔÏó
-var objInput = document.getElementById(objInputId); //ÎÄ±¾¿ò¶ÔÏó
+var objouter=document.getElementById("__smanDisp") //æ˜¾ç¤ºçš„DIVå¯¹è±¡
+var objInput = document.getElementById(objInputId); //æ–‡æœ¬æ¡†å¯¹è±¡
 var selectedIndex=-1;
-var intTmp; //Ñ­»·ÓÃµÄ:)
-if (objInput==null) {alert('smanPromptList³õÊ¼»¯Ê§°Ü:Ã»ÓÐÕÒµ½"'+objInputId+'"ÎÄ±¾¿ò');return ;}
-//ÎÄ±¾¿òÊ§È¥½¹µã
+var intTmp; //å¾ªçŽ¯ç”¨çš„:)
+if (objInput==null) {alert('smanPromptListåˆå§‹åŒ–å¤±è´¥:æ²¡æœ‰æ‰¾åˆ°"'+objInputId+'"æ–‡æœ¬æ¡†');return ;}
+//æ–‡æœ¬æ¡†å¤±åŽ»ç„¦ç‚¹
 
 objInput.onblur=function(){
 objouter.style.display='none';
 }
 
-//ÎÄ±¾¿ò°´¼üÌ§Æð
+//æ–‡æœ¬æ¡†æŒ‰é”®æŠ¬èµ·
 objInput.onkeyup=checkKeyCode;
-//ÎÄ±¾¿òµÃµ½½¹µã
+//æ–‡æœ¬æ¡†å¾—åˆ°ç„¦ç‚¹
 objInput.onfocus=checkAndShow;
 function checkKeyCode(){
 var ie = (document.all)? true:false
 if (ie){
 var keyCode=event.keyCode
-if (keyCode==40||keyCode==38){ //ÏÂÉÏ
+if (keyCode==40||keyCode==38){ //ä¸‹ä¸Š
    var isUp=false
    if(keyCode==40) isUp=true ;
    chageSelection(isUp)
-}else if (keyCode==13){//»Ø³µ
+}else if (keyCode==13){//å›žè½¦
    outSelection(selectedIndex);
 }else{
    checkAndShow()
@@ -292,7 +292,7 @@ function hideDiv()
 -->
 </script>
 
-<title>×ÔÖú·ÖÎö</title>
+<title>è‡ªåŠ©åˆ†æž</title>
 <style type="text/css" media="all">
 
 .TreeWrap {width:300px;}
@@ -450,47 +450,47 @@ function selectForm1(){
 	switch(currSelectIndex)
 	{
 		case 0:
-			varItem = new Option("¢ñ. ×Ê²ú",0);form1.options.add(varItem);
-			varItem = new Option("1. ÏÖ½ð",1);form1.options.add(varItem);
-			varItem = new Option("2. ¹ó½ðÊô",2);form1.options.add(varItem);
-			varItem = new Option("3. ´æ·ÅÖÐÑëÒøÐÐ¿îÏî",3);form1.options.add(varItem);
-			varItem = new Option("4. ´æ·ÅÍ¬Òµ¿îÏî",4);form1.options.add(varItem);
-			varItem = new Option("4.1 ¾³ÄÚÍ¬Òµ",5);form1.options.add(varItem);
-			varItem = new Option("4.2 ¾³ÍâÍ¬Òµ",6);form1.options.add(varItem);
-			varItem = new Option("70.´æ·ÅÏµÍ³ÄÚ¿îÏî",7);form1.options.add(varItem);
-			varItem = new Option("71.²¦¸¶ÓªÔË×Ê½ð",8);form1.options.add(varItem);
-			varItem = new Option("5. Ó¦ÊÕÀûÏ¢",9);form1.options.add(varItem);
-			varItem = new Option("6. ´û¿î",10);form1.options.add(varItem);
-			varItem = new Option("7. Ã³Ò×ÈÚ×Ê",11);form1.options.add(varItem);
-			varItem = new Option("8. ÌùÏÖ¼°Âò¶ÏÊ½×ªÌùÏÖ",12);form1.options.add(varItem);
-			varItem = new Option("9. ÆäËû´û¿î",13);form1.options.add(varItem);
-			varItem = new Option("10. ²ð·ÅÍ¬Òµ",14);form1.options.add(varItem);
-			varItem = new Option("11. ÆäËûÓ¦ÊÕ¿î",15);form1.options.add(varItem);
+			varItem = new Option("â… . èµ„äº§",0);form1.options.add(varItem);
+			varItem = new Option("1. çŽ°é‡‘",1);form1.options.add(varItem);
+			varItem = new Option("2. è´µé‡‘å±ž",2);form1.options.add(varItem);
+			varItem = new Option("3. å­˜æ”¾ä¸­å¤®é“¶è¡Œæ¬¾é¡¹",3);form1.options.add(varItem);
+			varItem = new Option("4. å­˜æ”¾åŒä¸šæ¬¾é¡¹",4);form1.options.add(varItem);
+			varItem = new Option("4.1 å¢ƒå†…åŒä¸š",5);form1.options.add(varItem);
+			varItem = new Option("4.2 å¢ƒå¤–åŒä¸š",6);form1.options.add(varItem);
+			varItem = new Option("70.å­˜æ”¾ç³»ç»Ÿå†…æ¬¾é¡¹",7);form1.options.add(varItem);
+			varItem = new Option("71.æ‹¨ä»˜è¥è¿èµ„é‡‘",8);form1.options.add(varItem);
+			varItem = new Option("5. åº”æ”¶åˆ©æ¯",9);form1.options.add(varItem);
+			varItem = new Option("6. è´·æ¬¾",10);form1.options.add(varItem);
+			varItem = new Option("7. è´¸æ˜“èžèµ„",11);form1.options.add(varItem);
+			varItem = new Option("8. è´´çŽ°åŠä¹°æ–­å¼è½¬è´´çŽ°",12);form1.options.add(varItem);
+			varItem = new Option("9. å…¶ä»–è´·æ¬¾",13);form1.options.add(varItem);
+			varItem = new Option("10. æ‹†æ”¾åŒä¸š",14);form1.options.add(varItem);
+			varItem = new Option("11. å…¶ä»–åº”æ”¶æ¬¾",15);form1.options.add(varItem);
 			break;
 		case 1:
-			varItem = new Option("1.·ÇÓ¦¼Æ´û¿î",0);form1.options.add(varItem);
-			varItem = new Option("2.Î¯ÍÐ¼°´úÀíÒµÎñ",1);form1.options.add(varItem);
-			varItem = new Option("2.1Î¯ÍÐ´û¿î×Ê½ð",2);form1.options.add(varItem);
-			varItem = new Option("2.2Î¯ÍÐÍ¶×Ê×Ê½ð",3);form1.options.add(varItem);
-			varItem = new Option("2.3Î¯ÍÐ´û¿î",4);form1.options.add(varItem);
-			varItem = new Option("2.4Î¯ÍÐÍ¶×Ê",5);form1.options.add(varItem);
-			varItem = new Option("2.5Î¯ÍÐ×Ê½ðÔþ²î",6);form1.options.add(varItem);
-			varItem = new Option("3.³Ð¶Ò»ãÆ±",7);form1.options.add(varItem);
-			varItem = new Option("4.±£º¯",8);form1.options.add(varItem);
-			varItem = new Option("5. Ó¦ÊÕÀûÏ¢",9);form1.options.add(varItem);
-			varItem = new Option("5.¸úµ¥ÐÅÓÃÖ¤",10);form1.options.add(varItem);
-			varItem = new Option("6.³ÐÅµ",11);form1.options.add(varItem);
-			varItem = new Option("6.1ÆäÖÐ£º²»¿ÉÎÞÌõ¼þ³·ÏúµÄ³ÐÅµ",12);form1.options.add(varItem);
-			varItem = new Option("7.ÐÅÓÃ·çÏÕÈÔÔÚÒøÐÐµÄÏúÊÛÓë¹ºÂòÐ­Òé",13);form1.options.add(varItem);
-			varItem = new Option("8.½ðÈÚÑÜÉúÆ·",14);form1.options.add(varItem);
+			varItem = new Option("1.éžåº”è®¡è´·æ¬¾",0);form1.options.add(varItem);
+			varItem = new Option("2.å§”æ‰˜åŠä»£ç†ä¸šåŠ¡",1);form1.options.add(varItem);
+			varItem = new Option("2.1å§”æ‰˜è´·æ¬¾èµ„é‡‘",2);form1.options.add(varItem);
+			varItem = new Option("2.2å§”æ‰˜æŠ•èµ„èµ„é‡‘",3);form1.options.add(varItem);
+			varItem = new Option("2.3å§”æ‰˜è´·æ¬¾",4);form1.options.add(varItem);
+			varItem = new Option("2.4å§”æ‰˜æŠ•èµ„",5);form1.options.add(varItem);
+			varItem = new Option("2.5å§”æ‰˜èµ„é‡‘è½§å·®",6);form1.options.add(varItem);
+			varItem = new Option("3.æ‰¿å…‘æ±‡ç¥¨",7);form1.options.add(varItem);
+			varItem = new Option("4.ä¿å‡½",8);form1.options.add(varItem);
+			varItem = new Option("5. åº”æ”¶åˆ©æ¯",9);form1.options.add(varItem);
+			varItem = new Option("5.è·Ÿå•ä¿¡ç”¨è¯",10);form1.options.add(varItem);
+			varItem = new Option("6.æ‰¿è¯º",11);form1.options.add(varItem);
+			varItem = new Option("6.1å…¶ä¸­ï¼šä¸å¯æ— æ¡ä»¶æ’¤é”€çš„æ‰¿è¯º",12);form1.options.add(varItem);
+			varItem = new Option("7.ä¿¡ç”¨é£Žé™©ä»åœ¨é“¶è¡Œçš„é”€å”®ä¸Žè´­ä¹°åè®®",13);form1.options.add(varItem);
+			varItem = new Option("8.é‡‘èžè¡ç”Ÿå“",14);form1.options.add(varItem);
 			break;
 		case 2:
-			varItem = new Option("1¸÷Ïî´û¿î",0);form1.options.add(varItem);
-			varItem = new Option("1.1Õý³£Àà",1);form1.options.add(varItem);
-			varItem = new Option("1.2¹Ø×¢Àà",2);form1.options.add(varItem);
-			varItem = new Option("1.3´Î¼¶Àà",3);form1.options.add(varItem);
-			varItem = new Option("1.4¿ÉÒÉÀà",4);form1.options.add(varItem);
-			varItem = new Option("1.5ËðÊ§Àà",5);form1.options.add(varItem);	
+			varItem = new Option("1å„é¡¹è´·æ¬¾",0);form1.options.add(varItem);
+			varItem = new Option("1.1æ­£å¸¸ç±»",1);form1.options.add(varItem);
+			varItem = new Option("1.2å…³æ³¨ç±»",2);form1.options.add(varItem);
+			varItem = new Option("1.3æ¬¡çº§ç±»",3);form1.options.add(varItem);
+			varItem = new Option("1.4å¯ç–‘ç±»",4);form1.options.add(varItem);
+			varItem = new Option("1.5æŸå¤±ç±»",5);form1.options.add(varItem);	
 			break;
 	}
 }
@@ -501,34 +501,34 @@ function selectForm2(){
 	switch(currSelectIndex)
 	{
 		case 0:
-			varItem = new Option("´óÐÍÆóÒµ´û¿î",0);form2.options.add(varItem);
-			varItem = new Option("ÖÐÐÍÆóÒµ´û¿î",1);form2.options.add(varItem);
-			varItem = new Option("Ð¡ÐÍÆóÒµ´û¿î",2);form2.options.add(varItem);
-			varItem = new Option("ÆäÖÐ£ºµ¥»§ÊÚÐÅÐ¡ÓÚ500ÍòµÄÐ¡ÐÍÆóÒµ´û¿î",3);form2.options.add(varItem);
-			varItem = new Option("ºÏ¼Æ",4);form2.options.add(varItem);
+			varItem = new Option("å¤§åž‹ä¼ä¸šè´·æ¬¾",0);form2.options.add(varItem);
+			varItem = new Option("ä¸­åž‹ä¼ä¸šè´·æ¬¾",1);form2.options.add(varItem);
+			varItem = new Option("å°åž‹ä¼ä¸šè´·æ¬¾",2);form2.options.add(varItem);
+			varItem = new Option("å…¶ä¸­ï¼šå•æˆ·æŽˆä¿¡å°äºŽ500ä¸‡çš„å°åž‹ä¼ä¸šè´·æ¬¾",3);form2.options.add(varItem);
+			varItem = new Option("åˆè®¡",4);form2.options.add(varItem);
 			break;
 		case 1:
-			varItem = new Option("ÉæÅ©´û¿î",0);form2.options.add(varItem);
-			varItem = new Option("ÉæÅ©´û¿î°´ÕÕÍ¶ÏòºÍÓÃÍ¾·ÖÀà",1);form2.options.add(varItem);
-			varItem = new Option("Å©´å´û¿î",2);form2.options.add(varItem);
-			varItem = new Option("Å©»§´û¿î",3);form2.options.add(varItem);
-			varItem = new Option("Å©»§Å©ÁÖÄÁÓæÒµ´û¿î",4);form2.options.add(varItem);
-			varItem = new Option("Å©»§Ïû·ÑºÍÆäËûÉú²ú¾­Óª´û¿î",5);form2.options.add(varItem);
-			varItem = new Option("Å©´åÆóÒµ¼°¸÷Àà×éÖ¯´û¿î",6);form2.options.add(varItem);
-			varItem = new Option("Å©´åÆóÒµ¼°¸÷Àà×éÖ¯Å©ÁÖÄÁÓæÒµ´û¿î",7);form2.options.add(varItem);
-			varItem = new Option("Å©´åÆóÒµ¼°¸÷Àà×éÖ¯Ö§Å©´û¿î",8);form2.options.add(varItem);
-			varItem = new Option("Å©´åÆóÒµ¼°¸÷Àà×éÖ¯ÆäËûÉú²ú´û¿î",9);form2.options.add(varItem);
-			varItem = new Option("³ÇÊÐÆóÒµ¼°¸÷Àà×éÖ¯ÉæÅ©´û¿î",10);form2.options.add(varItem);
-			varItem = new Option("³ÇÊÐÆóÒµ¼°¸÷Àà×éÖ¯Å©ÁÖÄÁÓæÒµ´û¿î",11);form2.options.add(varItem);
-			varItem = new Option("³ÇÊÐÆóÒµ¼°¸÷Àà×éÖ¯Ö§Å©´û¿î",12);form2.options.add(varItem);
+			varItem = new Option("æ¶‰å†œè´·æ¬¾",0);form2.options.add(varItem);
+			varItem = new Option("æ¶‰å†œè´·æ¬¾æŒ‰ç…§æŠ•å‘å’Œç”¨é€”åˆ†ç±»",1);form2.options.add(varItem);
+			varItem = new Option("å†œæ‘è´·æ¬¾",2);form2.options.add(varItem);
+			varItem = new Option("å†œæˆ·è´·æ¬¾",3);form2.options.add(varItem);
+			varItem = new Option("å†œæˆ·å†œæž—ç‰§æ¸”ä¸šè´·æ¬¾",4);form2.options.add(varItem);
+			varItem = new Option("å†œæˆ·æ¶ˆè´¹å’Œå…¶ä»–ç”Ÿäº§ç»è¥è´·æ¬¾",5);form2.options.add(varItem);
+			varItem = new Option("å†œæ‘ä¼ä¸šåŠå„ç±»ç»„ç»‡è´·æ¬¾",6);form2.options.add(varItem);
+			varItem = new Option("å†œæ‘ä¼ä¸šåŠå„ç±»ç»„ç»‡å†œæž—ç‰§æ¸”ä¸šè´·æ¬¾",7);form2.options.add(varItem);
+			varItem = new Option("å†œæ‘ä¼ä¸šåŠå„ç±»ç»„ç»‡æ”¯å†œè´·æ¬¾",8);form2.options.add(varItem);
+			varItem = new Option("å†œæ‘ä¼ä¸šåŠå„ç±»ç»„ç»‡å…¶ä»–ç”Ÿäº§è´·æ¬¾",9);form2.options.add(varItem);
+			varItem = new Option("åŸŽå¸‚ä¼ä¸šåŠå„ç±»ç»„ç»‡æ¶‰å†œè´·æ¬¾",10);form2.options.add(varItem);
+			varItem = new Option("åŸŽå¸‚ä¼ä¸šåŠå„ç±»ç»„ç»‡å†œæž—ç‰§æ¸”ä¸šè´·æ¬¾",11);form2.options.add(varItem);
+			varItem = new Option("åŸŽå¸‚ä¼ä¸šåŠå„ç±»ç»„ç»‡æ”¯å†œè´·æ¬¾",12);form2.options.add(varItem);
 			break;
 		case 2:
-			varItem = new Option("¡°ÈýÅ©¡±",0);form2.options.add(varItem);
-			varItem = new Option("ÆäÖÐ£ºÃæÏòÅ©»§µÄÐ¡¶îÐÅ´û",1);form2.options.add(varItem);
-			varItem = new Option("ÖØ´ó¹¤³Ì½¨Éè",2);form2.options.add(varItem);
-			varItem = new Option("½ÚÄÜ¼õÅÅ",3);form2.options.add(varItem);
-			varItem = new Option("¿Æ¼¼´´ÐÂ",4);form2.options.add(varItem);
-			varItem = new Option("¼¼Êõ¸ÄÔì",5);form2.options.add(varItem);	
+			varItem = new Option("â€œä¸‰å†œâ€",0);form2.options.add(varItem);
+			varItem = new Option("å…¶ä¸­ï¼šé¢å‘å†œæˆ·çš„å°é¢ä¿¡è´·",1);form2.options.add(varItem);
+			varItem = new Option("é‡å¤§å·¥ç¨‹å»ºè®¾",2);form2.options.add(varItem);
+			varItem = new Option("èŠ‚èƒ½å‡æŽ’",3);form2.options.add(varItem);
+			varItem = new Option("ç§‘æŠ€åˆ›æ–°",4);form2.options.add(varItem);
+			varItem = new Option("æŠ€æœ¯æ”¹é€ ",5);form2.options.add(varItem);	
 			break;
 	}
 }
@@ -594,35 +594,35 @@ function selectForm2(){
 				<td>
 <div class="login_content" style="width:805px;">
 	<div class="location">
-	  <div class="name"> µ±Ç°Î»ÖÃ£º<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />Êý¾Ý·ÖÎö <img src="images/icon_jt.gif" align="absmiddle" hspace="6" />×ÔÖú·ÖÎö</div>
+	  <div class="name"> å½“å‰ä½ç½®ï¼š<img src="images/icon_jt.gif" align="absmiddle" hspace="6" />æ•°æ®åˆ†æž <img src="images/icon_jt.gif" align="absmiddle" hspace="6" />è‡ªåŠ©åˆ†æž</div>
 	</div>
 
 <div class="subc6" style="width:805px; margin:5px 0px 0px 0px; margin-top:5px; height:790px;">
-		<div class="title" style="width:12%">×ÔÖú·ÖÎö</div>
+		<div class="title" style="width:12%">è‡ªåŠ©åˆ†æž</div>
 		<div class="titlebg" style=" margin-top:0px; width:88%">&nbsp;</div>
 		<div class="subc_content" style="text-indent:0">
 <div id="light1" class="white_content">
 		<div class="con">		
 			<table class="datalist">
 			<tr>
-				<th>Ê±¼äµã</th>
+				<th>æ—¶é—´ç‚¹</th>
 			</tr>
 			<tr>
 				<td height="140">
 				<select multiple="multiple" id="" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px"  name="">
-												<option value="±¾ÆÚ">±¾ÆÚ</option>
-												<option value="ÉÏÆÚ">ÉÏÆÚ</option>
-												<option value="Äê³õ">Äê³õ</option>
-												<option value="È¥ÄêÍ¬ÆÚ">È¥ÄêÍ¬ÆÚ</option>
-												<option value="±ÈÉÏÆÚ">±ÈÉÏÆÚ</option>
-												<option value="±ÈÄê³õ">±ÈÄê³õ</option>
-												<option value="±ÈÈ¥ÄêÍ¬ÆÚ">±ÈÈ¥ÄêÍ¬ÆÚ</option>			
+												<option value="æœ¬æœŸ">æœ¬æœŸ</option>
+												<option value="ä¸ŠæœŸ">ä¸ŠæœŸ</option>
+												<option value="å¹´åˆ">å¹´åˆ</option>
+												<option value="åŽ»å¹´åŒæœŸ">åŽ»å¹´åŒæœŸ</option>
+												<option value="æ¯”ä¸ŠæœŸ">æ¯”ä¸ŠæœŸ</option>
+												<option value="æ¯”å¹´åˆ">æ¯”å¹´åˆ</option>
+												<option value="æ¯”åŽ»å¹´åŒæœŸ">æ¯”åŽ»å¹´åŒæœŸ</option>			
 				</select>
 				</td>
 			</tr>
 			  <tr>		
 			  <td>
-		        <input name="button" type="button" class="buttonStyle" onClick="hide_window('light1')" value=" È· ÈÏ"/>
+		        <input name="button" type="button" class="buttonStyle" onClick="hide_window('light1')" value=" ç¡® è®¤"/>
 		      </td>
 			  </tr>
 			</table>
@@ -633,16 +633,16 @@ function selectForm2(){
 		<div class="con">		
 			<table class="datalist">
 			<tr>
-				<th>Á¬ÐøÊ±¼ä</th>
+				<th>è¿žç»­æ—¶é—´</th>
 			</tr>
 			<tr>
-				<td>¿ªÊ¼Ê±¼ä<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate1()">
+				<td>å¼€å§‹æ—¶é—´<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate1()">
 				
 				<div id="date1"><select name="year" style="width:auto">
                   <option>2011</option>
                   <option>2010</option>
                   <option>2009</option>
-				  </select>Äê
+				  </select>å¹´
 				  <select name="month" style="width:auto">
                   <option>1</option>
                   <option>2</option>
@@ -656,17 +656,17 @@ function selectForm2(){
 				  <option>10</option>
                   <option>11</option>
                   <option>12</option>
-				  </select>ÔÂ</div>
+				  </select>æœˆ</div>
 			  <div id="calendar1" style="display:none"><input name="text" type="text" id="datepicker1" value="" size="30" /></div>
 			 </td>
 			  </tr>
 			  <tr>
-			  <td>½áÊøÊ±¼ä<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate2()">
+			  <td>ç»“æŸæ—¶é—´<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate2()">
 				<div id="date2"><select name="year" style="width:auto">
                   <option>2011</option>
                   <option>2010</option>
                   <option>2009</option>
-				  </select>Äê
+				  </select>å¹´
 				  <select name="month" style="width:auto">
                   <option>1</option>
                   <option>2</option>
@@ -680,13 +680,13 @@ function selectForm2(){
 				  <option>10</option>
                   <option>11</option>
                   <option>12</option>
-				  </select>ÔÂ</div>
+				  </select>æœˆ</div>
 			  <div id="calendar2" style="display:none"><input name="text" type="text" id="datepicker2" value="" size="30" /></div>
 			  </td>
 			  </tr>
 			  <tr>		
 			  <td>
-		        <input name="button" type="button" class="buttonStyle" onClick="hide_window('light')" value=" È· ÈÏ"/>
+		        <input name="button" type="button" class="buttonStyle" onClick="hide_window('light')" value=" ç¡® è®¤"/>
 		     </td>
 			  </tr>
 			</table>
@@ -711,13 +711,13 @@ function selectForm2(){
 	<div class="univer_model">
 		<TABLE id="paramTable" width="98%" border="0" cellpadding="0" cellspacing="0">
             <tr height="30">
-              <td width="9%"><input type="radio" name="time" style="width:auto" checked="checked" onClick="if(light1.style.display='none')  show_window('light');"/>¿ªÊ¼Ê±¼ä<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate()">
+              <td width="9%"><input type="radio" name="time" style="width:auto" checked="checked" onClick="if(light1.style.display='none')  show_window('light');"/>å¼€å§‹æ—¶é—´<input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate()">
               </td>
 			  <td width="17%"  id="date"><select name="year" style="width:auto">
                   <option>2011</option>
                   <option>2010</option>
                   <option>2009</option>
-				  </select>Äê
+				  </select>å¹´
 				  <select name="month" style="width:auto">
                   <option>1</option>
                   <option>2</option>
@@ -731,17 +731,17 @@ function selectForm2(){
 				  <option>10</option>
                   <option>11</option>
                   <option>12</option>
-				  </select>ÔÂ
+				  </select>æœˆ
               </td>
 			  <td width="13%" id="calendar" style="display:none"><input name="text" type="text" id="datepicker" value="" size="30" /></td>
-			  <td width="10%">½áÊøÊ±¼ä
+			  <td width="10%">ç»“æŸæ—¶é—´
 			    <input type="checkbox" name="DateS" value="checkbox" style="width:auto" onClick="selectDate()">
               </td>
 			  <td width="17%"  id="date"><select name="year" style="width:auto">
                   <option>2011</option>
                   <option>2010</option>
                   <option>2009</option>
-				  </select>Äê
+				  </select>å¹´
 				  <select name="month" style="width:auto">
                   <option>1</option>
                   <option>2</option>
@@ -755,65 +755,65 @@ function selectForm2(){
 				  <option>10</option>
                   <option>11</option>
                   <option>12</option>
-				  </select>ÔÂ
+				  </select>æœˆ
               </td>
 			  <td width="13%" id="calendar" style="display:none"><input name="text" type="text" id="datepicker" value="" size="30" /></td>
-			  <td width="8%"><input type="radio" name="time" style="width:auto" onClick="if(light.style.display='none') show_window('light1');"/>Ê±¼äµã
+			  <td width="8%"><input type="radio" name="time" style="width:auto" onClick="if(light.style.display='none') show_window('light1');"/>æ—¶é—´ç‚¹
               </td>
 			  <td width="10%">
 			  <select name="month" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 50px" multiple size="4" name="lstDate16">
-                  <option>±¾ÆÚ</option>
-                  <option>ÉÏÆÚ</option>
-                  <option>Äê³õ</option>
-				  <option>È¥ÄêÍ¬ÆÚ</option>
-                  <option>±ÈÉÏÆÚ</option>
-                  <option>±ÈÄê³õ</option>
-				  <option>±ÈÈ¥ÄêÍ¬ÆÚ</option>
+                  <option>æœ¬æœŸ</option>
+                  <option>ä¸ŠæœŸ</option>
+                  <option>å¹´åˆ</option>
+				  <option>åŽ»å¹´åŒæœŸ</option>
+                  <option>æ¯”ä¸ŠæœŸ</option>
+                  <option>æ¯”å¹´åˆ</option>
+				  <option>æ¯”åŽ»å¹´åŒæœŸ</option>
 				  </select>
 </td>
-			  <td width="5%"><input type="checkbox" name="time" style="width:auto" />Í¼±í </td>
+			  <td width="5%"><input type="checkbox" name="time" style="width:auto" />å›¾è¡¨ </td>
 			</tr>
 		</TABLE>
 	</div>
 	
 	<div id="tabsB">
 	  <ul>
-		<li><span><a href="javascript:selectTab('tab1')"><span> &nbsp;Ö¸ ±ê&nbsp;  	</span></a></li>
-		<li><span><a href="javascript:selectTab('tab2')"><span> 1104±¨±í 			   	</span></a></li>
+		<li><span><a href="javascript:selectTab('tab1')"><span> &nbsp;æŒ‡ æ ‡&nbsp;  	</span></a></li>
+		<li><span><a href="javascript:selectTab('tab2')"><span> 1104æŠ¥è¡¨ 			   	</span></a></li>
 		
 	  </ul>
 	</div>
 		<div style="height:60%">
 			<div class="maincontent_left" style="width:300px;height:100px" id="tab1">
 			<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
-												<option value="²»Á¼´û¿îÂÊ">²»Á¼´û¿îÂÊ</option>
-												<option value="´æ´û¿î±ÈÀý">´æ´û¿î±ÈÀý</option>
-												<option value="´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ">´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ</option>
-												<option value="´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ">´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ</option>
-												<option value="³¬¶î±¸¸¶ÂÊ">³¬¶î±¸¸¶ÂÊ</option>
-												<option value="Á÷¶¯ÐÔ±ÈÀý">Á÷¶¯ÐÔ±ÈÀý</option>
-												<option value="Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý">Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý</option>				
-												<option value="ºËÐÄ¸ºÕ®ÒÀ´æ¶È">ºËÐÄ¸ºÕ®ÒÀ´æ¶È</option>
-												<option value="Á÷¶¯ÐÔÈ±¿ÚÂÊ">Á÷¶¯ÐÔÈ±¿ÚÂÊ</option>
-												<option value="·ÇÐÅ´û×Ê²ú²»Á¼ÂÊ">·ÇÐÅ´û×Ê²ú²»Á¼ÂÊ</option>
-												<option value="µ¥Ò»¼¯ÍÅ¿Í»§ÊÚÐÅ¼¯ÖÐ¶È">µ¥Ò»¼¯ÍÅ¿Í»§ÊÚÐÅ¼¯ÖÐ¶È</option>
-												<option value="ÊÚÐÅ¼¯ÖÐ¶È">ÊÚÐÅ¼¯ÖÐ¶È</option>
-												<option value="µ¥Ò»¿Í»§´û¿î¼¯ÖÐ¶È">µ¥Ò»¿Í»§´û¿î¼¯ÖÐ¶È</option>
-												<option value="µ¥Ò»¿Í»§´û¿îÕ¼È«²¿´û¿î±ÈÀý">µ¥Ò»¿Í»§´û¿îÕ¼È«²¿´û¿î±ÈÀý</option>			
-												<option value="È«²¿¹ØÁª¶È">È«²¿¹ØÁª¶È</option>
-												<option value="·çÏÕ×Ê²úÀûÈóÂÊ">·çÏÕ×Ê²úÀûÈóÂÊ</option>
-												<option value="²»Á¼´û¿îÂÊ">²»Á¼´û¿îÂÊ</option>
-												<option value="´æ´û¿î±ÈÀý">´æ´û¿î±ÈÀý</option>
-												<option value="´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ">´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ</option>
-												<option value="´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ">´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ</option>
-												<option value="³¬¶î±¸¸¶ÂÊ">³¬¶î±¸¸¶ÂÊ</option>	
-												<option value="Á÷¶¯ÐÔ±ÈÀý">Á÷¶¯ÐÔ±ÈÀý</option>
-												<option value="Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý">Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý</option>
-												<option value="×Ê±¾ÀûÈóÂÊ">×Ê±¾ÀûÈóÂÊ</option>
-												<option value="×Ê²úÀûÈóÂÊ">×Ê²úÀûÈóÂÊ</option>
-												<option value="µ÷Õû×Ê²úÀûÈóÂÊ">µ÷Õû×Ê²úÀûÈóÂÊ</option>
-												<option value="³É±¾ÊÕÈë±ÈÂÊ">³É±¾ÊÕÈë±ÈÂÊ</option>
-												<option value="×Ê±¾³ä×ãÂÊ">×Ê±¾³ä×ãÂÊ</option>
+												<option value="ä¸è‰¯è´·æ¬¾çŽ‡">ä¸è‰¯è´·æ¬¾çŽ‡</option>
+												<option value="å­˜è´·æ¬¾æ¯”ä¾‹">å­˜è´·æ¬¾æ¯”ä¾‹</option>
+												<option value="è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡">è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡</option>
+												<option value="è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡">è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡</option>
+												<option value="è¶…é¢å¤‡ä»˜çŽ‡">è¶…é¢å¤‡ä»˜çŽ‡</option>
+												<option value="æµåŠ¨æ€§æ¯”ä¾‹">æµåŠ¨æ€§æ¯”ä¾‹</option>
+												<option value="å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹">å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹</option>				
+												<option value="æ ¸å¿ƒè´Ÿå€ºä¾å­˜åº¦">æ ¸å¿ƒè´Ÿå€ºä¾å­˜åº¦</option>
+												<option value="æµåŠ¨æ€§ç¼ºå£çŽ‡">æµåŠ¨æ€§ç¼ºå£çŽ‡</option>
+												<option value="éžä¿¡è´·èµ„äº§ä¸è‰¯çŽ‡">éžä¿¡è´·èµ„äº§ä¸è‰¯çŽ‡</option>
+												<option value="å•ä¸€é›†å›¢å®¢æˆ·æŽˆä¿¡é›†ä¸­åº¦">å•ä¸€é›†å›¢å®¢æˆ·æŽˆä¿¡é›†ä¸­åº¦</option>
+												<option value="æŽˆä¿¡é›†ä¸­åº¦">æŽˆä¿¡é›†ä¸­åº¦</option>
+												<option value="å•ä¸€å®¢æˆ·è´·æ¬¾é›†ä¸­åº¦">å•ä¸€å®¢æˆ·è´·æ¬¾é›†ä¸­åº¦</option>
+												<option value="å•ä¸€å®¢æˆ·è´·æ¬¾å å…¨éƒ¨è´·æ¬¾æ¯”ä¾‹">å•ä¸€å®¢æˆ·è´·æ¬¾å å…¨éƒ¨è´·æ¬¾æ¯”ä¾‹</option>			
+												<option value="å…¨éƒ¨å…³è”åº¦">å…¨éƒ¨å…³è”åº¦</option>
+												<option value="é£Žé™©èµ„äº§åˆ©æ¶¦çŽ‡">é£Žé™©èµ„äº§åˆ©æ¶¦çŽ‡</option>
+												<option value="ä¸è‰¯è´·æ¬¾çŽ‡">ä¸è‰¯è´·æ¬¾çŽ‡</option>
+												<option value="å­˜è´·æ¬¾æ¯”ä¾‹">å­˜è´·æ¬¾æ¯”ä¾‹</option>
+												<option value="è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡">è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡</option>
+												<option value="è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡">è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡</option>
+												<option value="è¶…é¢å¤‡ä»˜çŽ‡">è¶…é¢å¤‡ä»˜çŽ‡</option>	
+												<option value="æµåŠ¨æ€§æ¯”ä¾‹">æµåŠ¨æ€§æ¯”ä¾‹</option>
+												<option value="å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹">å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹</option>
+												<option value="èµ„æœ¬åˆ©æ¶¦çŽ‡">èµ„æœ¬åˆ©æ¶¦çŽ‡</option>
+												<option value="èµ„äº§åˆ©æ¶¦çŽ‡">èµ„äº§åˆ©æ¶¦çŽ‡</option>
+												<option value="è°ƒæ•´èµ„äº§åˆ©æ¶¦çŽ‡">è°ƒæ•´èµ„äº§åˆ©æ¶¦çŽ‡</option>
+												<option value="æˆæœ¬æ”¶å…¥æ¯”çŽ‡">æˆæœ¬æ”¶å…¥æ¯”çŽ‡</option>
+												<option value="èµ„æœ¬å……è¶³çŽ‡">èµ„æœ¬å……è¶³çŽ‡</option>
 												</select>
 												</div>
 			<div class="maincontent_left" id="tab2" style="width:300px;height:100px;display:none">
@@ -825,13 +825,13 @@ function selectForm2(){
 				<tr height="95%">
 				<td>
 				<select id="sl1" style="FONT-SIZE: 9pt; WIDTH:120px; HEIGHT: 100px" size="4" name="sl1" onChange="selectForm1();">
-												<option value="1">GF01×Ê²ú¸ºÕ®ÏîÄ¿Í³¼Æ±í.xls</option>
-												<option value="2">GF01×Ê²ú¸ºÕ®ÏîÄ¿Í³¼Æ±í¸½×¢µÚ¢ñ²¿·Ö£º±íÍâÒµÎñÇé¿ö±í</option>
-												<option value="3">GF01×Ê²ú¸ºÕ®ÏîÄ¿Í³¼Æ±í¸½×¢µÚ¢ò²¿·Ö£º´û¿îÖÊÁ¿Îå¼¶·ÖÀàÇé¿ö¼ò±í</option>
-												<option value="4">GF01×Ê²ú¸ºÕ®ÏîÄ¿Í³¼Æ±í¸½×¢µÚ¢ó²¿·Ö£º´æ´û¿îÃ÷Ï¸±¨±í(Ò»)</option>
-												<option value="5">GF01×Ê²ú¸ºÕ®ÏîÄ¿Í³¼Æ±í¸½×¢µÚ¢ö²¿·Ö£º¸÷Ïîµæ¿îÇé¿ö±í</option>
-												<option value="6">GF01×Ê²ú¸ºÕ®ÏîÄ¿Í³¼Æ±í¸½×¢µÚ¢ù²¿·Ö£º´æ´û¿îÔÂÈÕ¾ùÇé¿ö±í</option>
-												<option value="7">GF01×Ê²ú¸ºÕ®ÏîÄ¿Í³¼Æ±í¸½×¢µÚVII²¿·Ö£º´û¿î·ÖÐÐÒµÇé¿ö±í£¨°´´û¿îÍ¶Ïò£©</option>
+												<option value="1">GF01èµ„äº§è´Ÿå€ºé¡¹ç›®ç»Ÿè®¡è¡¨.xls</option>
+												<option value="2">GF01èµ„äº§è´Ÿå€ºé¡¹ç›®ç»Ÿè®¡è¡¨é™„æ³¨ç¬¬â… éƒ¨åˆ†ï¼šè¡¨å¤–ä¸šåŠ¡æƒ…å†µè¡¨</option>
+												<option value="3">GF01èµ„äº§è´Ÿå€ºé¡¹ç›®ç»Ÿè®¡è¡¨é™„æ³¨ç¬¬â…¡éƒ¨åˆ†ï¼šè´·æ¬¾è´¨é‡äº”çº§åˆ†ç±»æƒ…å†µç®€è¡¨</option>
+												<option value="4">GF01èµ„äº§è´Ÿå€ºé¡¹ç›®ç»Ÿè®¡è¡¨é™„æ³¨ç¬¬â…¢éƒ¨åˆ†ï¼šå­˜è´·æ¬¾æ˜Žç»†æŠ¥è¡¨(ä¸€)</option>
+												<option value="5">GF01èµ„äº§è´Ÿå€ºé¡¹ç›®ç»Ÿè®¡è¡¨é™„æ³¨ç¬¬â…¥éƒ¨åˆ†ï¼šå„é¡¹åž«æ¬¾æƒ…å†µè¡¨</option>
+												<option value="6">GF01èµ„äº§è´Ÿå€ºé¡¹ç›®ç»Ÿè®¡è¡¨é™„æ³¨ç¬¬â…¨éƒ¨åˆ†ï¼šå­˜è´·æ¬¾æœˆæ—¥å‡æƒ…å†µè¡¨</option>
+												<option value="7">GF01èµ„äº§è´Ÿå€ºé¡¹ç›®ç»Ÿè®¡è¡¨é™„æ³¨ç¬¬VIIéƒ¨åˆ†ï¼šè´·æ¬¾åˆ†è¡Œä¸šæƒ…å†µè¡¨ï¼ˆæŒ‰è´·æ¬¾æŠ•å‘ï¼‰</option>
 												</select>
 												</td>
 				<td>
@@ -850,9 +850,9 @@ function selectForm2(){
 				<tr height="95%">
 				<td>
 				<select id="sl2" style="FONT-SIZE: 9pt; WIDTH: 120px; HEIGHT: 100px" size="4" name="sl2" onChange="selectForm2();">
-												<option value="1">0¼à²âÍ³¼Æ±¨±í6-´óÖÐÐ¡ÆóÒµ´û¿îÍ³¼Æ±í</option>
-												<option value="2">4¿îÍ¶Ïò¼à²âÍ³¼Æ±¨±í5-ÉæÅ©´û¿îÍ³¼Æ±í</option>
-												<option value="3">5Í³¼Æ±¨±í3-´û¿î°´ÓÐ±£ÓÐÑ¹·ÖÀàÍ³¼Æ±í</option>
+												<option value="1">0ç›‘æµ‹ç»Ÿè®¡æŠ¥è¡¨6-å¤§ä¸­å°ä¼ä¸šè´·æ¬¾ç»Ÿè®¡è¡¨</option>
+												<option value="2">4æ¬¾æŠ•å‘ç›‘æµ‹ç»Ÿè®¡æŠ¥è¡¨5-æ¶‰å†œè´·æ¬¾ç»Ÿè®¡è¡¨</option>
+												<option value="3">5ç»Ÿè®¡æŠ¥è¡¨3-è´·æ¬¾æŒ‰æœ‰ä¿æœ‰åŽ‹åˆ†ç±»ç»Ÿè®¡è¡¨</option>
 												</select>
 												</td>
 				<td>
@@ -865,34 +865,34 @@ function selectForm2(){
 			<div class="maincontent_left" id="tab4" style="width:300px;height:100px;display:none">
 				<input type="text" style="width:auto" id="inputer3">
 				<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
-												<option value="²»Á¼´û¿îÂÊ">²»Á¼´û¿îÂÊ</option>
-												<option value="´æ´û¿î±ÈÀý">´æ´û¿î±ÈÀý</option>
-												<option value="´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ">´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ</option>
-												<option value="´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ">´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ</option>
-												<option value="³¬¶î±¸¸¶ÂÊ">³¬¶î±¸¸¶ÂÊ</option>
-												<option value="Á÷¶¯ÐÔ±ÈÀý">Á÷¶¯ÐÔ±ÈÀý</option>
-												<option value="Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý">Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý</option>				
-												<option value="ºËÐÄ¸ºÕ®ÒÀ´æ¶È">ºËÐÄ¸ºÕ®ÒÀ´æ¶È</option>
-												<option value="Á÷¶¯ÐÔÈ±¿ÚÂÊ">Á÷¶¯ÐÔÈ±¿ÚÂÊ</option>
-												<option value="·ÇÐÅ´û×Ê²ú²»Á¼ÂÊ">·ÇÐÅ´û×Ê²ú²»Á¼ÂÊ</option>
-												<option value="µ¥Ò»¼¯ÍÅ¿Í»§ÊÚÐÅ¼¯ÖÐ¶È">µ¥Ò»¼¯ÍÅ¿Í»§ÊÚÐÅ¼¯ÖÐ¶È</option>
-												<option value="ÊÚÐÅ¼¯ÖÐ¶È">ÊÚÐÅ¼¯ÖÐ¶È</option>
-												<option value="µ¥Ò»¿Í»§´û¿î¼¯ÖÐ¶È">µ¥Ò»¿Í»§´û¿î¼¯ÖÐ¶È</option>
-												<option value="µ¥Ò»¿Í»§´û¿îÕ¼È«²¿´û¿î±ÈÀý">µ¥Ò»¿Í»§´û¿îÕ¼È«²¿´û¿î±ÈÀý</option>			
-												<option value="È«²¿¹ØÁª¶È">È«²¿¹ØÁª¶È</option>
-												<option value="·çÏÕ×Ê²úÀûÈóÂÊ">·çÏÕ×Ê²úÀûÈóÂÊ</option>
-												<option value="²»Á¼´û¿îÂÊ">²»Á¼´û¿îÂÊ</option>
-												<option value="´æ´û¿î±ÈÀý">´æ´û¿î±ÈÀý</option>
-												<option value="´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ">´û¿î×¨ÏîËðÊ§×¼±¸³ä×ãÂÊ</option>
-												<option value="´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ">´û¿îËðÊ§×¼±¸¸²¸ÇÂÊ</option>
-												<option value="³¬¶î±¸¸¶ÂÊ">³¬¶î±¸¸¶ÂÊ</option>	
-												<option value="Á÷¶¯ÐÔ±ÈÀý">Á÷¶¯ÐÔ±ÈÀý</option>
-												<option value="Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý">Å©Òµ´û¿îÕ¼¸÷Ïî´û¿î±ÈÀý</option>
-												<option value="×Ê±¾ÀûÈóÂÊ">×Ê±¾ÀûÈóÂÊ</option>
-												<option value="×Ê²úÀûÈóÂÊ">×Ê²úÀûÈóÂÊ</option>
-												<option value="µ÷Õû×Ê²úÀûÈóÂÊ">µ÷Õû×Ê²úÀûÈóÂÊ</option>
-												<option value="³É±¾ÊÕÈë±ÈÂÊ">³É±¾ÊÕÈë±ÈÂÊ</option>
-												<option value="×Ê±¾³ä×ãÂÊ">×Ê±¾³ä×ãÂÊ</option>
+												<option value="ä¸è‰¯è´·æ¬¾çŽ‡">ä¸è‰¯è´·æ¬¾çŽ‡</option>
+												<option value="å­˜è´·æ¬¾æ¯”ä¾‹">å­˜è´·æ¬¾æ¯”ä¾‹</option>
+												<option value="è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡">è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡</option>
+												<option value="è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡">è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡</option>
+												<option value="è¶…é¢å¤‡ä»˜çŽ‡">è¶…é¢å¤‡ä»˜çŽ‡</option>
+												<option value="æµåŠ¨æ€§æ¯”ä¾‹">æµåŠ¨æ€§æ¯”ä¾‹</option>
+												<option value="å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹">å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹</option>				
+												<option value="æ ¸å¿ƒè´Ÿå€ºä¾å­˜åº¦">æ ¸å¿ƒè´Ÿå€ºä¾å­˜åº¦</option>
+												<option value="æµåŠ¨æ€§ç¼ºå£çŽ‡">æµåŠ¨æ€§ç¼ºå£çŽ‡</option>
+												<option value="éžä¿¡è´·èµ„äº§ä¸è‰¯çŽ‡">éžä¿¡è´·èµ„äº§ä¸è‰¯çŽ‡</option>
+												<option value="å•ä¸€é›†å›¢å®¢æˆ·æŽˆä¿¡é›†ä¸­åº¦">å•ä¸€é›†å›¢å®¢æˆ·æŽˆä¿¡é›†ä¸­åº¦</option>
+												<option value="æŽˆä¿¡é›†ä¸­åº¦">æŽˆä¿¡é›†ä¸­åº¦</option>
+												<option value="å•ä¸€å®¢æˆ·è´·æ¬¾é›†ä¸­åº¦">å•ä¸€å®¢æˆ·è´·æ¬¾é›†ä¸­åº¦</option>
+												<option value="å•ä¸€å®¢æˆ·è´·æ¬¾å å…¨éƒ¨è´·æ¬¾æ¯”ä¾‹">å•ä¸€å®¢æˆ·è´·æ¬¾å å…¨éƒ¨è´·æ¬¾æ¯”ä¾‹</option>			
+												<option value="å…¨éƒ¨å…³è”åº¦">å…¨éƒ¨å…³è”åº¦</option>
+												<option value="é£Žé™©èµ„äº§åˆ©æ¶¦çŽ‡">é£Žé™©èµ„äº§åˆ©æ¶¦çŽ‡</option>
+												<option value="ä¸è‰¯è´·æ¬¾çŽ‡">ä¸è‰¯è´·æ¬¾çŽ‡</option>
+												<option value="å­˜è´·æ¬¾æ¯”ä¾‹">å­˜è´·æ¬¾æ¯”ä¾‹</option>
+												<option value="è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡">è´·æ¬¾ä¸“é¡¹æŸå¤±å‡†å¤‡å……è¶³çŽ‡</option>
+												<option value="è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡">è´·æ¬¾æŸå¤±å‡†å¤‡è¦†ç›–çŽ‡</option>
+												<option value="è¶…é¢å¤‡ä»˜çŽ‡">è¶…é¢å¤‡ä»˜çŽ‡</option>	
+												<option value="æµåŠ¨æ€§æ¯”ä¾‹">æµåŠ¨æ€§æ¯”ä¾‹</option>
+												<option value="å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹">å†œä¸šè´·æ¬¾å å„é¡¹è´·æ¬¾æ¯”ä¾‹</option>
+												<option value="èµ„æœ¬åˆ©æ¶¦çŽ‡">èµ„æœ¬åˆ©æ¶¦çŽ‡</option>
+												<option value="èµ„äº§åˆ©æ¶¦çŽ‡">èµ„äº§åˆ©æ¶¦çŽ‡</option>
+												<option value="è°ƒæ•´èµ„äº§åˆ©æ¶¦çŽ‡">è°ƒæ•´èµ„äº§åˆ©æ¶¦çŽ‡</option>
+												<option value="æˆæœ¬æ”¶å…¥æ¯”çŽ‡">æˆæœ¬æ”¶å…¥æ¯”çŽ‡</option>
+												<option value="èµ„æœ¬å……è¶³çŽ‡">èµ„æœ¬å……è¶³çŽ‡</option>
 												</select>
 			</div>
 			<div style="height:100px;width:100px" class="maincontent_middle">
@@ -907,7 +907,7 @@ function selectForm2(){
 					<td align="center"><input type="button" style="width:50%" value="<-" class="buttonStyle"></td>
 				</tr>
 				<tr height="20%">
-					<td align="center"><input type="button" style="width:50%" value="É¾³ý" class="buttonStyle"></td>
+					<td align="center"><input type="button" style="width:50%" value="åˆ é™¤" class="buttonStyle"></td>
 				</tr>
 				<tr height="20%">
 					<td align="center">&nbsp;</td>
@@ -921,12 +921,12 @@ function selectForm2(){
 	<table><tr height="10px"><td>&nbsp;</td></tr></table>
 	<table>
 	<tr>
-		<td><input type="radio" name="jg" onClick="xnjg.style.display = '';bsjg.style.display = 'none';" checked="checked" style="width:auto">ÐéÄâ»ú¹¹
+		<td><input type="radio" name="jg" onClick="xnjg.style.display = '';bsjg.style.display = 'none';" checked="checked" style="width:auto">è™šæ‹Ÿæœºæž„
 		</td>
-		<td><input type="radio" name="jg" onClick="xnjg.style.display = 'none';bsjg.style.display = '';" style="width:auto">±¨ËÍ»ú¹¹</td>
+		<td><input type="radio" name="jg" onClick="xnjg.style.display = 'none';bsjg.style.display = '';" style="width:auto">æŠ¥é€æœºæž„</td>
 	</tr>
 		<tr>
-		<td colspan="2"><input type="text" style="width:130">&nbsp;&nbsp;<input name="" type="checkbox" value="È«Ê¡">È«Ê¡&nbsp;&nbsp;<input name="" type="checkbox" value="È«ÊÐ">È«ÊÐ&nbsp;&nbsp;<input name="" type="checkbox" value="È«ÏØ">È«ÏØ
+		<td colspan="2"><input type="text" style="width:130">&nbsp;&nbsp;<input name="" type="checkbox" value="å…¨çœ">å…¨çœ&nbsp;&nbsp;<input name="" type="checkbox" value="å…¨å¸‚">å…¨å¸‚&nbsp;&nbsp;<input name="" type="checkbox" value="å…¨åŽ¿">å…¨åŽ¿
 		</td>
 		
 	</tr>
@@ -935,70 +935,70 @@ function selectForm2(){
 	<div style="height:60%">
 	<div id="xnjg" style="height:100px;width:300px" class="maincontent_left">
 	<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
-												<option value="Ì«Ô­³ÇÇøÁªºÏÉç">Ì«Ô­³ÇÇøÁªºÏÉç</option>
-												<option value="Ì«Ô­³ÇÇøºÏ×÷ÊÐ">Ì«Ô­³ÇÇøºÏ×÷ÊÐ</option>
-												<option value="Ì«Ô­³ÇÇøÅ©ÒµÉç">Ì«Ô­³ÇÇøÅ©ÒµÉç</option>
-												<option value="¹Å½»ÊÐÁªºÏÉç ">¹Å½»ÊÐÁªºÏÉç </option>
-												<option value="¹Å½»ÊÐºÏ×÷ÊÐ ">¹Å½»ÊÐºÏ×÷ÊÐ </option>
-												<option value="¹Å½»ÊÐÅ©ÒµÉç ">¹Å½»ÊÐÅ©ÒµÉç </option>
-												<option value="ÇåÐìÏØÁªºÏÉç ">ÇåÐìÏØÁªºÏÉç </option>				
-												<option value="ÇåÐìÏØºÏ×÷ÊÐ ">ÇåÐìÏØºÏ×÷ÊÐ </option>
-												<option value="ÇåÐìÏØÅ©ÒµÉç ">ÇåÐìÏØÅ©ÒµÉç </option>
-												<option value="ÑôÇúÏØÁªºÏÉç">ÑôÇúÏØÁªºÏÉç</option>
-												<option value="ÑôÇúÏØºÏ×÷ÊÐ ">ÑôÇúÏØºÏ×÷ÊÐ </option>
-												<option value="ÑôÇúÏØÅ©ÒµÉç ">ÑôÇúÏØÅ©ÒµÉç </option>
-												<option value="Â¦·³ÏØÁªºÏÉç ">Â¦·³ÏØÁªºÏÉç </option>
-												<option value="Â¦·³ÏØºÏ×÷ÊÐ ">Â¦·³ÏØºÏ×÷ÊÐ </option>			
-												<option value="Â¦·³ÏØÅ©ÒµÉç">Â¦·³ÏØÅ©ÒµÉç</option>
-												<option value="´óÍ¬ÄÏÐ§ÇøÁªºÏÉç">´óÍ¬ÄÏÐ§ÇøÁªºÏÉç</option>
-												<option value="´óÍ¬ÄÏÐ§ÇøºÏ×÷ÊÐ">´óÍ¬ÄÏÐ§ÇøºÏ×÷ÊÐ</option>
-												<option value="´óÍ¬ÄÏÐ§ÇøÅ©ÒµÉç ">´óÍ¬ÄÏÐ§ÇøÅ©ÒµÉç </option>
-												<option value="Ñô¸ßÏØÁªºÏÉç ">Ñô¸ßÏØÁªºÏÉç </option>
-												<option value="Ñô¸ßÏØºÏ×÷ÊÐ">Ñô¸ßÏØºÏ×÷ÊÐ</option>
-												<option value="Ñô¸ßÏØÅ©ÒµÉç">Ñô¸ßÏØÅ©ÒµÉç</option>	
-												<option value="ÌìÕòÏØÁªºÏÉç ">ÌìÕòÏØÁªºÏÉç </option>
-												<option value="ÌìÕòÏØºÏ×÷ÊÐ ">ÌìÕòÏØºÏ×÷ÊÐ </option>
-												<option value="ÌìÕòÏØÅ©ÒµÉç ">ÌìÕòÏØÅ©ÒµÉç </option>
-												<option value="¹ãÁéÏØÁªºÏÉç ">¹ãÁéÏØÁªºÏÉç </option>
-												<option value="¹ãÁéÏØºÏ×÷ÊÐ ">¹ãÁéÏØºÏ×÷ÊÐ </option>
-												<option value="¹ãÁéÏØÅ©ÒµÉç ">¹ãÁéÏØÅ©ÒµÉç </option>
-												<option value="ÁéÇðÏØÁªºÏÉç ">ÁéÇðÏØÁªºÏÉç </option>
-												<option value="ÁéÇðÏØºÏ×÷ÊÐ ">ÁéÇðÏØºÏ×÷ÊÐ </option>
-												<option value="ÁéÇðÏØÅ©ÒµÉç ">ÁéÇðÏØÅ©ÒµÉç </option>
+												<option value="å¤ªåŽŸåŸŽåŒºè”åˆç¤¾">å¤ªåŽŸåŸŽåŒºè”åˆç¤¾</option>
+												<option value="å¤ªåŽŸåŸŽåŒºåˆä½œå¸‚">å¤ªåŽŸåŸŽåŒºåˆä½œå¸‚</option>
+												<option value="å¤ªåŽŸåŸŽåŒºå†œä¸šç¤¾">å¤ªåŽŸåŸŽåŒºå†œä¸šç¤¾</option>
+												<option value="å¤äº¤å¸‚è”åˆç¤¾ ">å¤äº¤å¸‚è”åˆç¤¾ </option>
+												<option value="å¤äº¤å¸‚åˆä½œå¸‚ ">å¤äº¤å¸‚åˆä½œå¸‚ </option>
+												<option value="å¤äº¤å¸‚å†œä¸šç¤¾ ">å¤äº¤å¸‚å†œä¸šç¤¾ </option>
+												<option value="æ¸…å¾åŽ¿è”åˆç¤¾ ">æ¸…å¾åŽ¿è”åˆç¤¾ </option>				
+												<option value="æ¸…å¾åŽ¿åˆä½œå¸‚ ">æ¸…å¾åŽ¿åˆä½œå¸‚ </option>
+												<option value="æ¸…å¾åŽ¿å†œä¸šç¤¾ ">æ¸…å¾åŽ¿å†œä¸šç¤¾ </option>
+												<option value="é˜³æ›²åŽ¿è”åˆç¤¾">é˜³æ›²åŽ¿è”åˆç¤¾</option>
+												<option value="é˜³æ›²åŽ¿åˆä½œå¸‚ ">é˜³æ›²åŽ¿åˆä½œå¸‚ </option>
+												<option value="é˜³æ›²åŽ¿å†œä¸šç¤¾ ">é˜³æ›²åŽ¿å†œä¸šç¤¾ </option>
+												<option value="å¨„çƒ¦åŽ¿è”åˆç¤¾ ">å¨„çƒ¦åŽ¿è”åˆç¤¾ </option>
+												<option value="å¨„çƒ¦åŽ¿åˆä½œå¸‚ ">å¨„çƒ¦åŽ¿åˆä½œå¸‚ </option>			
+												<option value="å¨„çƒ¦åŽ¿å†œä¸šç¤¾">å¨„çƒ¦åŽ¿å†œä¸šç¤¾</option>
+												<option value="å¤§åŒå—æ•ˆåŒºè”åˆç¤¾">å¤§åŒå—æ•ˆåŒºè”åˆç¤¾</option>
+												<option value="å¤§åŒå—æ•ˆåŒºåˆä½œå¸‚">å¤§åŒå—æ•ˆåŒºåˆä½œå¸‚</option>
+												<option value="å¤§åŒå—æ•ˆåŒºå†œä¸šç¤¾ ">å¤§åŒå—æ•ˆåŒºå†œä¸šç¤¾ </option>
+												<option value="é˜³é«˜åŽ¿è”åˆç¤¾ ">é˜³é«˜åŽ¿è”åˆç¤¾ </option>
+												<option value="é˜³é«˜åŽ¿åˆä½œå¸‚">é˜³é«˜åŽ¿åˆä½œå¸‚</option>
+												<option value="é˜³é«˜åŽ¿å†œä¸šç¤¾">é˜³é«˜åŽ¿å†œä¸šç¤¾</option>	
+												<option value="å¤©é•‡åŽ¿è”åˆç¤¾ ">å¤©é•‡åŽ¿è”åˆç¤¾ </option>
+												<option value="å¤©é•‡åŽ¿åˆä½œå¸‚ ">å¤©é•‡åŽ¿åˆä½œå¸‚ </option>
+												<option value="å¤©é•‡åŽ¿å†œä¸šç¤¾ ">å¤©é•‡åŽ¿å†œä¸šç¤¾ </option>
+												<option value="å¹¿çµåŽ¿è”åˆç¤¾ ">å¹¿çµåŽ¿è”åˆç¤¾ </option>
+												<option value="å¹¿çµåŽ¿åˆä½œå¸‚ ">å¹¿çµåŽ¿åˆä½œå¸‚ </option>
+												<option value="å¹¿çµåŽ¿å†œä¸šç¤¾ ">å¹¿çµåŽ¿å†œä¸šç¤¾ </option>
+												<option value="çµä¸˜åŽ¿è”åˆç¤¾ ">çµä¸˜åŽ¿è”åˆç¤¾ </option>
+												<option value="çµä¸˜åŽ¿åˆä½œå¸‚ ">çµä¸˜åŽ¿åˆä½œå¸‚ </option>
+												<option value="çµä¸˜åŽ¿å†œä¸šç¤¾ ">çµä¸˜åŽ¿å†œä¸šç¤¾ </option>
 												</select>
 			</div>
 			<div id="bsjg" style="height:100px;width:300px;display:none" class="maincontent_left">
 	<select id="lstDate16" style="FONT-SIZE: 9pt; WIDTH: 100%; HEIGHT: 100px" multiple size="4" name="lstDate16">
-												<!--option value="Ì«Ô­³ÇÇøÁªºÏÉç">Ì«Ô­³ÇÇøÁªºÏÉç</option>
-												<option value="Ì«Ô­³ÇÇøºÏ×÷ÊÐ">Ì«Ô­³ÇÇøºÏ×÷ÊÐ</option>
-												<option value="Ì«Ô­³ÇÇøÅ©ÒµÉç">Ì«Ô­³ÇÇøÅ©ÒµÉç</option-->
-												<option value="¹Å½»ÊÐÁªºÏÉç ">¹Å½»ÊÐÁªºÏÉç </option>
-												<option value="¹Å½»ÊÐºÏ×÷ÊÐ ">¹Å½»ÊÐºÏ×÷ÊÐ </option>
-												<option value="¹Å½»ÊÐÅ©ÒµÉç ">¹Å½»ÊÐÅ©ÒµÉç </option>
-												<option value="ÇåÐìÏØÁªºÏÉç ">ÇåÐìÏØÁªºÏÉç </option>				
-												<option value="ÇåÐìÏØºÏ×÷ÊÐ ">ÇåÐìÏØºÏ×÷ÊÐ </option>
-												<option value="ÇåÐìÏØÅ©ÒµÉç ">ÇåÐìÏØÅ©ÒµÉç </option>
-												<option value="ÑôÇúÏØÁªºÏÉç">ÑôÇúÏØÁªºÏÉç</option>
-												<option value="ÑôÇúÏØºÏ×÷ÊÐ ">ÑôÇúÏØºÏ×÷ÊÐ </option>
-												<option value="ÑôÇúÏØÅ©ÒµÉç ">ÑôÇúÏØÅ©ÒµÉç </option>
-												<option value="Â¦·³ÏØÁªºÏÉç ">Â¦·³ÏØÁªºÏÉç </option>
-												<option value="Â¦·³ÏØºÏ×÷ÊÐ ">Â¦·³ÏØºÏ×÷ÊÐ </option>			
-												<option value="Â¦·³ÏØÅ©ÒµÉç">Â¦·³ÏØÅ©ÒµÉç</option>
-												<option value="´óÍ¬ÄÏÐ§ÇøÁªºÏÉç">´óÍ¬ÄÏÐ§ÇøÁªºÏÉç</option>
-												<option value="´óÍ¬ÄÏÐ§ÇøºÏ×÷ÊÐ">´óÍ¬ÄÏÐ§ÇøºÏ×÷ÊÐ</option>
-												<option value="´óÍ¬ÄÏÐ§ÇøÅ©ÒµÉç ">´óÍ¬ÄÏÐ§ÇøÅ©ÒµÉç </option>
-												<option value="Ñô¸ßÏØÁªºÏÉç ">Ñô¸ßÏØÁªºÏÉç </option>
-												<option value="Ñô¸ßÏØºÏ×÷ÊÐ">Ñô¸ßÏØºÏ×÷ÊÐ</option>
-												<option value="Ñô¸ßÏØÅ©ÒµÉç">Ñô¸ßÏØÅ©ÒµÉç</option>	
-												<option value="ÌìÕòÏØÁªºÏÉç ">ÌìÕòÏØÁªºÏÉç </option>
-												<option value="ÌìÕòÏØºÏ×÷ÊÐ ">ÌìÕòÏØºÏ×÷ÊÐ </option>
-												<option value="ÌìÕòÏØÅ©ÒµÉç ">ÌìÕòÏØÅ©ÒµÉç </option>
-												<option value="¹ãÁéÏØÁªºÏÉç ">¹ãÁéÏØÁªºÏÉç </option>
-												<option value="¹ãÁéÏØºÏ×÷ÊÐ ">¹ãÁéÏØºÏ×÷ÊÐ </option>
-												<option value="¹ãÁéÏØÅ©ÒµÉç ">¹ãÁéÏØÅ©ÒµÉç </option>
-												<option value="ÁéÇðÏØÁªºÏÉç ">ÁéÇðÏØÁªºÏÉç </option>
-												<option value="ÁéÇðÏØºÏ×÷ÊÐ ">ÁéÇðÏØºÏ×÷ÊÐ </option>
-												<option value="ÁéÇðÏØÅ©ÒµÉç ">ÁéÇðÏØÅ©ÒµÉç </option>
+												<!--option value="å¤ªåŽŸåŸŽåŒºè”åˆç¤¾">å¤ªåŽŸåŸŽåŒºè”åˆç¤¾</option>
+												<option value="å¤ªåŽŸåŸŽåŒºåˆä½œå¸‚">å¤ªåŽŸåŸŽåŒºåˆä½œå¸‚</option>
+												<option value="å¤ªåŽŸåŸŽåŒºå†œä¸šç¤¾">å¤ªåŽŸåŸŽåŒºå†œä¸šç¤¾</option-->
+												<option value="å¤äº¤å¸‚è”åˆç¤¾ ">å¤äº¤å¸‚è”åˆç¤¾ </option>
+												<option value="å¤äº¤å¸‚åˆä½œå¸‚ ">å¤äº¤å¸‚åˆä½œå¸‚ </option>
+												<option value="å¤äº¤å¸‚å†œä¸šç¤¾ ">å¤äº¤å¸‚å†œä¸šç¤¾ </option>
+												<option value="æ¸…å¾åŽ¿è”åˆç¤¾ ">æ¸…å¾åŽ¿è”åˆç¤¾ </option>				
+												<option value="æ¸…å¾åŽ¿åˆä½œå¸‚ ">æ¸…å¾åŽ¿åˆä½œå¸‚ </option>
+												<option value="æ¸…å¾åŽ¿å†œä¸šç¤¾ ">æ¸…å¾åŽ¿å†œä¸šç¤¾ </option>
+												<option value="é˜³æ›²åŽ¿è”åˆç¤¾">é˜³æ›²åŽ¿è”åˆç¤¾</option>
+												<option value="é˜³æ›²åŽ¿åˆä½œå¸‚ ">é˜³æ›²åŽ¿åˆä½œå¸‚ </option>
+												<option value="é˜³æ›²åŽ¿å†œä¸šç¤¾ ">é˜³æ›²åŽ¿å†œä¸šç¤¾ </option>
+												<option value="å¨„çƒ¦åŽ¿è”åˆç¤¾ ">å¨„çƒ¦åŽ¿è”åˆç¤¾ </option>
+												<option value="å¨„çƒ¦åŽ¿åˆä½œå¸‚ ">å¨„çƒ¦åŽ¿åˆä½œå¸‚ </option>			
+												<option value="å¨„çƒ¦åŽ¿å†œä¸šç¤¾">å¨„çƒ¦åŽ¿å†œä¸šç¤¾</option>
+												<option value="å¤§åŒå—æ•ˆåŒºè”åˆç¤¾">å¤§åŒå—æ•ˆåŒºè”åˆç¤¾</option>
+												<option value="å¤§åŒå—æ•ˆåŒºåˆä½œå¸‚">å¤§åŒå—æ•ˆåŒºåˆä½œå¸‚</option>
+												<option value="å¤§åŒå—æ•ˆåŒºå†œä¸šç¤¾ ">å¤§åŒå—æ•ˆåŒºå†œä¸šç¤¾ </option>
+												<option value="é˜³é«˜åŽ¿è”åˆç¤¾ ">é˜³é«˜åŽ¿è”åˆç¤¾ </option>
+												<option value="é˜³é«˜åŽ¿åˆä½œå¸‚">é˜³é«˜åŽ¿åˆä½œå¸‚</option>
+												<option value="é˜³é«˜åŽ¿å†œä¸šç¤¾">é˜³é«˜åŽ¿å†œä¸šç¤¾</option>	
+												<option value="å¤©é•‡åŽ¿è”åˆç¤¾ ">å¤©é•‡åŽ¿è”åˆç¤¾ </option>
+												<option value="å¤©é•‡åŽ¿åˆä½œå¸‚ ">å¤©é•‡åŽ¿åˆä½œå¸‚ </option>
+												<option value="å¤©é•‡åŽ¿å†œä¸šç¤¾ ">å¤©é•‡åŽ¿å†œä¸šç¤¾ </option>
+												<option value="å¹¿çµåŽ¿è”åˆç¤¾ ">å¹¿çµåŽ¿è”åˆç¤¾ </option>
+												<option value="å¹¿çµåŽ¿åˆä½œå¸‚ ">å¹¿çµåŽ¿åˆä½œå¸‚ </option>
+												<option value="å¹¿çµåŽ¿å†œä¸šç¤¾ ">å¹¿çµåŽ¿å†œä¸šç¤¾ </option>
+												<option value="çµä¸˜åŽ¿è”åˆç¤¾ ">çµä¸˜åŽ¿è”åˆç¤¾ </option>
+												<option value="çµä¸˜åŽ¿åˆä½œå¸‚ ">çµä¸˜åŽ¿åˆä½œå¸‚ </option>
+												<option value="çµä¸˜åŽ¿å†œä¸šç¤¾ ">çµä¸˜åŽ¿å†œä¸šç¤¾ </option>
 												</select>
 			</div>
 		<div style="height:100px;width:100px" class="maincontent_middle">
@@ -1013,7 +1013,7 @@ function selectForm2(){
 					<td align="center"><input type="button" style="width:50%" value="<-" class="buttonStyle"></td>
 				</tr>
 				<tr height="20%">
-					<td align="center"><input type="button" style="width:50%" value="É¾³ý" class="buttonStyle"></td>
+					<td align="center"><input type="button" style="width:50%" value="åˆ é™¤" class="buttonStyle"></td>
 				</tr>
 				<tr height="20%">
 					<td align="center">&nbsp;</td>
@@ -1025,7 +1025,7 @@ function selectForm2(){
 	</div>
 	<div class="ressultbutton" align="center" style="width:805px;">
 		<form ><a href="zzfx_result.html"onclick="window.open(this.href);return false">
-			<input type="submit" value="²é¿´·ÖÎö½á¹û" class="buttonStyle" /></a><input type="reset" value="È«²¿Çå¿Õ" class="buttonStyle" />
+			<input type="submit" value="æŸ¥çœ‹åˆ†æžç»“æžœ" class="buttonStyle" /></a><input type="reset" value="å…¨éƒ¨æ¸…ç©º" class="buttonStyle" />
 		</form>
 	</div>
 	</div>
@@ -1036,7 +1036,7 @@ function selectForm2(){
 			</tr>
 		</table>
 	</div>
-	<div class="login_bottom" style="text-align:center; vertical-align:middle;margin-top:10px">   ¼¼ÊõÖ§³Ö£ºÄÏ¾©¿ÆÈÚÊý¾ÝÏµÍ³ÓÐÏÞ¹«Ë¾&nbsp;&nbsp;</div>
+	<div class="login_bottom" style="text-align:center; vertical-align:middle;margin-top:10px">   æŠ€æœ¯æ”¯æŒï¼šå—äº¬ç§‘èžæ•°æ®ç³»ç»Ÿæœ‰é™å…¬å¸&nbsp;&nbsp;</div>
 	</div>
 	</div>
 </body>

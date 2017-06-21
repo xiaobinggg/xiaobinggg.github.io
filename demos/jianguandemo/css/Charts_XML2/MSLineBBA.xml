@@ -7,7 +7,7 @@
 		<category label='2009-4' />
 		<category label='2009-5' />
     </categories>
-<dataset seriesName='´æ´û¿î±ÈÀý' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
+<dataset seriesName='å­˜è´·æ¬¾æ¯”ä¾‹' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
 	<set value='34' />
 	<set value='64' />
 	<set value='63' />
@@ -15,7 +15,7 @@
 	<set value='34' />
 	</dataset>
 
-<dataset seriesName='Á÷¶¯ÐÔ±ÈÀý' color='F1683C' anchorBorderColor='F1683C' anchorBgColor='F1683C'>
+<dataset seriesName='æµåŠ¨æ€§æ¯”ä¾‹' color='F1683C' anchorBorderColor='F1683C' anchorBgColor='F1683C'>
 	<set value='73' />
 	<set value='83' />
 	<set value='94' />
@@ -23,7 +23,7 @@
 	<set value='48' />
 </dataset>
 
-<dataset seriesName='Á÷¶¯ÐÔÈ±¿ÚÂÊ' color='2AD62A' anchorBorderColor='2AD62A' anchorBgColor='2AD62A'>
+<dataset seriesName='æµåŠ¨æ€§ç¼ºå£çŽ‡' color='2AD62A' anchorBorderColor='2AD62A' anchorBgColor='2AD62A'>
 	<set value='23' />
 	<set value='15' />
 	<set value='33' />

@@ -1,11 +1,11 @@
 <?xml version= '1.0' encoding= 'GB2312'?>
-<chart numberSuffix='(万元)' lineThickness='1' showValues='0' formatNumberScale='0' anchorRadius='2'   divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridAlpha='5' alternateHGridColor='CC3300' shadowAlpha='40' labelStep="2" numvdivlines='5' chartRightMargin="35" bgColor='FFFFFF,CC3300' bgAngle='270' bgAlpha='10,10'>
+<chart numberSuffix='(涓囧厓)' lineThickness='1' showValues='0' formatNumberScale='0' anchorRadius='2'   divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridAlpha='5' alternateHGridColor='CC3300' shadowAlpha='40' labelStep="2" numvdivlines='5' chartRightMargin="35" bgColor='FFFFFF,CC3300' bgAngle='270' bgAlpha='10,10'>
 	<categories>
-		<category label='清徐县联合社' />
-		<category label='阳曲县合作社' />
-		<category label='古交市合作社' />
-		<category label='阳高县联合社' />
-		<category label='天镇县联合社' />
+		<category label='娓呭緪鍘胯仈鍚堢ぞ' />
+		<category label='闃虫洸鍘垮悎浣滅ぞ' />
+		<category label='鍙や氦甯傚悎浣滅ぞ' />
+		<category label='闃抽珮鍘胯仈鍚堢ぞ' />
+		<category label='澶╅晣鍘胯仈鍚堢ぞ' />
     </categories>
 <dataset seriesName='2009-1' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
 	<set value='34' />

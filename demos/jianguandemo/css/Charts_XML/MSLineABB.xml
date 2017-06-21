@@ -1,5 +1,5 @@
 <?xml version= '1.0' encoding= 'GB2312'?>
-<chart numberSuffix='(万元)' lineThickness='1' showValues='0' formatNumberScale='0' anchorRadius='2'   divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridAlpha='5' alternateHGridColor='CC3300' shadowAlpha='40' labelStep="2" numvdivlines='5' chartRightMargin="35" bgColor='FFFFFF,CC3300' bgAngle='270' bgAlpha='10,10'>
+<chart numberSuffix='(涓囧厓)' lineThickness='1' showValues='0' formatNumberScale='0' anchorRadius='2'   divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1' showAlternateHGridColor='1' alternateHGridAlpha='5' alternateHGridColor='CC3300' shadowAlpha='40' labelStep="2" numvdivlines='5' chartRightMargin="35" bgColor='FFFFFF,CC3300' bgAngle='270' bgAlpha='10,10'>
 	<categories>
 		<category label='2009-1' />
 		<category label='2009-2' />
@@ -7,7 +7,7 @@
 		<category label='2009-4' />
 		<category label='2009-5' />
     </categories>
-<dataset seriesName='不良贷款' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
+<dataset seriesName='涓嶈壇璐锋' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
 	<set value='34' />
 	<set value='64' />
 	<set value='63' />
@@ -15,7 +15,7 @@
 	<set value='34' />
 	</dataset>
 
-<dataset seriesName='贷款专项损失准备缺口' color='F1683C' anchorBorderColor='F1683C' anchorBgColor='F1683C'>
+<dataset seriesName='璐锋涓撻」鎹熷け鍑嗗缂哄彛' color='F1683C' anchorBorderColor='F1683C' anchorBgColor='F1683C'>
 	<set value='73' />
 	<set value='83' />
 	<set value='94' />
@@ -23,7 +23,7 @@
 	<set value='48' />
 </dataset>
 
-<dataset seriesName='实收资本' color='2AD62A' anchorBorderColor='2AD62A' anchorBgColor='2AD62A'>
+<dataset seriesName='瀹炴敹璧勬湰' color='2AD62A' anchorBorderColor='2AD62A' anchorBgColor='2AD62A'>
 	<set value='23' />
 	<set value='15' />
 	<set value='33' />

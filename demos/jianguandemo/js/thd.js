@@ -4,7 +4,7 @@
 var thd = {}
 
 
-thd.getO = function(id){//Í¨¹ıid»òÕß¶ÔÏó±¾Éí»ñÈ¡¶ÔÏó
+thd.getO = function(id){//é€šè¿‡idæˆ–è€…å¯¹è±¡æœ¬èº«è·å–å¯¹è±¡
 
 	if(typeof(id) == "string"){
 
@@ -26,7 +26,7 @@ thd.getO = function(id){//Í¨¹ıid»òÕß¶ÔÏó±¾Éí»ñÈ¡¶ÔÏó
 
 }
 
-thd.create = function(htmlTagName){//´´½¨HTML¶ÔÏó
+thd.create = function(htmlTagName){//åˆ›å»ºHTMLå¯¹è±¡
 
 	return document.createElement(htmlTagName);
 
@@ -37,44 +37,44 @@ var TabPage = function(idString){
 
 	this.idStr = idString;
 	
-	this.tabPDiv = thd.create("div");//tabPage×îÍâ²ãdiv
+	this.tabPDiv = thd.create("div");//tabPageæœ€å¤–å±‚div
 	this.tabPDiv.id = idString;
 
-	this.tabPDivCss = "";//tabPDivµÄÑùÊ½
+	this.tabPDivCss = "";//tabPDivçš„æ ·å¼
 
-	this.tabMenu = thd.create("div");//Ñ¡Ïî¿¨²Ëµ¥div
+	this.tabMenu = thd.create("div");//é€‰é¡¹å¡èœå•div
 	this.tabMenu.id = "thd_tabPage_menuUl";
 
 	this.tabMenu.appendChild(thd.create("span"));
 
-	this.tabConDiv = thd.create("div");//Ñ¡Ïî¿¨ÄÚÈİpDiv
-	this.tabConDiv.style.background = "#FFFFFF";//ÄÚÈİ¿ò±³¾°
-	this.tabConDiv.id = "thd_tabPage_sdPDiv";//ÄÚÈİ¿òÑùÊ½ID
+	this.tabConDiv = thd.create("div");//é€‰é¡¹å¡å†…å®¹pDiv
+	this.tabConDiv.style.background = "#FFFFFF";//å†…å®¹æ¡†èƒŒæ™¯
+	this.tabConDiv.id = "thd_tabPage_sdPDiv";//å†…å®¹æ¡†æ ·å¼ID
 
-	this.tabObj = [];//Êı×éÖĞµÄÔªËØ{title,id}
+	this.tabObj = [];//æ•°ç»„ä¸­çš„å…ƒç´ {title,id}
 	this.setTabObj = function(divArray){
 		this.tabObj = divArray;
 	}
 
-	this.setTabPDivCss = function(css){//ÉèÖÃtabPDivµÄÑùÊ½
+	this.setTabPDivCss = function(css){//è®¾ç½®tabPDivçš„æ ·å¼
 		
 		this.tabPDivCss = css;
 
 	}
 
-	this.addedTo = function(id){//Ìí¼Óµ½Ä³¸öHTMLÔªËØµÄÄÚ²¿ idÎªhtmlÔªËØµÄid»òÕß¶ÔÏó
+	this.addedTo = function(id){//æ·»åŠ åˆ°æŸä¸ªHTMLå…ƒç´ çš„å†…éƒ¨ idä¸ºhtmlå…ƒç´ çš„idæˆ–è€…å¯¹è±¡
 		
 		var _this = this;
 
 		this.tabPDiv.style.cssText = this.tabPDivCss;		
 
-		this.tabPDiv.appendChild(_this.tabMenu);//¼ÓÈë²Ëµ¥
+		this.tabPDiv.appendChild(_this.tabMenu);//åŠ å…¥èœå•
 
 		var cls = thd.create("div");
 
 		cls.className = "thd_tabPage_cls";
 
-		this.tabPDiv.appendChild(cls);//¼ÓÈë²Ëµ¥ºÍÑ¡Ïî¿¨ÄÚÈİÖ®¼äµÄÇå³ı¸¡¶¯²ã
+		this.tabPDiv.appendChild(cls);//åŠ å…¥èœå•å’Œé€‰é¡¹å¡å†…å®¹ä¹‹é—´çš„æ¸…é™¤æµ®åŠ¨å±‚
 
 
 		var menuArray = [];
@@ -84,14 +84,14 @@ var TabPage = function(idString){
 		
 			var tabObj = this.tabObj[i];
 
-			var tit = thd.create("div");//Ñ¡Ïî¿¨²Ëµ¥
+			var tit = thd.create("div");//é€‰é¡¹å¡èœå•
 			tit.id = _this.idStr + "_tit" + i;
 			tit.innerHTML = tabObj.title;
 			tit.className = (i == 0) ? "hover" : "";
 			menuArray.push(tit.id);
 
 
-			var con = thd.create("div");//Ñ¡Ïî¿¨ÄÚÈİ²ã
+			var con = thd.create("div");//é€‰é¡¹å¡å†…å®¹å±‚
 			con.appendChild(thd.getO(tabObj.id));
 			con.id = _this.idStr + "_con" + i;
 			con.style.display = (i == 0) ? "block" : "none";
@@ -102,7 +102,7 @@ var TabPage = function(idString){
 		
 		}
 
-		this.tabPDiv.appendChild(_this.tabConDiv);//¼ÓÈëÑ¡Ïî¿¨ÄÚÈİpDiv
+		this.tabPDiv.appendChild(_this.tabConDiv);//åŠ å…¥é€‰é¡¹å¡å†…å®¹pDiv
 
 		thd.getO(id).appendChild(_this.tabPDiv);
 
@@ -151,7 +151,7 @@ scrollDoor.prototype = {
 		var _this = this;
 		if(menus.length != divs.length)
 		{
-			alert("²Ëµ¥²ãÊıÁ¿ºÍÄÚÈİ²ãÊıÁ¿²»Ò»Ñù!");
+			alert("èœå•å±‚æ•°é‡å’Œå†…å®¹å±‚æ•°é‡ä¸ä¸€æ ·!");
 			return false;
 		}				
 		for(var i = 0 ; i < menus.length ; i++)
@@ -178,7 +178,7 @@ scrollDoor.prototype = {
 
 		if(menus.length != divs.length)
 		{
-			alert("²Ëµ¥²ãÊıÁ¿ºÍÄÚÈİ²ãÊıÁ¿²»Ò»Ñù!");
+			alert("èœå•å±‚æ•°é‡å’Œå†…å®¹å±‚æ•°é‡ä¸ä¸€æ ·!");
 			return false;
 		}				
 		for(var i = 0 ; i < menus.length ; i++)

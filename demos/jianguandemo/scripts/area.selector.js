@@ -1,4 +1,4 @@
-﻿jQuery.fn.selector = function(settings){
+jQuery.fn.selector = function(settings){
 	settings = jQuery.extend({
 		seletedResultor : null, // 输出给用户看的选择器
 		seletedResulId : null // 返回的选择结果的ID的选择器
